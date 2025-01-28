@@ -47,7 +47,7 @@ jobs:
     - uses: actions/cache/restore@v4
       with:
         path: |
-          cache/byond
+          ${{ github.workspace }}/cache/byond
         key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
