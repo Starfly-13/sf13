@@ -18,7 +18,7 @@ jobs:
     - uses: actions/cache@v4
       with:
         path: |
-          cache/byond
+          ${{ github.workspace }}/cache/byond
         key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
@@ -26,16 +26,16 @@ jobs:
     - name: Cache BYOND (Linux)
       run: |
         source dependencies.sh
-        if [ ! -f cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip ]; then
-            mkdir -p cache/byond
-            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o "cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip"
+        if [ ! -f ${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip ]; then
+            mkdir -p ${{ github.workspace }}/cache/byond
+            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o "${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip"
         fi
     - name: Cache BYOND (Windows)
       run: |
         source dependencies.sh
-        if [ ! -f cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip ]; then
-            mkdir -p cache/byond
-            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip" -o "cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip"
+        if [ ! -f ${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip ]; then
+            mkdir -p ${{ github.workspace }}/cache/byond
+            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip" -o "${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip"
         fi
 
   build_linux:
