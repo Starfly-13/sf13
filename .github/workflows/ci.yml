@@ -1,0 +1,58 @@
+# ci.yml
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  download_byond:
+    name: "Download BYOND"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/cache@v4
+      with:
+        path: |
+          ~/cache/byond
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-
+    - name: Cache BYOND (Linux)
+      run: |
+        source dependencies.sh
+        if [ ! -f ~/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip ]; then
+            mkdir -p ~/cache/byond
+            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o "~/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip"
+        fi
+    - name: Cache BYOND (Windows)
+      run: |
+        source dependencies.sh
+        if [ ! -f ~/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip ]; then
+            mkdir -p ~/cache/byond
+            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip" -o "~/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip"
+        fi
+
+  build_linux:
+    name: "Build (Linux)"
+    needs: download_byond
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/cache/restore@v4
+      with:
+        path: |
+          ~/cache/byond
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        fail-on-cache-miss: true
+    - run: tools/starfly/ci/install_byond_linux.sh
+    - name: Build Project
+      run: |
+        source ${HOME}/BYOND/byond/bin/byondsetup
+        tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DFULL_INIT
