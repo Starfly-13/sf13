@@ -60,4 +60,13 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-auxmos-${{ hashFiles('**/dependencies.sh') }}
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-auxmos-
+    - uses: actions/cache/restore@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/byond
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        fail-on-cache-miss: true
+    - run: tools/starfly/ci/install_byond_linux.sh
     - run: tools/starfly/ci/build_auxmos.sh
