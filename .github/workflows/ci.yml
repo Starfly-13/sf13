@@ -46,3 +46,27 @@ jobs:
       run: pwsh tools/starfly/ci/build_windows.ps1
       env:
         DM_EXE: "C:\\byond\\bin\\dm.exe"
+
+  build_auxmos:
+    name: "Build libauxmos.so"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/cache@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/auxmos
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-auxmos-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-auxmos-${{ hashFiles('**/dependencies.sh') }}
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-auxmos-
+    - uses: actions/cache/restore@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/byond
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        fail-on-cache-miss: true
+    - run: tools/starfly/ci/install_byond_linux.sh
+    - run: tools/starfly/ci/build_auxmos.sh
