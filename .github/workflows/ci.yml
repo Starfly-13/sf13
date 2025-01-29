@@ -10,8 +10,8 @@ on:
       - main
 
 jobs:
-  download_byond:
-    name: "Download BYOND"
+  build_linux:
+    name: "Build (Linux)"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -23,35 +23,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-
-    - name: Cache BYOND (Linux)
-      run: |
-        source dependencies.sh
-        if [ ! -f ${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip ]; then
-            mkdir -p ${{ github.workspace }}/cache/byond
-            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o "${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip"
-        fi
-    - name: Cache BYOND (Windows)
-      run: |
-        source dependencies.sh
-        if [ ! -f ${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip ]; then
-            mkdir -p ${{ github.workspace }}/cache/byond
-            curl "https://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip" -o "${{ github.workspace }}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip"
-        fi
-
-  build_linux:
-    name: "Build (Linux)"
-    needs: download_byond
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/cache/restore@v4
-      with:
-        path: |
-          ${{ github.workspace }}/cache/byond
-        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
-        restore-keys: |
-          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
-        fail-on-cache-miss: true
+    - run: tools/starfly/ci/download_byond_linux.sh
     - run: tools/starfly/ci/install_byond_linux.sh
     - name: Build Project
       run: |
@@ -60,18 +32,20 @@ jobs:
 
   build_windows:
     name: "Build (Windows)"
-    needs: download_byond
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/cache/restore@v4
+    - uses: actions/cache@v4
       with:
         path: |
           ${{ github.workspace }}/cache/byond
         key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
-        fail-on-cache-miss: true
-    - run: pwsh tools/starfly/ci/build.ps1
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-
+    - run: bash tools/starfly/ci/download_byond_windows.sh
+    - run: bash tools/starfly/ci/install_byond_windows.sh
+    - name: Build Project
+      run: pwsh tools/starfly/ci/build_windows.ps1
       env:
         DM_EXE: "C:\\byond\\bin\\dm.exe"
