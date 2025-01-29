@@ -42,7 +42,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-
-    - run: bash tools/starfly/ci/install_byond_windows.sh
     - name: Build Project
       run: pwsh tools/starfly/ci/build_windows.ps1
       env:
