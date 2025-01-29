@@ -57,3 +57,21 @@ jobs:
       run: |
         source ${HOME}/BYOND/byond/bin/byondsetup
         tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DFULL_INIT
+
+  build_windows:
+    name: "Build (Windows)"
+    needs: download_byond
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/cache/restore@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/byond
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        fail-on-cache-miss: true
+    - run: pwsh tools/starfly/ci/build.ps1
+      env:
+        DM_EXE: "C:\\byond\\bin\\dm.exe"
