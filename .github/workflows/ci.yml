@@ -23,7 +23,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-
-    - run: tools/starfly/ci/download_byond_linux.sh
     - run: tools/starfly/ci/install_byond_linux.sh
     - name: Build Project
       run: |
@@ -38,12 +37,11 @@ jobs:
     - uses: actions/cache@v4
       with:
         path: |
-          ${{ github.workspace }}/cache/byond
+          C:/byond.zip
         key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
         restore-keys: |
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-
-    - run: bash tools/starfly/ci/download_byond_windows.sh
     - run: bash tools/starfly/ci/install_byond_windows.sh
     - name: Build Project
       run: pwsh tools/starfly/ci/build_windows.ps1

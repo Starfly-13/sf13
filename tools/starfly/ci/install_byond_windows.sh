@@ -3,11 +3,7 @@
 
 set -euo pipefail
 source dependencies.sh
-BYOND_ZIP="${GITHUB_WORKSPACE}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip"
-if [ ! -f ${BYOND_ZIP} ]; then
-    echo "${BYOND_ZIP} not found; cannot install BYOND"
-    exit 1
+if [ ! -f C:/byond.zip ]; then
+    curl "http://www.byond.com/download/build/$BYOND_MAJOR/$BYOND_MAJOR.${BYOND_MINOR}_byond.zip" -o C:/byond.zip
 fi
-cp -v "${GITHUB_WORKSPACE}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond.zip" C:/byond.zip
 unzip C:/byond.zip
-rm C:/byond.zip
