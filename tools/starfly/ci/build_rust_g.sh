@@ -17,6 +17,10 @@ fi
 git fetch origin --depth=1 $RUST_G_VERSION
 git reset --hard FETCH_HEAD
 
+sudo dpkg --add-architecture i386
+sudo apt update || true
+sudo apt install -o APT::Immediate-Configure=false g++-multilib libssl-dev:i386 libgcc-s1:i386 zlib1g-dev:i386
+
 rustup target add i686-unknown-linux-gnu
 
 env PKG_CONFIG_ALLOW_CROSS=1 cargo build --release --target=i686-unknown-linux-gnu
