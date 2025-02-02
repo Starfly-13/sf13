@@ -70,3 +70,19 @@ jobs:
         fail-on-cache-miss: true
     - run: tools/starfly/ci/install_byond_linux.sh
     - run: tools/starfly/ci/build_auxmos.sh
+
+  build_rustg:
+    name: "Build librust_g.so"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/cache@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/rustg
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-rustg-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-rustg-${{ hashFiles('**/dependencies.sh') }}
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-rustg-
+    - run: rustup update stable && rustup default stable
+    - run: tools/starfly/ci/build_rust_g.sh
