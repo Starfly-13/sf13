@@ -106,6 +106,15 @@ jobs:
         - "PLANET_GEN_TEST"
         - "RUIN_PLACEMENT_TEST"
         - "SHIP_PLACEMENT_TEST"
+
+    services:
+      mariadb:
+        image: mariadb:latest
+        env:
+          MYSQL_ROOT_PASSWORD: oopy-pants
+        ports:
+          - 3306
+
     steps:
     - name: "Checkout Project"
       uses: actions/checkout@v4
@@ -149,16 +158,35 @@ jobs:
     - name: "Prepare BYOND"
       run: |
         tools/starfly/ci/install_byond_linux.sh
-        source ~/BYOND/byond/bin/byondsetup
         cp -v ${{ github.workspace }}/cache/auxmos/libauxmos.so ~/BYOND/byond/bin/libauxmos.so
         cp -v ${{ github.workspace }}/cache/rustg/librust_g.so ~/BYOND/byond/bin/librust_g.so
-        ls -l ~/BYOND/byond/bin && echo
-        ldd ~/BYOND/byond/bin/DreamDaemon && echo
-        ldd ~/BYOND/byond/bin/DreamMaker && echo
-        ldd ~/BYOND/byond/bin/libbyond.so && echo
-        ldd ~/BYOND/byond/bin/libext.so && echo
-        ldd ~/BYOND/byond/bin/libauxmos.so && echo
-        ldd ~/BYOND/byond/bin/librust_g.so && echo
+
+    # - name: "Debug: Prepare BYOND"
+    #   run:
+    #     source ~/BYOND/byond/bin/byondsetup
+    #     ls -l ~/BYOND/byond/bin && echo
+    #     ldd ~/BYOND/byond/bin/DreamDaemon && echo
+    #     ldd ~/BYOND/byond/bin/DreamMaker && echo
+    #     ldd ~/BYOND/byond/bin/libbyond.so && echo
+    #     ldd ~/BYOND/byond/bin/libext.so && echo
+    #     ldd ~/BYOND/byond/bin/libauxmos.so && echo
+    #     ldd ~/BYOND/byond/bin/librust_g.so && echo
+
+    - name: "Setup MariaDB Database"
+      run: |
+        sudo systemctl start mariadb
+        mysql -u root -poopy-pants -e 'CREATE DATABASE tg_ci;'
+        mysql -u root -poopy-pants tg_ci < SQL/tgstation_schema.sql
+
+    - name: "Compile Tests"
+      run: |
+        source ~/BYOND/byond/bin/byondsetup
+        tools/build/build --ci dm -DCIBUILDING -DANSICOLORS -D${{ matrix.test_name }}
+
+    - name: "Run Tests"
+      run: |
+        source ~/BYOND/byond/bin/byondsetup
+        bash tools/ci/run_server.sh
 
   # run_integration_tests:
   #   runs-on: ubuntu-latest
