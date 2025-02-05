@@ -174,7 +174,6 @@ jobs:
 
     - name: "Setup MariaDB Database"
       run: |
-        sudo systemctl start mariadb
         mysql -u root -poopy-pants -e 'CREATE DATABASE tg_ci;'
         mysql -u root -poopy-pants tg_ci < SQL/tgstation_schema.sql
 
