@@ -149,15 +149,15 @@ jobs:
     - name: "Prepare BYOND"
       run: |
         tools/starfly/ci/install_byond_linux.sh
-        cp -v ${{ github.workspace }}/cache/auxmos/libauxmos.so ~/.byond/bin/libauxmos.so
-        cp -v ${{ github.workspace }}/cache/rustg/librust_g.so ~/.byond/bin/librust_g.so
-        ls -l ~/.byond/bin && echo
-        ldd ~/.byond/bin/DreamDaemon && echo
-        ldd ~/.byond/bin/DreamMaker && echo
-        ldd ~/.byond/bin/libbyond.so && echo
-        ldd ~/.byond/bin/libext.so && echo
-        ldd ~/.byond/bin/libauxmos.so && echo
-        ldd ~/.byond/bin/librust_g.so && echo
+        cp -v ${{ github.workspace }}/cache/auxmos/libauxmos.so ~/BYOND/byond/bin/libauxmos.so
+        cp -v ${{ github.workspace }}/cache/rustg/librust_g.so ~/BYOND/byond/bin/librust_g.so
+        ls -l ~/BYOND/byond/bin && echo
+        ldd ~/BYOND/byond/bin/DreamDaemon && echo
+        ldd ~/BYOND/byond/bin/DreamMaker && echo
+        ldd ~/BYOND/byond/bin/libbyond.so && echo
+        ldd ~/BYOND/byond/bin/libext.so && echo
+        ldd ~/BYOND/byond/bin/libauxmos.so && echo
+        ldd ~/BYOND/byond/bin/librust_g.so && echo
 
   # run_integration_tests:
   #   runs-on: ubuntu-latest
