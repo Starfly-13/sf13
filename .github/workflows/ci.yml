@@ -149,6 +149,7 @@ jobs:
     - name: "Prepare BYOND"
       run: |
         tools/starfly/ci/install_byond_linux.sh
+        source ~/BYOND/byond/bin/byondsetup
         cp -v ${{ github.workspace }}/cache/auxmos/libauxmos.so ~/BYOND/byond/bin/libauxmos.so
         cp -v ${{ github.workspace }}/cache/rustg/librust_g.so ~/BYOND/byond/bin/librust_g.so
         ls -l ~/BYOND/byond/bin && echo
