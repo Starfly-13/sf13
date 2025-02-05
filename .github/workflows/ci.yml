@@ -10,8 +10,15 @@ on:
       - main
 
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: tools/starfly/ci/lint.sh
+
   build_linux:
-    name: "Build (Linux)"
+    name: "Build shiptest.dmb (Linux)"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -30,7 +37,7 @@ jobs:
         tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DFULL_INIT
 
   build_windows:
-    name: "Build (Windows)"
+    name: "Build shiptest.dmb (Windows)"
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
@@ -87,13 +94,6 @@ jobs:
     - run: rustup update stable && rustup default stable
     - run: tools/starfly/ci/build_rust_g.sh
 
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-
-
   run_integration_tests:
     name: "Integration Tests"
     runs-on: ubuntu-latest
@@ -140,11 +140,24 @@ jobs:
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-rustg-${{ hashFiles('**/dependencies.sh') }}
         fail-on-cache-miss: true
 
-    - run: |
-        echo "Running test ${{ matrix.test_name }}"
-        ls -l ${{ github.workspace }}/cache/byond
-        ls -l ${{ github.workspace }}/cache/auxmos
-        ls -l ${{ github.workspace }}/cache/rustg
+    - name: "Install System Packages"
+      run: |
+        dpkg --add-architecture i386
+        apt update || true
+        apt install -o APT::Immediate-Configure=false libssl-dev:i386 libgcc-s1:i386
+
+    - name: "Prepare BYOND"
+      run: |
+        tools/starfly/ci/install_byond_linux.sh
+        cp -v ${{ github.workspace }}/cache/auxmos/libauxmos.so ~/.byond/bin/libauxmos.so
+        cp -v ${{ github.workspace }}/cache/rustg/librust_g.so ~/.byond/bin/librust_g.so
+        ls -l ~/.byond/bin && echo
+        ldd ~/.byond/bin/DreamDaemon && echo
+        ldd ~/.byond/bin/DreamMaker && echo
+        ldd ~/.byond/bin/libbyond.so && echo
+        ldd ~/.byond/bin/libext.so && echo
+        ldd ~/.byond/bin/libauxmos.so && echo
+        ldd ~/.byond/bin/librust_g.so && echo
 
   # run_integration_tests:
   #   runs-on: ubuntu-latest
