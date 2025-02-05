@@ -174,8 +174,8 @@ jobs:
 
     - name: "Setup MariaDB Database"
       run: |
-        mysql --host mariadb --port 3306 -u root -poopy-pants -e 'CREATE DATABASE tg_ci;'
-        mysql --host mariadb --port 3306 -u root -poopy-pants tg_ci < SQL/tgstation_schema.sql
+        mysql --host 127.0.0.1 --port 3306 -u root -poopy-pants -e 'CREATE DATABASE tg_ci;'
+        mysql --host 127.0.0.1 --port 3306 -u root -poopy-pants tg_ci < SQL/tgstation_schema.sql
 
     - name: "Compile Tests"
       run: |
