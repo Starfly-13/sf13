@@ -10,8 +10,15 @@ on:
       - main
 
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: tools/starfly/ci/lint.sh
+
   build_linux:
-    name: "Build (Linux)"
+    name: "Build shiptest.dmb (Linux)"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -30,7 +37,7 @@ jobs:
         tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DFULL_INIT
 
   build_windows:
-    name: "Build (Windows)"
+    name: "Build shiptest.dmb (Windows)"
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
@@ -86,3 +93,107 @@ jobs:
           ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-rustg-
     - run: rustup update stable && rustup default stable
     - run: tools/starfly/ci/build_rust_g.sh
+
+  build_docker:
+    name: "Build Docker Image"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: docker/build-push-action@v4
+      with:
+        context: .
+        push: false
+
+  run_integration_tests:
+    name: "Integration Tests"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        test_name:
+        - "BASIC_TESTS"
+        - "CREATE_AND_DESTROY_TEST"
+        - "PLANET_GEN_TEST"
+        - "RUIN_PLACEMENT_TEST"
+        - "SHIP_PLACEMENT_TEST"
+
+    services:
+      mariadb:
+        image: mariadb:latest
+        env:
+          MYSQL_ROOT_PASSWORD: oopy-pants
+        ports:
+          - 23306:3306
+
+    steps:
+    - name: "Checkout Project"
+      uses: actions/checkout@v4
+
+    - name: "Restore BYOND"
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/byond
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        fail-on-cache-miss: true
+
+    - name: "Restore libauxmos.so"
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/auxmos
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-auxmos-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-auxmos-${{ hashFiles('**/dependencies.sh') }}
+        fail-on-cache-miss: true
+
+    - name: "Restore librust_g.so"
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/rustg
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-rustg-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-rustg-${{ hashFiles('**/dependencies.sh') }}
+        fail-on-cache-miss: true
+
+    - name: "Install System Packages"
+      run: |
+        sudo dpkg --add-architecture i386
+        sudo apt update || true
+        sudo apt install -o APT::Immediate-Configure=false libssl-dev:i386 libgcc-s1:i386
+
+    - name: "Prepare BYOND"
+      run: |
+        tools/starfly/ci/install_byond_linux.sh
+        cp -v ${{ github.workspace }}/cache/auxmos/libauxmos.so ~/BYOND/byond/bin/libauxmos.so
+        cp -v ${{ github.workspace }}/cache/rustg/librust_g.so ~/BYOND/byond/bin/librust_g.so
+
+    # - name: "Debug: Prepare BYOND"
+    #   run:
+    #     source ~/BYOND/byond/bin/byondsetup
+    #     ls -l ~/BYOND/byond/bin && echo
+    #     ldd ~/BYOND/byond/bin/DreamDaemon && echo
+    #     ldd ~/BYOND/byond/bin/DreamMaker && echo
+    #     ldd ~/BYOND/byond/bin/libbyond.so && echo
+    #     ldd ~/BYOND/byond/bin/libext.so && echo
+    #     ldd ~/BYOND/byond/bin/libauxmos.so && echo
+    #     ldd ~/BYOND/byond/bin/librust_g.so && echo
+
+    - name: "Setup MariaDB Database"
+      run: |
+        mysql --host 127.0.0.1 --port 23306 -u root -poopy-pants -e 'CREATE DATABASE tg_ci;'
+        mysql --host 127.0.0.1 --port 23306 -u root -poopy-pants tg_ci < SQL/tgstation_schema.sql
+
+    - name: "Compile Tests"
+      run: |
+        source ~/BYOND/byond/bin/byondsetup
+        tools/build/build --ci dm -DCIBUILDING -DANSICOLORS -D${{ matrix.test_name }}
+
+    - name: "Run Tests"
+      run: |
+        source ~/BYOND/byond/bin/byondsetup
+        bash tools/ci/run_server.sh
