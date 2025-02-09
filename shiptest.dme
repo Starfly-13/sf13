@@ -3572,6 +3572,7 @@
 #include "modular_starfly\modules\sinta_unathi\_defines.dm"
 #include "modular_starfly\modules\sinta_unathi\draconic.dm"
 #include "modular_starfly\modules\sinta_unathi\ipc.dm"
+#include "modular_starfly\modules\sinta_unathi\lizard_bodyparts.dm"
 #include "modular_starfly\modules\sinta_unathi\lizardpeople.dm"
 #include "modular_starfly\modules\sinta_unathi\mining_base.dm"
 #include "modular_starfly\modules\sinta_unathi\tails.dm"
