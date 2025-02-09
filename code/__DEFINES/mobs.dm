@@ -90,7 +90,19 @@
 #define SPECIES_SLIMEPERSON "slime_person"
 #define SPECIES_LUMINESCENT "luminescent"
 #define SPECIES_STARGAZER "stargazer"
-#define SPECIES_SARATHI "sarathi"
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+	#define SPECIES_SARATHI "sarathi"
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+	#define SPECIES_SARATHI "sinta"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 #define SPECIES_ASHWALKER "ashwalker"
 #define SPECIES_KOBOLD "kobold"
 #define SPECIES_MONKEY "monkey"

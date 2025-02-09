@@ -266,6 +266,10 @@
 	name = "None"
 	icon_state = "none"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /datum/sprite_accessory/ipc_tail/lizard
 	name = "Synthetic Sarathi"
 	icon_state = "synth"
@@ -273,6 +277,10 @@
 /datum/sprite_accessory/ipc_tail/lizard_big
 	name = "Synthetic Sarathi Large"
 	icon_state = "large"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
 
 /datum/sprite_accessory/ipc_tail/plug
 	name = "Power Plug"

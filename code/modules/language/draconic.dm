@@ -1,3 +1,7 @@
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /datum/language/draconic
 	name = "Kalixcian Common"
 	desc = "The most prevalent language to come out of Kalixcis, and generally understood by all those native to it."
@@ -19,3 +23,7 @@
 	)
 	icon_state = "lizard"
 	default_priority = 90
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------

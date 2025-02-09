@@ -7,6 +7,10 @@
 	. = ..()
 	take_damage(rand(120, 150),BRUTE)
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/effect/mob_spawn/human/corpse/ruin/ns_mine_manager
 	mob_name = "gruff sarathi man"
 	mob_gender = MALE
@@ -14,6 +18,10 @@
 	icon_state = "corpsehuman"
 	outfit = /datum/outfit/job/nanotrasen/quartermaster
 	brute_damage = 120
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/effect/mob_spawn/human/corpse/ruin/ns_mine_miner
 	outfit = /datum/outfit/job/nanotrasen/miner
@@ -41,6 +49,10 @@
 /obj/item/taperecorder/preset/mining_base
 	starting_tape_type = /obj/item/tape/random/preset/mining_base/one
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/item/tape/random/preset/mining_base/one
 	ruined = 1
 	used_capacity = 120
@@ -91,3 +103,7 @@
 		50,
 		120
 	)
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
