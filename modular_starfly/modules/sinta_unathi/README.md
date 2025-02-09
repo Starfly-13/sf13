@@ -18,8 +18,10 @@ Replaces Sarathi with Sinta'Unathi as the default lizard race.
 
 ### Modular Overrides
 
+- `modular_starfly/modules/sinta_unathi/icons/bodyparts.dmi`
 - `modular_starfly/modules/sinta_unathi/draconic.dm`: `/datum/language/draconic`
 - `modular_starfly/modules/sinta_unathi/ipc.dm`: `/datum/sprite_accessory/ipc_tail/lizard`, `/datum/sprite_accessory/ipc_tail/lizard_big`
+- `modular_starfly/modules/sinta_unathi/lizard_bodyparts.dm`: `/obj/item/bodypart/**/lizard`
 - `modular_starfly/modules/sinta_unathi/lizardpeople.dm`: `/datum/species/lizard`
 - `modular_starfly/modules/sinta_unathi/mining_base.dm`: `/obj/effect/mob_spawn/human/corpse/ruin/ns_mine_manager`, `/obj/item/tape/random/preset/mining_base/one`
 - `modular_starfly/modules/sinta_unathi/tails.dm`: `/obj/item/organ/tail/lizard`

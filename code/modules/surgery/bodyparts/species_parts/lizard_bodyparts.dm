@@ -1,3 +1,7 @@
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/item/bodypart/head/lizard
 	icon = 'icons/mob/species/lizard/bodyparts.dmi'
 	icon_state = "sarathi_head"
@@ -46,3 +50,7 @@
 	icon = 'icons/mob/species/lizard/bodyparts.dmi'
 	icon_state = "sarathi_r_leg_digitigrade"
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC | BODYTYPE_DIGITIGRADE
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
