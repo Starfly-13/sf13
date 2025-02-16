@@ -1,12 +1,10 @@
-https://github.com/Starfly-13/sf13/pull/16
+# Yeosa'Unathi
 
-## Yeosa'Unathi
-
-Module ID: YEOSA_UNATHI
+Module ID: `YEOSA_UNATHI`
 
 ### Description:
 
-Adds new Yeosa'Unathi race as another lizard race.
+Add new Yeosa'Unathi race as another lizard race.
 
 ### TG Proc/File Changes:
 
@@ -37,5 +35,6 @@ E.g:
 
 ### Credits:
 
-- LectroNyx is the original author of this module.
+- Patrick Meade created this module.
+- LectroNyx is the original author of the content of this module.
 - Most of this content first appeared here: https://github.com/Starfly-13/STARFLY-13/pull/14

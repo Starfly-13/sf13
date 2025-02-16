@@ -36,6 +36,27 @@ jobs:
         source ${HOME}/BYOND/byond/bin/byondsetup
         tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DFULL_INIT
 
+  build_modules_off:
+    name: "Build shiptest.dmb (Modules Disabled)"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/cache/restore@v4
+      with:
+        path: |
+          ${{ github.workspace }}/cache/byond
+        key: ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-${{ hashFiles('**/dependencies.sh') }}
+          ${{ runner.os }}-${{ secrets.CACHE_PURGE_KEY }}-byond-
+    - run: tools/starfly/ci/install_byond_linux.sh
+    - name: Build Project
+      run: |
+        sed -i -e 's.#define.// #define.g' code/__DEFINES/__starfly.dm
+        sed -i -e 's.true.false.g' tgui/packages/tgui/starfly.ts
+        source ${HOME}/BYOND/byond/bin/byondsetup
+        tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DFULL_INIT
+
   build_windows:
     name: "Build shiptest.dmb (Windows)"
     runs-on: windows-latest

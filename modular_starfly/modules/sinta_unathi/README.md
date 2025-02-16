@@ -1,14 +1,12 @@
-https://github.com/Starfly-13/sf13/pull/13
+# Sinta'Unathi
 
-## Sinta'Unathi
+Module ID: `SINTA_UNATHI`
 
-Module ID: SINTA_UNATHI
-
-### Description
+## Description
 
 Replaces Sarathi with Sinta'Unathi as the default lizard race.
 
-### ST Proc/File Changes
+## ST Proc/File Changes
 
 - `code/__DEFINES/mobs.dm`: `SPECIES_SARATHI`
 - `code/modules/projectiles/guns/ballistic/launchers.dm`: `rpg_scrawlings`
@@ -16,7 +14,7 @@ Replaces Sarathi with Sinta'Unathi as the default lizard race.
 - `config/game_options.txt`: `ROUNDSTART_RACES sinta`
 - `tgui/packages/tgui/interfaces/ScannerGate.js`: `TARGET_SPECIES_LIST`
 
-### Modular Overrides
+## Modular Overrides
 
 - `modular_starfly/modules/sinta_unathi/icons/bodyparts.dmi`
 - `modular_starfly/modules/sinta_unathi/draconic.dm`: `/datum/language/draconic`
@@ -26,18 +24,19 @@ Replaces Sarathi with Sinta'Unathi as the default lizard race.
 - `modular_starfly/modules/sinta_unathi/mining_base.dm`: `/obj/effect/mob_spawn/human/corpse/ruin/ns_mine_manager`, `/obj/item/tape/random/preset/mining_base/one`
 - `modular_starfly/modules/sinta_unathi/tails.dm`: `/obj/item/organ/tail/lizard`
 
-### Defines
+## Defines
 
 - `code/__DEFINES/__STARFLY/__modules.dm`: `STARFLY13_MODULE_SINTA_UNATHI_ENABLED`
 - `modular_starfly/modules/sinta_unathi/_defines.dm`: `SPECIES_LIZARD`
 - `modular_starfly/modules/sinta_unathi/_defines.dm`: `SPECIES_SINTA`
 - `modular_starfly/modules/sinta_unathi/_defines.dm`: `SPECIES_UNATHI`
 
-### Included files that are not contained in this module
+## Included files that are not contained in this module
 
 - N/A
 
-### Credits
+## Credits
 
-- LectroNyx is the original author of this module.
+- Patrick Meade created this module.
+- LectroNyx is the original author of the content of this module.
 - Most of this content first appeared here: https://github.com/Starfly-13/STARFLY-13/pull/11

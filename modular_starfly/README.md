@@ -144,7 +144,7 @@ Such modules, unless _very_ simple, **need** to have a `readme.md` in their fold
 - (optionally) a bit more elaborative documentation for future-proofing the code,  that will be useful further development and maintenance
 - credits
 
-***Template:*** [Here](module_template.md)
+***Template:*** [Here](template.md)
 
 ## Modular Overrides (Important!!)
 
