@@ -57,8 +57,21 @@ GLOBAL_LIST_INIT(rpg_scrawlings, list(
 	"\"Portable Demotion\"",
 	"A drawing of the Rilena character 'T4L1' smoking a boof",
 	"\"Eat it corpo!\"",
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 	"A Sarathi woman in a suggestive pose",
 	"A masculine Sarathi shouldering a launcher",
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+	"A Unathi woman in a suggestive pose",
+	"A masculine Unathi shouldering a launcher",
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 	"A Vox woman with a sledgehammer over their shoulder",
 	"A man in a floral patterned shirt and nothing else, drawn leaning against the rocket's tube",
 	"A crudely-drawn picture of a Gorlex Marauder exploding",

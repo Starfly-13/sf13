@@ -40,6 +40,10 @@
 		color = H.hair_color
 		H.update_body()
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/item/organ/tail/lizard
 	name = "\improper Sarathi tail"
 	desc = "A severed Sarathi's tail. Can't they regrow these...?"
@@ -47,6 +51,10 @@
 	color = "#116611"
 	tail_type = "Smooth"
 	var/spines = "None"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/item/organ/tail/lizard/Initialize()
 	. = ..()

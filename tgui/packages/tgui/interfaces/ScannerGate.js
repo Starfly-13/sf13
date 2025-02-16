@@ -2,6 +2,13 @@ import { useBackend } from '../backend';
 import { Box, Button, LabeledList, NumberInput, Section } from '../components';
 import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
 import { Window } from '../layouts';
+//------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN - SINTA_UNATHI
+//------------------------------------------------------------------------------
+import { STARFLY13 } from '../starfly';
+//------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION END - SINTA_UNATHI
+//------------------------------------------------------------------------------
 
 const DISEASE_THEASHOLD_LIST = [
   'Positive',
@@ -19,7 +26,13 @@ const TARGET_SPECIES_LIST = [
     value: 'human',
   },
   {
-    name: 'Sarathi',
+//------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN - SINTA_UNATHI
+//------------------------------------------------------------------------------
+    name: (STARFLY13.MODULE_SINTA_UNATHI_ENABLED ? 'Unathi' : 'Sarathi'),
+//------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE END - SINTA_UNATHI
+//------------------------------------------------------------------------------
     value: 'lizard',
   },
   {
