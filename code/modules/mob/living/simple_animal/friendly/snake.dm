@@ -143,7 +143,10 @@
 					to_chat(usr, "<span class='notice'>You fit the glasses onto [src].</span>")
 					update_overlays()
 
-#ifdef CULL_THE_BOOKWORM
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 #define MAX_BOOKWORM_BOOKS 20
 
 /mob/living/simple_animal/hostile/retaliate/poison/snake/bookworm
@@ -220,4 +223,7 @@
 			qdel(O)
 			return
 	..()
-#endif // #ifdef CULL_THE_BOOKWORM
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
