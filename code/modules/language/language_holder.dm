@@ -269,11 +269,40 @@ Key procs
 /datum/language_holder/lizard
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 								/datum/language/draconic = list(LANGUAGE_ATOM))
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/draconic = list(LANGUAGE_ATOM))
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+							/datum/language/draconic = list(LANGUAGE_ATOM),
+							/datum/language/yeosa = list(LANGUAGE_ATOM))
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 
 /datum/language_holder/lizard/ash
 	selected_language = /datum/language/draconic
+
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN
+#ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+/datum/language_holder/yeosa
+	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/yeosa = list(LANGUAGE_ATOM))
+	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+							/datum/language/draconic = list(LANGUAGE_ATOM),
+							/datum/language/yeosa = list(LANGUAGE_ATOM))
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+// STARFLY EDIT - ADDITION END
+//---------------------------------------------------------------------------------------------------------------------
 
 /datum/language_holder/monkey
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
@@ -330,11 +359,27 @@ Key procs
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/calcic = list(LANGUAGE_ATOM))
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_LANGUAGE_KALIXCIS_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /datum/language_holder/ethereal
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 								/datum/language/draconic = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/draconic = list(LANGUAGE_ATOM))
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+/datum/language_holder/ethereal
+	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/kalixcis = list(LANGUAGE_ATOM))
+	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+							/datum/language/kalixcis = list(LANGUAGE_ATOM))
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_LANGUAGE_KALIXCIS_ENABLED
+// STARFLY EDIT - CHANGE BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /datum/language_holder/fly
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),

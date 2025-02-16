@@ -75,9 +75,23 @@ GLOBAL_LIST_INIT(patrons, world.file2list("[global.config.directory]/patrons.txt
 	screen_loc = null
 	return ..()
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /atom/movable/screen/credit/title_card
 	icon = 'icons/title_cards.dmi'
 	screen_loc = "4,1"
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+/atom/movable/screen/credit/title_card
+	icon = 'modular_starfly/modules/starfly_branding/icons/title_cards.dmi'
+	screen_loc = "4,1"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 
 /atom/movable/screen/credit/title_card/Initialize(mapload, credited, title_icon_state)
 	icon_state = title_icon_state

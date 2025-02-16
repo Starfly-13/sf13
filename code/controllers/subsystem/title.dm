@@ -31,8 +31,21 @@ SUBSYSTEM_DEF(title)
 	if(length(title_screens))
 		file_path = "[global.config.directory]/title_screens/images/[pick(title_screens)]"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 	if(!file_path)
 		file_path = "icons/runtime/default_title.dmi"
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+	if(!file_path)
+		file_path = 'modular_starfly/modules/starfly_branding/icons/default_title.dmi'
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 
 	ASSERT(fexists(file_path))
 
