@@ -86,7 +86,7 @@ GLOBAL_LIST_INIT(patrons, world.file2list("[global.config.directory]/patrons.txt
 #else
 //---------------------------------------------------------------------------------------------------------------------
 /atom/movable/screen/credit/title_card
-	icon = 'modular_starfly/modules/starfly_branding/icons/title_cards.dmi'
+	icon = 'icons/starfly_title_cards.dmi'
 	screen_loc = "4,1"
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
