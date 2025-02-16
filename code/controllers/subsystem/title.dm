@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(title)
 #else
 //---------------------------------------------------------------------------------------------------------------------
 	if(!file_path)
-		file_path = 'icons/runtime/starfly_title.dmi'
+		file_path = "icons/runtime/starfly_title.dmi"
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
 // STARFLY EDIT - CHANGE END
