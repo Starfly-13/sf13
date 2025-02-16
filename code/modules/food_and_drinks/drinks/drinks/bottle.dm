@@ -232,12 +232,20 @@
 	desc = "A higher shelf absinthe, distributed primarily from The Shoal. Features the folkhero Chacheyi on the label, alongside their goldgrub companions."
 	icon_state = "absinthepremium"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine
 	name = "bottle of Blueflame Pyrecask"
 	desc = "An alcoholic beverage originating from isolated vineyards on Zohil, maintained by the reclusive religious sects of the Blueflame. Now considered so popular and high quality, imitation bottles can be found everywhere. Check the label for point of origin."
 	icon_state = "lizardwine"
 	list_reagents = list(/datum/reagent/consumable/ethanol/lizardwine = 100)
 	foodtype = FRUIT | ALCOHOL
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/item/reagent_containers/food/drinks/bottle/hcider
 	name = "Neue Hamburg Spiced"
