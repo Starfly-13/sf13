@@ -73,6 +73,15 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/cmd_admin_world_narrate,	/*sends text to all players with no padding*/
 	/client/proc/cmd_admin_local_narrate,	/*sends text to all mobs within view of atom*/
 	/client/proc/cmd_admin_check_player_exp, /* shows players by playtime */
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN
+#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+//---------------------------------------------------------------------------------------------------------------------
+	/client/proc/freeze,
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+// STARFLY EDIT - ADDITION END
+//---------------------------------------------------------------------------------------------------------------------
 	/client/proc/toggle_combo_hud, // toggle display of the combination pizza antag and taco sci/med/eng hud
 	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
 	/client/proc/toggleprayers,

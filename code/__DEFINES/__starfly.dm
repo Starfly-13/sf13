@@ -32,8 +32,11 @@
 
 //---------------------------------------------------------------------------
 
+// See also: tgui/packages/tgui/starfly.ts
+
 // Alphabetical List of All STARFLY-13 Module Defines
 
+#define STARFLY13_MODULE_ADMIN_VERB_FREEZE
 #define STARFLY13_MODULE_LANGUAGE_KALIXCIS_ENABLED
 #define STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
 #define STARFLY13_MODULE_ROSEUS_GALACTIC_ENABLED
