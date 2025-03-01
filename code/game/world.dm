@@ -304,8 +304,21 @@ GLOBAL_VAR(restart_counter)
 	var/discord_url
 	var/github_url
 	if(isnull(config))
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 		discord_url = "https://shiptest.net/discord"
 		github_url = "https://github.com/shiptest-ss13/Shiptest"
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+		discord_url = "https://discord.gg/aCU5gY9EnK"
+		github_url = "https://github.com/Starfly-13/sf13"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 	else
 		discord_url = CONFIG_GET(string/discordurl)
 		github_url = CONFIG_GET(string/githuburl)
