@@ -137,6 +137,10 @@
 #include "ship_outpost_placement.dm"
 #endif //SHIP_PLACEMENT_TEST
 
+#ifdef STARFLY13_TEST
+#include "starfly13.dm"
+#endif //STARFLY13_TEST
+
 #include "unit_test.dm"
 
 #undef TEST_ASSERT

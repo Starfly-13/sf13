@@ -85,6 +85,7 @@
 #define PLANET_GEN_TEST
 #define RUIN_PLACEMENT_TEST
 #define SHIP_PLACEMENT_TEST
+#define STARFLY13_TEST
 #endif
 
 #if defined(OPENDREAM)
