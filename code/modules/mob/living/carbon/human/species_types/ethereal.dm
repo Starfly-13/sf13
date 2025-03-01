@@ -50,7 +50,19 @@
 	var/current_color
 	var/EMPeffect = FALSE
 	var/static/unhealthy_color = rgb(237, 164, 149)
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 	loreblurb = "Elzuosa are an uncommon and unusual species best described as crystalline, electrically-powered plantpeople. They hail from the warm planet Kalixcis, where they evolved alongside the Sarathi. Kalixcian culture places no importance on blood-bonds, and those from it tend to consider their family anyone they are sufficiently close to, and choose their own names."
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+	loreblurb = "Elzuosa are an uncommon and unusual species best described as crystalline, electrically-powered plantpeople. They hail from the tropical planet Kalixcis. Their culture places no importance on blood-bonds, and those from it tend to consider their family anyone they are sufficiently close to, and choose their own names."
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 	var/drain_time = 0 //used to keep ethereals from spam draining power sources
 	var/obj/effect/dummy/lighting_obj/ethereal_light
 	var/datum/action/innate/root/rooting
