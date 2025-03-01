@@ -163,12 +163,12 @@
 	if(_codeword)
 		codeword = _codeword
 	else
-		codeword = pick(strings("ion_laws.json", "ionabstract")\
-			| strings("ion_laws.json", "ionobjects")\
-			| strings("ion_laws.json", "ionadjectives")\
-			| strings("ion_laws.json", "ionthreats")\
-			| strings("ion_laws.json", "ionfood")\
-			| strings("ion_laws.json", "iondrinks"))
+		codeword = pick(strings(ION_FILE, "ionabstract")\
+			| strings(ION_FILE, "ionobjects")\
+			| strings(ION_FILE, "ionadjectives")\
+			| strings(ION_FILE, "ionthreats")\
+			| strings(ION_FILE, "ionfood")\
+			| strings(ION_FILE, "iondrinks"))
 
 /datum/brain_trauma/severe/split_personality/brainwashing/on_gain()
 	..()

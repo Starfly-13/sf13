@@ -138,6 +138,7 @@ jobs:
         - "PLANET_GEN_TEST"
         - "RUIN_PLACEMENT_TEST"
         - "SHIP_PLACEMENT_TEST"
+        - "STARFLY13_TEST"
 
     services:
       mariadb:
