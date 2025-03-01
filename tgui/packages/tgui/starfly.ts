@@ -16,13 +16,14 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-// See: code/__DEFINES/__STARFLY/__modules.dm
+// See also: code/__DEFINES/__starfly.dm
 
 // This file defines STARFLY-13 modules enabled in the codebase.
 // TGUI code should modify its interfaces based on the constants
 // defined in this file.
 
 export const STARFLY13 = {
+	MODULE_ADMIN_VERB_FREEZE: true,
 	MODULE_LANGUAGE_KALIXCIS_ENABLED: true,
 	MODULE_PATCH_UPSTREAM_ENABLED: true,
 	MODULE_ROSEUS_GALACTIC_ENABLED: true,
