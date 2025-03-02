@@ -1,0 +1,6 @@
+# starfly13_config.txt
+
+## Apply symptoms of cryosleep to characters when first spawning on a ship
+## Comment this out if you want characters to skip the cryo sickness stuff
+## and jump straight to it
+CRYOSLEEP_SYMPTOMS
