@@ -116,6 +116,15 @@
 #define SPECIES_KEPORI "kepori"
 #define SPECIES_VAMPIRE "vampire"
 #define SPECIES_VOX "vox"
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN
+#ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+#define SPECIES_YEOSA "yeosa"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+// STARFLY EDIT - ADDITION END
+//---------------------------------------------------------------------------------------------------------------------
 #define SPECIES_ZOMBIE "zombie"
 #define SPECIES_XENOMORPH "xenomorph"
 
