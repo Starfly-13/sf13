@@ -43,7 +43,8 @@
 		"ra", "ar", "re", "er", "ri", "ir", "ro", "or", "ru", "ur", "rs", "sr",
 		"a",  "a",  "e",  "e",  "i",  "i",  "o",  "o",  "u",  "u",  "s",  "s"
 	)
-	icon_state = "lizard"
+	icon = 'modular_starfly/modules/yeosa_unathi/icons/language.dmi'
+	icon_state = "squiddish"
 	default_priority = 90
 
 //---------------------------------------------------------------------------------------------------------------------

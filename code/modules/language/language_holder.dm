@@ -267,20 +267,22 @@ Key procs
 	blocked_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
 
 /datum/language_holder/lizard
-	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/draconic = list(LANGUAGE_ATOM))
 //---------------------------------------------------------------------------------------------------------------------
 // STARFLY EDIT - CHANGE BEGIN
 #ifndef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
+	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/draconic = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/draconic = list(LANGUAGE_ATOM))
 //---------------------------------------------------------------------------------------------------------------------
 #else
 //---------------------------------------------------------------------------------------------------------------------
+	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/yeosa = list(LANGUAGE_ATOM),
+								/datum/language/draconic = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-							/datum/language/draconic = list(LANGUAGE_ATOM),
-							/datum/language/yeosa = list(LANGUAGE_ATOM))
+							/datum/language/draconic = list(LANGUAGE_ATOM))
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifndef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
 // STARFLY EDIT - CHANGE END
@@ -295,9 +297,9 @@ Key procs
 //---------------------------------------------------------------------------------------------------------------------
 /datum/language_holder/yeosa
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/draconic = list(LANGUAGE_ATOM),
 								/datum/language/yeosa = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-							/datum/language/draconic = list(LANGUAGE_ATOM),
 							/datum/language/yeosa = list(LANGUAGE_ATOM))
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
