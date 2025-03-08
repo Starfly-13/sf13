@@ -3580,6 +3580,8 @@
 #include "modular_starfly\modules\cryosleep_symptoms\cryopod.dm"
 #include "modular_starfly\modules\cryosleep_symptoms\game_options.dm"
 #include "modular_starfly\modules\language_kalixcis\draconic.dm"
+#include "modular_starfly\modules\rksh_unathi\_defines.dm"
+#include "modular_starfly\modules\rksh_unathi\lizardpeople.dm"
 #include "modular_starfly\modules\roseus_galactic\syndicate.dm"
 #include "modular_starfly\modules\sinta_unathi\_defines.dm"
 #include "modular_starfly\modules\sinta_unathi\bottle.dm"
@@ -3590,4 +3592,5 @@
 #include "modular_starfly\modules\sinta_unathi\mining_base.dm"
 #include "modular_starfly\modules\sinta_unathi\tails.dm"
 #include "modular_starfly\modules\yeosa_unathi\draconic.dm"
+#include "modular_starfly\modules\yeosa_unathi\lizardpeople.dm"
 // END_INCLUDE

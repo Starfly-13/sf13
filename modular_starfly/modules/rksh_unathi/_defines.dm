@@ -1,7 +1,7 @@
-#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
+#ifdef STARFLY13_MODULE_RKSH_UNATHI_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 
-// living_defines.dm
+// _defines.dm
 // Copyright 2025 Patrick Meade.
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,11 +18,9 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //---------------------------------------------------------------------------
 
-/mob/living
-	/// Used for preventing attacks on admin-frozen mobs.
-	var/admin_frozen = null
-	/// Used for keeping track of previous sleeping value with admin freeze.
-	var/admin_prev_sleeping = 0
+// See: code/__DEFINES/mobs.dm
+
+#define SPECIES_LIZARD (SPECIES_SARATHI)
 
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
+#endif // #ifdef STARFLY13_MODULE_RKSH_UNATHI_ENABLED

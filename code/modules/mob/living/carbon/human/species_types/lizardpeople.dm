@@ -114,7 +114,11 @@
 
 	return randname
 
-/*
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_RKSH_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+/* 
 Lizard subspecies: ASHWALKERS
 */
 /datum/species/lizard/ashwalker
@@ -125,6 +129,10 @@ Lizard subspecies: ASHWALKERS
 	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
 	species_language_holder = /datum/language_holder/lizard/ash
 	digitigrade_customization = DIGITIGRADE_FORCED
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_RKSH_UNATHI_ENABLED
+// STARFLY EDIT - REMOVAL END
+//---------------------------------------------------------------------------------------------------------------------
 
 //WS Edit Start - Kobold
 //Ashwalker subspecies: KOBOLD

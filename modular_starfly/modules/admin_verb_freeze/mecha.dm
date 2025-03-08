@@ -1,4 +1,4 @@
-#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 
 // mecha.dm
@@ -38,4 +38,4 @@
 	return ..()
 
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
