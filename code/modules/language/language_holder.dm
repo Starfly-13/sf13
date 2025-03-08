@@ -279,8 +279,8 @@ Key procs
 #else
 //---------------------------------------------------------------------------------------------------------------------
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/yeosa = list(LANGUAGE_ATOM),
-								/datum/language/draconic = list(LANGUAGE_ATOM))
+								/datum/language/draconic = list(LANGUAGE_ATOM),
+								/datum/language/yeosa = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/draconic = list(LANGUAGE_ATOM))
 //---------------------------------------------------------------------------------------------------------------------
