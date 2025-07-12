@@ -124,8 +124,8 @@
 	path = /obj/item/toy/plush/snakeplushie
 
 /datum/gear/moth
-	display_name = "toy, moth plushie"
-	path = /obj/item/toy/plush/moth
+	display_name = "toy, moth plushie box"
+	path = /obj/item/choice_beacon/mothplushies
 
 /datum/gear/bee
 	display_name = "toy, bee plushie"
@@ -214,3 +214,15 @@
 /datum/gear/hourglass
 	display_name = "hourglass"
 	path = /obj/item/hourglass
+
+/datum/gear/spraycan
+	display_name = "spraycan"
+	path = /obj/item/toy/crayon/spraycan
+
+/datum/gear/prescription_pills
+	display_name = "prescription pills"
+	path = /obj/item/storage/pill_bottle/placebatol
+
+/datum/gear/prescription_injector
+	display_name = "prescription injector"
+	path = /obj/item/reagent_containers/hypospray/medipen/placebatol
