@@ -55,6 +55,50 @@
 	say_mod = "hisses"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+	var/static/list/languages_possible_lizard = typecacheof(list(
+		/datum/language/galactic_common,
+		/datum/language/kalixcian_common,
+		/datum/language/teceti_unified,
+		/datum/language/solarian_international,
+		/datum/language/moffic,
+		/datum/language/monkey,
+		/datum/language/ratvar,
+		/datum/language/codespeak,
+		/datum/language/aphasia,
+		/datum/language/draconic,
+		/datum/language/yeosa
+	))
+
+/obj/item/organ/tongue/lizard/Initialize()
+	. = ..()
+	languages_possible = languages_possible_lizard
+//---------------------------------------------------------------------------------------------------------------------
+#elif defined(STARFLY13_MODULE_SINTA_UNATHI_ENABLED)
+//---------------------------------------------------------------------------------------------------------------------
+	var/static/list/languages_possible_lizard = typecacheof(list(
+		/datum/language/galactic_common,
+		/datum/language/kalixcian_common,
+		/datum/language/teceti_unified,
+		/datum/language/solarian_international,
+		/datum/language/moffic,
+		/datum/language/monkey,
+		/datum/language/ratvar,
+		/datum/language/codespeak,
+		/datum/language/aphasia,
+		/datum/language/draconic,
+	))
+
+/obj/item/organ/tongue/lizard/Initialize()
+	. = ..()
+	languages_possible = languages_possible_lizard
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/item/organ/tongue/lizard/handle_speech(datum/source, list/speech_args)
 	// Sarathi tongues don't hiss when speaking Kalixcian. Or when signing.
