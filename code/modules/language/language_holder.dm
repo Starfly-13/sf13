@@ -372,7 +372,7 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 /datum/language_holder/lizard/ash
 	selected_language = /datum/language/draconic
 //---------------------------------------------------------------------------------------------------------------------
-#elif STARFLY13_MODULE_SINTA_UNATHI_ENABLED
+#elif defined(STARFLY13_MODULE_SINTA_UNATHI_ENABLED)
 //---------------------------------------------------------------------------------------------------------------------
 /datum/language_holder/lizard
 	understood_languages = list(/datum/language/galactic_common = list(LANGUAGE_ATOM),
