@@ -27,7 +27,6 @@
 	icon = 'modular_starfly/modules/roseus_galactic/icons/obj/syndicate.dmi'
 	icon_state = "aclfgrunt"
 	mob_overlay_icon = 'modular_starfly/modules/roseus_galactic/icons/mob/syndicate.dmi'
-	can_adjust = FALSE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
 	alt_covers_chest = TRUE
 
@@ -38,7 +37,6 @@
 	icon_state = "really_black_suit"
 	item_state = "bl_suit"
 	mob_overlay_icon = 'modular_starfly/modules/roseus_galactic/icons/mob/suits.dmi'
-	can_adjust = FALSE
 
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifdef STARFLY13_MODULE_ROSEUS_GALACTIC_ENABLED

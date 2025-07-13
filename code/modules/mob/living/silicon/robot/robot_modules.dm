@@ -610,7 +610,7 @@
 			T.cell.give(S.e_cost * coeff)
 			T.update_appearance()
 		else
-			T.charge_tick = 0
+			T.charge_timer = 0
 
 /obj/item/robot_module/peacekeeper
 	name = "Peacekeeper"
@@ -738,32 +738,6 @@
 	var/obj/item/reagent_containers/spray/cyborg_lube/CL = locate(/obj/item/reagent_containers/spray/cyborg_lube) in emag_modules
 	if(CL)
 		CL.reagents.add_reagent(/datum/reagent/lube, 2 * coeff)
-
-/obj/item/robot_module/clown
-	name = "Clown"
-	basic_modules = list(
-		/obj/item/assembly/flash/cyborg,
-		/obj/item/toy/crayon/rainbow,
-		/obj/item/instrument/bikehorn,
-		/obj/item/bikehorn,
-		/obj/item/bikehorn/airhorn,
-		/obj/item/paint/anycolor,
-		/obj/item/soap/nanotrasen,
-		/obj/item/pneumatic_cannon/pie/selfcharge/cyborg,
-		/obj/item/razor,					//killbait material
-		/obj/item/lipstick/purple,
-		/obj/item/reagent_containers/spray/waterflower/cyborg,
-		/obj/item/borg/cyborghug/peacekeeper,
-		/obj/item/borg/lollipop/clown,
-		/obj/item/picket_sign/cyborg,
-		/obj/item/reagent_containers/borghypo/clown,
-		/obj/item/extinguisher/mini)
-	emag_modules = list(
-		/obj/item/reagent_containers/borghypo/clown/hacked,
-		/obj/item/reagent_containers/spray/waterflower/cyborg/hacked)
-	moduleselect_icon = "service"
-	cyborg_base_icon = "clown"
-	hat_offset = -2
 
 /obj/item/robot_module/butler
 	name = "Service"
