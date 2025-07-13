@@ -1,15 +1,15 @@
 //---------------------------------------------------------------------------------------------------------------------
-// STARFLY EDIT - REMOVAL BEGIN
-#ifndef STARFLY13_MODULE_KALIXCIAN_AS_ELZUOSAN_ENABLED
+// STARFLY EDIT - ADDITION BEGIN
+#ifdef STARFLY13_MODULE_KALIXCIAN_AS_ELZUOSAN_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 /datum/language/kalixcian_common
 	name = "Kalixcian Common"
-	desc = "The most prevalent language to come out of Kalixcis, and generally understood by all those native to it."
-	speech_verb = "hisses"
-	ask_verb = "hisses"
-	exclaim_verb = "roars"
-	sing_verb = "sings"
-	key = "o"
+	desc = "The native language of the Elzuosa, consisting of rattles and clicks with a surprisingly complex structure."
+	speech_verb = "clicks"
+	ask_verb = "clicks"
+	exclaim_verb = "clacks"
+	sing_verb = "rattles"
+	key = "K"
 	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_NOT_UNDERSTOOD
 	space_chance = 12
 	sentence_chance = 0
@@ -29,6 +29,6 @@
 	icon_state = "lizard"
 	default_priority = 90
 //---------------------------------------------------------------------------------------------------------------------
-// STARFLY EDIT - REMOVAL END
-#endif // #ifndef STARFLY13_MODULE_KALIXCIAN_AS_ELZUOSAN_ENABLED
+// STARFLY EDIT - ADDITION BEGIN
+#endif //#ifdef STARFLY13_MODULE_KALIXCIAN_AS_ELZUOSAN_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
