@@ -6,7 +6,7 @@ source dependencies.sh
 BYOND_ZIP="${GITHUB_WORKSPACE}/cache/byond/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip"
 if [ ! -f ${BYOND_ZIP} ]; then
     mkdir -p $(dirname $BYOND_ZIP)
-    curl "http://www.byond.com/download/build/$BYOND_MAJOR/$BYOND_MAJOR.${BYOND_MINOR}_byond_linux.zip" -o ${BYOND_ZIP}
+    curl "http://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o ${BYOND_ZIP} -A "Starfly13/1.0 Continuous Integration"
 fi
 rm -rf "${HOME}/BYOND"
 mkdir -p "${HOME}/BYOND"
