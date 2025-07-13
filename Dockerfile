@@ -1,14 +1,15 @@
 # syntax=docker/dockerfile:1
-FROM beestation/byond:515.1633 as base
+FROM beestation/byond:515.1633 AS base
 
 # Install the tools needed to compile our rust dependencies
-FROM base as rust-build
+FROM base AS rust-build
 ENV PKG_CONFIG_ALLOW_CROSS=1 \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
 WORKDIR /build
 COPY dependencies.sh .
 RUN dpkg --add-architecture i386 \
+    && sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
     curl ca-certificates gcc-multilib \
@@ -19,7 +20,7 @@ RUN dpkg --add-architecture i386 \
     && rm -rf /var/lib/apt/lists/*
 
 # Build rust-g
-FROM rust-build as rustg
+FROM rust-build AS rustg
 RUN git init \
     && git remote add origin https://github.com/tgstation/rust-g \
     && /bin/bash -c "source dependencies.sh \
@@ -28,7 +29,7 @@ RUN git init \
     && cargo build --release --target i686-unknown-linux-gnu
 
 # Build auxmos
-FROM rust-build as auxmos
+FROM rust-build AS auxmos
 RUN git init \
     && /bin/bash -c "source dependencies.sh \
     && git remote add origin \$AUXMOS_REPO \
@@ -37,16 +38,17 @@ RUN git init \
     && env PKG_CONFIG_ALLOW_CROSS=1 cargo build --release --target=i686-unknown-linux-gnu --features "citadel_reactions,katmos"
 
 # Install nodejs which is required to deploy Shiptest
-FROM base as node
+FROM base AS node
 COPY dependencies.sh .
-RUN apt-get update \
+RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list \
+    && apt-get update \
     && apt-get install curl -y \
     && /bin/bash -c "source dependencies.sh \
     && curl -fsSL https://deb.nodesource.com/setup_\$NODE_VERSION.x | bash -" \
     && apt-get install -y nodejs
 
 # Build TGUI, tgfonts, and the dmb
-FROM node as dm-build
+FROM node AS dm-build
 ENV TG_BOOTSTRAP_NODE_LINUX=1
 WORKDIR /dm-build
 COPY . .
