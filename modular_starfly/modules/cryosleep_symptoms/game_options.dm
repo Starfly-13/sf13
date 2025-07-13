@@ -1,4 +1,4 @@
-#ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG
+#ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 
 // game_options.dm
@@ -22,4 +22,4 @@
 /datum/config_entry/flag/cryosleep_symptoms
 
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG
+#endif // #ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG_ENABLED
