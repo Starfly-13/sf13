@@ -1,4 +1,4 @@
-#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 
 // freeze.dm
@@ -117,4 +117,4 @@ GLOBAL_LIST_EMPTY(frozen_atom_list)
 		log_admin("[key_name(admin)] [admin_frozen ? "froze" : "unfroze"] an empty [name]")
 
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED

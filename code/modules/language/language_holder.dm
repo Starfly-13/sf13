@@ -366,8 +366,7 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 								/datum/language/draconic = list(LANGUAGE_ATOM),
 								/datum/language/yeosa = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/galactic_common = list(LANGUAGE_ATOM),
-							/datum/language/draconic = list(LANGUAGE_ATOM),
-							/datum/language/yeosa = list(LANGUAGE_ATOM))
+							/datum/language/draconic = list(LANGUAGE_ATOM))
 
 /datum/language_holder/lizard/ash
 	selected_language = /datum/language/draconic
@@ -402,9 +401,9 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 //---------------------------------------------------------------------------------------------------------------------
 /datum/language_holder/yeosa
 	understood_languages = list(/datum/language/galactic_common = list(LANGUAGE_ATOM),
+								/datum/language/draconic = list(LANGUAGE_ATOM),
 								/datum/language/yeosa = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/galactic_common = list(LANGUAGE_ATOM),
-							/datum/language/draconic = list(LANGUAGE_ATOM),
 							/datum/language/yeosa = list(LANGUAGE_ATOM))
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED

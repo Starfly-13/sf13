@@ -1,7 +1,8 @@
-#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
+#ifdef STARFLY13_MODULE_RKSH_UNATHI_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 
-// living_defines.dm
+// lizardpeople.dm
+// Copyright 2023 LectroNyx.
 // Copyright 2025 Patrick Meade.
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,11 +19,18 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //---------------------------------------------------------------------------
 
-/mob/living
-	/// Used for preventing attacks on admin-frozen mobs.
-	var/admin_frozen = null
-	/// Used for keeping track of previous sleeping value with admin freeze.
-	var/admin_prev_sleeping = 0
+/// Lizard subspecies: ASHWALKERS
+/datum/species/lizard/ashwalker
+	name = "Rksh'Unathi"
+	id = SPECIES_ASHWALKER
+	species_age_min = 18
+	species_age_max = 300
+	examine_limb_id = SPECIES_LIZARD
+	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR)
+	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
+	species_language_holder = /datum/language_holder/lizard/ash
+	digitigrade_customization = DIGITIGRADE_FORCED
+	loreblurb = "The Rksh'Unathi are a mysterious reptilian species scattered across numerous planets, but only where the Necropolis' tendrils have scarred the land. While they are genetically related to the other species of Unathi, it is unclear how they came to be."
 
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
+#endif // #ifdef STARFLY13_MODULE_RKSH_UNATHI_ENABLED
