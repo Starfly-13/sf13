@@ -22,7 +22,7 @@
 // See: code/modules/language/draconic.dm
 
 /datum/language/draconic
-	name = "Sinta'Unathi"
+	name = "Sinta'Azaziba"
 	desc = "The most prevalent language to come out of Moghes, composed of sibilant hisses and rattles."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
@@ -40,7 +40,8 @@
 		"ra", "ar", "re", "er", "ri", "ir", "ro", "or", "ru", "ur", "rs", "sr",
 		"a",  "a",  "e",  "e",  "i",  "i",  "o",  "o",  "u",  "u",  "s",  "s"
 	)
-	icon_state = "lizard"
+	icon = 'modular_starfly/modules/sinta_unathi/icons/language.dmi'
+	icon_state = "sinta"
 	default_priority = 90
 
 //---------------------------------------------------------------------------------------------------------------------

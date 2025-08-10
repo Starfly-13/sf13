@@ -76,11 +76,11 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/cmd_admin_check_player_exp, /* shows players by playtime */
 //---------------------------------------------------------------------------------------------------------------------
 // STARFLY EDIT - ADDITION BEGIN
-#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 	/client/proc/freeze,
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
 // STARFLY EDIT - ADDITION END
 //---------------------------------------------------------------------------------------------------------------------
 	/client/proc/toggle_combo_hud, // toggle display of the combination pizza antag and taco sci/med/eng hud

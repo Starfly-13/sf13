@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# run-docker-local
+# run the starfly13 service in a container
+
+VOLUME_ROOT="/tmp/starfly13-$(date +%s)"
+
+mkdir -p "${VOLUME_ROOT}"
+tar c config | tar x -C "${VOLUME_ROOT}"
+#tar c data | tar x -C "${VOLUME_ROOT}"
+mkdir -p "${VOLUME_ROOT}/data"
+cp -v secret/* "${VOLUME_ROOT}/config/."
+
+    # --detach \
+docker run \
+    --link starfly_db:starfly_db \
+    --name=starfly13 \
+    --publish 1337:1337 \
+    --rm \
+    --volume ${VOLUME_ROOT}/config:/shiptest/config:ro \
+    --volume ${VOLUME_ROOT}/data:/shiptest/data \
+    starfly13:latest

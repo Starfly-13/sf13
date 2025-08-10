@@ -1,4 +1,4 @@
-#ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG
+#ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 
 // cryopod.dm
@@ -34,4 +34,4 @@
 	return ..()
 
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG
+#endif // #ifdef STARFLY13_MODULE_CRYOSLEEP_SYMPTOMS_FLAG_ENABLED

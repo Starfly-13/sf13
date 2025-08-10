@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# run-docker-db-shell
+# connect to the starfly13 database container with a mysql client shell
+
+# ensure awk is GNU Awk (gawk)
+if ! awk --version 2>&1 | grep -q 'GNU Awk'; then
+    echo >&2 "Error: This script requires GNU Awk (gawk), but 'awk' is not gawk."
+    echo >&2 "Install it with:"
+    echo >&2 "    sudo apt update && sudo apt install -y gawk"
+    exit 1
+fi
+
+# run a mysql shell and connect to the starfly13 database container
+MYSQL_ROOT_PASSWORD=$(head -1 secret/dbconfig.txt | awk -e '{print $3}')
+docker exec --interactive --tty starfly_db \
+    mysql --password=${MYSQL_ROOT_PASSWORD} starfly13

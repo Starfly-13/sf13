@@ -96,6 +96,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/staminamod = 1
 	///multiplier for stun durations
 	var/stunmod = 1
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN
+#ifdef STARFLY13_MODULE_OXYGEN_DAMAGE_MOD_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+	///multiplier for oxy damage
+	var/oxymod = 1
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_OXYGEN_DAMAGE_MOD_ENABLED
+// STARFLY EDIT - ADDITION END
+//---------------------------------------------------------------------------------------------------------------------
 	///Type of damage attack does. Ethereals attack with burn damage for example.
 	var/attack_type = BRUTE
 	///Lowest possible punch damage this species can give. If this is set to 0, punches will always miss.
@@ -1766,7 +1776,19 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.tox_mod
 			H.adjustToxLoss(damage_amount)
 		if(OXY)
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_OXYGEN_DAMAGE_MOD_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.oxy_mod
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+			var/damage_amount = forced ? damage : damage * hit_percent * oxymod * H.physiology.oxy_mod
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_OXYGEN_DAMAGE_MOD_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 			H.adjustOxyLoss(damage_amount)
 		if(CLONE)
 			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.clone_mod

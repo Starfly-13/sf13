@@ -1,4 +1,4 @@
-#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
 //---------------------------------------------------------------------------------------------------------------------
 
 // overlays.dm
@@ -25,4 +25,4 @@
 	layer = ABOVE_ALL_MOB_LAYER
 
 //---------------------------------------------------------------------------------------------------------------------
-#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE
+#endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
