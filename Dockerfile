@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM beestation/byond:515.1633 AS base
+FROM beestation/byond:515.1642 AS base
 
 # Install the tools needed to compile our rust dependencies
 FROM base AS rust-build
@@ -17,6 +17,14 @@ RUN dpkg --add-architecture i386 \
     zlib1g-dev:i386 pkg-config:i386 git \
     && /bin/bash -c "source dependencies.sh \
     && curl https://sh.rustup.rs | sh -s -- -y -t i686-unknown-linux-gnu --no-modify-path --profile minimal --default-toolchain \$RUST_VERSION" \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install a MariaDB development package for the shared library
+FROM rust-build AS mariadb-library
+RUN dpkg --add-architecture i386 \
+    && apt-get update \
+	&& apt-get install -y --no-install-recommends \
+    libmariadb-dev:i386 \
     && rm -rf /var/lib/apt/lists/*
 
 # Build rust-g
@@ -59,10 +67,13 @@ RUN tools/build/build \
     && apt-get autoremove curl -y \
     && rm -rf /var/lib/apt/lists/*
 
-FROM base
+FROM base AS starfly13
+ENV LD_LIBRARY_PATH="/shiptest"
 WORKDIR /shiptest
+COPY --from=auxmos /build/target/i686-unknown-linux-gnu/release/libauxmos.so libauxmos.so
+COPY --from=mariadb-library /usr/lib/i386-linux-gnu/libmariadb.so libmariadb.so
+COPY --from=rustg /build/target/i686-unknown-linux-gnu/release/librust_g.so librust_g.so
 COPY --from=dm-build /deploy ./
-COPY --from=rustg /build/target/i686-unknown-linux-gnu/release/librust_g.so /root/.byond/bin/rust_g
 VOLUME [ "/shiptest/config", "/shiptest/data" ]
 ENTRYPOINT [ "DreamDaemon", "shiptest.dmb", "-port", "1337", "-trusted", "-close", "-verbose" ]
 EXPOSE 1337

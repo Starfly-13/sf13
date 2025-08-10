@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# debug-starfly13
+# create a starfly13 container and run a bash shell
+
+docker run \
+    --entrypoint bash \
+    --interactive \
+    --name debug_me \
+    --rm \
+    --tty \
+    starfly13:latest
