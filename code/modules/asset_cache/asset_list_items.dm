@@ -187,10 +187,8 @@
 	name = "chat"
 
 /datum/asset/spritesheet/chat/register()
-	log_world("About to InsertAll('emoji')")
 	InsertAll("emoji", EMOJI_SET)
-	// pre-loading all langugage icons also helps to avoid meta
-	log_world("About to InsertAll('language')")
+	// pre-loading all language icons also helps to avoid meta
 	InsertAll("language", 'icons/misc/language.dmi')
 	// catch languages which are pulling icons from another file
 	for(var/path in typesof(/datum/language))
@@ -198,9 +196,8 @@
 		var/icon = initial(L.icon)
 		if (icon != 'icons/misc/language.dmi')
 			var/icon_state = initial(L.icon_state)
-			log_world("About to Insert('language-[icon_state]')")
 			Insert("language-[icon_state]", icon, icon_state=icon_state)
-	log_world("Calling parent register()")
+	// now that we've gathered up all the icons, register it
 	..()
 
 /datum/asset/simple/lobby

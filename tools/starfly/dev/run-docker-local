@@ -8,7 +8,7 @@ mkdir -p "${VOLUME_ROOT}"
 tar c config | tar x -C "${VOLUME_ROOT}"
 #tar c data | tar x -C "${VOLUME_ROOT}"
 mkdir -p "${VOLUME_ROOT}/data"
-cp -v secret/dbconfig.txt "${VOLUME_ROOT}/config/dbconfig.txt"
+cp -v secret/* "${VOLUME_ROOT}/config/."
 
     # --detach \
 docker run \
