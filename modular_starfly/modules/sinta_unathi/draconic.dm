@@ -22,7 +22,7 @@
 // See: code/modules/language/draconic.dm
 
 /datum/language/draconic
-	name = "Sinta'Unathi"
+	name = "Sinta'Azaziba"
 	desc = "The most prevalent language to come out of Moghes, composed of sibilant hisses and rattles."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
