@@ -40,6 +40,7 @@
 		"ra", "ar", "re", "er", "ri", "ir", "ro", "or", "ru", "ur", "rs", "sr",
 		"a",  "a",  "e",  "e",  "i",  "i",  "o",  "o",  "u",  "u",  "s",  "s"
 	)
+	icon = 'modular_starfly/modules/sinta_unathi/icons/language.dmi'
 	icon_state = "lizard"
 	default_priority = 90
 
