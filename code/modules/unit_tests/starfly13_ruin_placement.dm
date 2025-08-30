@@ -24,7 +24,7 @@
 /datum/overmap/dynamic/ruin_tester
 	populate_turfs = FALSE
 
-/datum/unit_test/ruin_placement/test_placement(var/planet_name)
+/datum/unit_test/ruin_placement/proc/test_placement(var/planet_name)
 	var/datum/overmap_star_system/dummy_system = SSovermap.default_system
 	dummy_system.name = "Ruin Test: Dummy System"
 
