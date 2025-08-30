@@ -207,6 +207,11 @@
 #include "starfly13_ruin_placement_wasteplanet.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_WASTEPLANET_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_WATERPLANET_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_waterplanet.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_WATERPLANET_TEST
+
 #include "unit_test.dm"
 
 #undef TEST_ASSERT
