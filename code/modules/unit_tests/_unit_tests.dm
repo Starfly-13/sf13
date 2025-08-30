@@ -177,6 +177,11 @@
 #include "starfly13_ruin_placement_lava.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_LAVA_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_PLASMA_GIANT_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_plasma_giant.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_PLASMA_GIANT_TEST
+
 #ifdef STARFLY13_RUIN_PLACEMENT_REEBE_TEST
 #include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_reebe.dm"

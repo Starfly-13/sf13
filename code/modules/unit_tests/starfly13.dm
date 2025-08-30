@@ -32,6 +32,7 @@
 		"ice",
 		"jungle",
 		"lava",
+		"plasma giant",
 		"reebe",
 		"rockplanet",
 		"sand",
