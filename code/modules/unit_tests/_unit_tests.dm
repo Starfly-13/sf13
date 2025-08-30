@@ -140,46 +140,55 @@
 
 #ifdef STARFLY13_TEST
 #include "starfly13.dm"
-#include "starfly13_ruin_placement.dm"
 #endif //STARFLY13_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_BEACHPLANET_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_beachplanet.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_BEACHPLANET_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_EMPTY_SPACE_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_empty_space.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_EMPTY_SPACE_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_ICE_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_ice.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_ICE_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_JUNGLE_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_jungle.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_JUNGLE_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_LAVA_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_lava.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_LAVA_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_REEBE_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_reebe.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_REEBE_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_ROCKPLANET_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_rockplanet.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_ROCKPLANET_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_SAND_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_sand.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_SAND_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_SPACE_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_space.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_SPACE_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_WASTEPLANET_TEST
+#include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_wasteplanet.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_WASTEPLANET_TEST
 

@@ -1,4 +1,4 @@
-// starfly13.dm
+// starfly13_ruin_placement_wasteplanet.dm
 // Copyright 2025 Patrick Meade.
 //
 // This program is free software: you can redistribute it and/or modify
@@ -15,27 +15,5 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //---------------------------------------------------------------------------
 
-
-/datum/unit_test/starfly13_ion_laws/Run()
-	var/ionabstract = strings(ION_FILE, "ionabstract")
-	TEST_ASSERT_NOTNULL(ionabstract, "Unable to load ionabstract list from ION_FILE")
-	TEST_ASSERT_NOTNULL(GLOB.string_cache[ION_FILE], "Unable to cache strings from ION_FILE")
-
-
-/datum/unit_test/starfly13_planet_types/Run()
-	// the list of planet types that we know to unit test for ruin placement
-	var/list/test_names = list(
-		"beachplanet",
-		"empty space",
-		"ice",
-		"jungle",
-		"lava",
-		"reebe",
-		"rockplanet",
-		"sand",
-		"space",
-		"wasteplanet",
-	)
-	// for each planet type in the code, make sure it's on our known types list
-	for(var/planet_name in SSmapping.planet_types)
-		TEST_ASSERT((planet_name in test_names), "'[planet_name]' is an unknown planet type!")
+/datum/unit_test/ruin_placement/Run()
+	test_placement("wasteplanet")
