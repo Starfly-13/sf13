@@ -25,6 +25,7 @@
 /datum/unit_test/starfly13_planet_types/Run()
 	// the list of planet types that we know to unit test for ruin placement
 	var/list/test_names = list(
+		"asteroid",
 		"beachplanet",
 		"empty space",
 		"ice",
