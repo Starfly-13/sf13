@@ -161,7 +161,7 @@
 	weather_controller_type = null
 	ruin_type = null // asteroid ruins when
 	weight = 0
-#ifndef RUIN_PLACEMENT_TEST
+#if !defined(RUIN_PLACEMENT_TEST) && !defined(STARFLY13_RUIN_PLACEMENT_ASTEROID_TEST)
 	selfloop = TRUE
 #endif
 	primary_ores = list(\
@@ -179,7 +179,7 @@
 	default_baseturf = /turf/open/space
 	weather_controller_type = null
 	ruin_type = RUINTYPE_SPACE
-#ifndef RUIN_PLACEMENT_TEST
+#if !defined(RUIN_PLACEMENT_TEST) && !defined(STARFLY13_RUIN_PLACEMENT_SPACERUIN_TEST)
 	selfloop = TRUE
 #endif
 
@@ -196,7 +196,7 @@
 	default_baseturf = /turf/open/space
 	weather_controller_type = null
 	ruin_type = RUINTYPE_SPACE
-#ifndef RUIN_PLACEMENT_TEST
+#if !defined(RUIN_PLACEMENT_TEST) && !defined(STARFLY13_RUIN_PLACEMENT_SPACE_TEST)
 	selfloop = TRUE
 #endif
 
