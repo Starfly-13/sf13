@@ -234,7 +234,11 @@ jobs:
     - name: "Compile Tests"
       run: |
         source ~/BYOND/byond/bin/byondsetup
-        tools/build/build --ci dm -DCIBUILDING -DANSICOLORS -D${{ matrix.test_name }}
+        EXTRA_FLAGS=""
+        if [[ "${{ matrix.test_name }}" == STARFLY13_RUIN_PLACEMENT* ]]; then
+            EXTRA_FLAGS="-DRUIN_PLACEMENT_TEST"
+        fi
+        tools/build/build --ci dm -DCIBUILDING -DANSICOLORS -D${{ matrix.test_name }} $EXTRA_FLAGS
 
     - name: "Run Tests"
       run: |

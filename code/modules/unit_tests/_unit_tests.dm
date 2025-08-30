@@ -130,9 +130,9 @@
 #include "planet_gen.dm"
 #endif //PLANET_GEN
 
-#ifdef RUIN_PLACEMENT_TEST
-#include "ruin_placement.dm"
-#endif //RUIN_PLACEMENT_TEST
+// #ifdef RUIN_PLACEMENT_TEST
+// #include "ruin_placement.dm"
+// #endif //RUIN_PLACEMENT_TEST
 
 #ifdef SHIP_PLACEMENT_TEST
 #include "ship_placement.dm"
