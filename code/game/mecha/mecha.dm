@@ -898,6 +898,11 @@
 		pilot_mob.forceMove(src)
 		GrantActions(pilot_mob)//needed for checks, and incase a badmin puts somebody in the mob
 
+
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/mecha/proc/aimob_exit_mech(mob/living/simple_animal/hostile/human/ramzi/mecha_pilot/pilot_mob)
 	if(occupant == pilot_mob)
 		occupant = null
@@ -906,6 +911,25 @@
 	icon_state = "[initial(icon_state)]-open"
 	pilot_mob.forceMove(get_turf(src))
 	RemoveActions(pilot_mob)
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+/obj/mecha/proc/aimob_exit_mech(mob/living/simple_animal/hostile/human/ramzi/mecha_pilot/pilot_mob)
+	if(!pilot_mob)
+		return
+	if(occupant == pilot_mob)
+		occupant = null
+	if(pilot_mob.mecha == src)
+		pilot_mob.mecha = null
+	icon_state = "[initial(icon_state)]-open"
+	var/dest_turf = get_turf(src)
+	if(dest_turf)
+		pilot_mob.forceMove(dest_turf)
+	RemoveActions(pilot_mob)
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 
 
 /////////////////////////////////////
