@@ -28,6 +28,7 @@
 		"asteroid",
 		"beachplanet",
 		"empty space",
+		"gas giant",
 		"ice",
 		"jungle",
 		"lava",

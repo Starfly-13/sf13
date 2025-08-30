@@ -29,7 +29,7 @@
 	dummy_system.name = "Ruin Test: Dummy System"
 
 	var/datum/planet_type/planet_type = SSmapping.planet_types[planet_name]
-	TEST_ASSERT(planet_type, "'[planet_name]' is not a planet type! planet_types: [SSmapping.planet_types]")
+	TEST_ASSERT(planet_type, "'[planet_name]' is not a planet type! planet_types: [json_encode(SSmapping.planet_types, JSON_PRETTY_PRINT)]")
 
 	if (planet_type.ruin_type == null)
 		log_test("Planet Type: [planet_name] does not have ruins (ruin_type == null). Skipping tests.")

@@ -157,6 +157,11 @@
 #include "starfly13_ruin_placement_empty_space.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_EMPTY_SPACE_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_GAS_GIANT_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_gas_giant.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_GAS_GIANT_TEST
+
 #ifdef STARFLY13_RUIN_PLACEMENT_ICE_TEST
 #include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_ice.dm"
