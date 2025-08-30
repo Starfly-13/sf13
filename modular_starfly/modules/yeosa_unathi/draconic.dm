@@ -44,7 +44,6 @@
 		"a",  "a",  "e",  "e",  "i",  "i",  "o",  "o",  "u",  "u",  "s",  "s"
 	)
 	icon = 'modular_starfly/modules/yeosa_unathi/icons/language.dmi'
-	// icon = 'icons/misc/language.dmi'
 	icon_state = "yeosa"
 	default_priority = 90
 
