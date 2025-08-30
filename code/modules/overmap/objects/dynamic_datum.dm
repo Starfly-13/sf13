@@ -326,9 +326,7 @@
 	name = "Empty Space"
 	token_icon_state = "signal_ship"
 	interaction_options = list(INTERACTION_OVERMAP_DOCK, INTERACTION_OVERMAP_QUICKDOCK, INTERACTION_OVERMAP_SETSIGNALSPRITE)
-#if !defined(RUIN_PLACEMENT_TEST) && !defined(STARFLY13_RUIN_PLACEMENT_EMPTY_SPACE_TEST)
 	selfloop = TRUE
-#endif
 	var/static/list/available_icon_options = list(\
 		"signal_none",
 		"signal_ship",
