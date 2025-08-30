@@ -10,7 +10,29 @@
 	stats_action.Grant(user, src)
 	strafing_action.Grant(user, src)
 
-
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+/obj/mecha/proc/RemoveActions(mob/living/user, human_occupant = 0)
+	if(human_occupant)
+		eject_action.Remove(user)
+	if(internals_action)
+		internals_action.Remove(user)
+	if(cycle_action)
+		cycle_action.Remove(user)
+	if(lights_action)
+		lights_action.Remove(user)
+	if(stats_action)
+		stats_action.Remove(user)
+	if(strafing_action)
+		strafing_action.Remove(user)
+	if(zoom_action)
+		zoom_action.Remove(user)
+		user.client.view_size.zoomIn()
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
 /obj/mecha/proc/RemoveActions(mob/living/user, human_occupant = 0)
 	if(human_occupant)
 		eject_action.Remove(user)
@@ -22,6 +44,10 @@
 	if(zoom_action)
 		zoom_action.Remove(user)
 		user.client.view_size.zoomIn()
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 
 
 /datum/action/innate/mecha
