@@ -147,10 +147,25 @@
 #include "starfly13_ruin_placement_asteroid.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_ASTEROID_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_BATTLEFIELDPLANET_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_battlefieldplanet.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_BATTLEFIELDPLANET_TEST
+
 #ifdef STARFLY13_RUIN_PLACEMENT_BEACHPLANET_TEST
 #include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_beachplanet.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_BEACHPLANET_TEST
+
+#ifdef STARFLY13_RUIN_PLACEMENT_DESERTPLANET_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_desertplanet.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_DESERTPLANET_TEST
+
+#ifdef STARFLY13_RUIN_PLACEMENT_DUSTBALL_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_dustball.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_DUSTBALL_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_EMPTY_SPACE_TEST
 #include "starfly13_ruin_placement.dm"
@@ -177,6 +192,11 @@
 #include "starfly13_ruin_placement_lava.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_LAVA_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_MOON_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_moon.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_MOON_TEST
+
 #ifdef STARFLY13_RUIN_PLACEMENT_PLASMA_GIANT_TEST
 #include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_plasma_giant.dm"
@@ -197,10 +217,30 @@
 #include "starfly13_ruin_placement_sand.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_SAND_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_SHROUDEDPLANET_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_shroudedplanet.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_SHROUDEDPLANET_TEST
+
+#ifdef STARFLY13_RUIN_PLACEMENT_SNOWBALL_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_snowball.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_SNOWBALL_TEST
+
 #ifdef STARFLY13_RUIN_PLACEMENT_SPACE_TEST
 #include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_space.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_SPACE_TEST
+
+#ifdef STARFLY13_RUIN_PLACEMENT_SUPERFLAT_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_superflat.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_SUPERFLAT_TEST
+
+#ifdef STARFLY13_RUIN_PLACEMENT_TEST_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_test.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_TEST_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_WASTEPLANET_TEST
 #include "starfly13_ruin_placement.dm"

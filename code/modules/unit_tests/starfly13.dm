@@ -26,24 +26,31 @@
 	// the list of planet types that we know to unit test for ruin placement
 	var/list/test_names = list(
 		"asteroid",
+		"battlefieldplanet",
 		"beachplanet",
 		"desertplanet",
+		"dustball",
 		"empty space",
 		"gas giant",
 		"ice",
 		"jungle",
 		"lava",
+		"moon",
 		"plasma giant",
 		"reebe",
 		"rockplanet",
 		"sand",
+		"shroudedplanet",
+		"snowball",
 		"space",
+		"superflat",
+		"test",
 		"wasteplanet",
 		"waterplanet",
 	)
 	// for each type on our known types list, make sure it's in the code
 	for(var/test_name in test_names)
-		TEST_ASSERT((test_name in SSmapping.planet_types), "'[test_name]' is not among the planet types! test_names: [json_encode(test_names, JSON_PRETTY_PRINT)] planet_types: [json_encode(SSmapping.planet_types, JSON_PRETTY_PRINT)]")
+		TEST_ASSERT((test_name in SSmapping.planet_types), "test_name:'[test_name]' does not appear in the planet names! planet_types: [json_encode(SSmapping.planet_types, JSON_PRETTY_PRINT)]")
 	// for each planet type in the code, make sure it's on our known types list
 	for(var/planet_name in SSmapping.planet_types)
-		TEST_ASSERT((planet_name in test_names), "'[planet_name]' is an unknown planet type! test_names: [json_encode(test_names, JSON_PRETTY_PRINT)] planet_types: [json_encode(SSmapping.planet_types, JSON_PRETTY_PRINT)]")
+		TEST_ASSERT((planet_name in test_names), "planet_name:'[planet_name]' does not appear in the test names! test_names: [json_encode(test_names, JSON_PRETTY_PRINT)]")
