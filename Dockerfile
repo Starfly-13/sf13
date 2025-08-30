@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM beestation/byond:515.1647 as base
+FROM beestation/byond:515.1647 AS base
 
 # Install the tools needed to compile our rust dependencies
 FROM base AS rust-build
@@ -9,7 +9,6 @@ ENV PKG_CONFIG_ALLOW_CROSS=1 \
 WORKDIR /build
 COPY dependencies.sh .
 RUN dpkg --add-architecture i386 \
-    && sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
     curl ca-certificates gcc-multilib \
@@ -48,8 +47,7 @@ RUN git init \
 # Install nodejs which is required to deploy Shiptest
 FROM base AS node
 COPY dependencies.sh .
-RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list \
-    && apt-get update \
+RUN apt-get update \
     && apt-get install curl -y \
     && /bin/bash -c "source dependencies.sh \
     && curl -fsSL https://deb.nodesource.com/setup_\$NODE_VERSION.x | bash -" \
