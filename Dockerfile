@@ -1,5 +1,9 @@
 # syntax=docker/dockerfile:1
+<<<<<<< HEAD
 FROM beestation/byond:515.1642 AS base
+=======
+FROM beestation/byond:515.1647 as base
+>>>>>>> upstream/master
 
 # Install the tools needed to compile our rust dependencies
 FROM base AS rust-build
