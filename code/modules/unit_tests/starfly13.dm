@@ -36,6 +36,9 @@
 		"space",
 		"wasteplanet",
 	)
+	// for each type on our known types list, make sure it's in the code
+	for(var/test_name in test_names)
+		TEST_ASSERT((test_name in SSmapping.planet_types), "'[test_name]' is not among the planet types!")
 	// for each planet type in the code, make sure it's on our known types list
 	for(var/planet_name in SSmapping.planet_types)
 		TEST_ASSERT((planet_name in test_names), "'[planet_name]' is an unknown planet type!")

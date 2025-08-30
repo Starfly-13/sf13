@@ -29,6 +29,11 @@
 	dummy_system.name = "Ruin Test: Dummy System"
 
 	var/datum/planet_type/planet_type = SSmapping.planet_types[planet_name]
+
+	if (planet_type.ruin_type == null)
+		log_test("Planet Type: [planet_name] does not have ruins (ruin_type == null). Skipping tests.")
+		return
+
 	for(var/ruin_name as anything in SSmapping.ruin_types_list[planet_type.ruin_type])
 		log_test("Testing Ruin: [ruin_name]")
 		var/datum/map_template/ruin/ruin = SSmapping.ruin_types_list[planet_type.ruin_type][ruin_name]

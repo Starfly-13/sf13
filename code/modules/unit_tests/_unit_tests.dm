@@ -142,6 +142,11 @@
 #include "starfly13.dm"
 #endif //STARFLY13_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_ASTEROID_TEST
+#include "starfly13_ruin_placement.dm"
+#include "starfly13_ruin_placement_asteroid.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_ASTEROID_TEST
+
 #ifdef STARFLY13_RUIN_PLACEMENT_BEACHPLANET_TEST
 #include "starfly13_ruin_placement.dm"
 #include "starfly13_ruin_placement_beachplanet.dm"
