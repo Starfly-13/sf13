@@ -142,6 +142,10 @@
 #include "starfly13.dm"
 #endif //STARFLY13_TEST
 
+#ifdef STARFLY13_RUIN_PLACEMENT_TEST
+#include "starfly13_ruin_placement.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_TEST
+
 #include "unit_test.dm"
 
 #undef TEST_ASSERT

@@ -22,7 +22,10 @@
 
 #define SPECIES_SINTA (SPECIES_SARATHI)
 
-#define SPECIES_LIZARD (SPECIES_SINTA)
+#ifndef SPECIES_LIZARD
+	#define SPECIES_LIZARD (SPECIES_SINTA)
+#endif
+
 #define SPECIES_UNATHI (SPECIES_SINTA)
 
 //---------------------------------------------------------------------------------------------------------------------
