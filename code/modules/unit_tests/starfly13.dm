@@ -27,6 +27,7 @@
 	var/list/test_names = list(
 		"asteroid",
 		"beachplanet",
+		"desertplanet",
 		"empty space",
 		"gas giant",
 		"ice",
@@ -42,7 +43,7 @@
 	)
 	// for each type on our known types list, make sure it's in the code
 	for(var/test_name in test_names)
-		TEST_ASSERT((test_name in SSmapping.planet_types), "'[test_name]' is not among the planet types! planet_types: [json_encode(SSmapping.planet_types, JSON_PRETTY_PRINT)]")
+		TEST_ASSERT((test_name in SSmapping.planet_types), "'[test_name]' is not among the planet types! test_names: [json_encode(test_names, JSON_PRETTY_PRINT)] planet_types: [json_encode(SSmapping.planet_types, JSON_PRETTY_PRINT)]")
 	// for each planet type in the code, make sure it's on our known types list
 	for(var/planet_name in SSmapping.planet_types)
-		TEST_ASSERT((planet_name in test_names), "'[planet_name]' is an unknown planet type! test_names: [json_encode(test_names, JSON_PRETTY_PRINT)]")
+		TEST_ASSERT((planet_name in test_names), "'[planet_name]' is an unknown planet type! test_names: [json_encode(test_names, JSON_PRETTY_PRINT)] planet_types: [json_encode(SSmapping.planet_types, JSON_PRETTY_PRINT)]")
