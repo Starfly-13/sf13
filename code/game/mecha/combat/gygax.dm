@@ -119,10 +119,24 @@
 	..()
 	overload_action.Grant(user, src)
 
-
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/mecha/combat/gygax/RemoveActions(mob/living/user, human_occupant = 0)
 	..()
 	overload_action.Remove(user)
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+/obj/mecha/combat/gygax/RemoveActions(mob/living/user, human_occupant = 0)
+	..()
+	if(overload_action)
+		overload_action.Remove(user)
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/mecha/combat/gygax/charger/GrantActions(mob/living/user, human_occupant = 0)
 	..()
