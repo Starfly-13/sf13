@@ -159,6 +159,7 @@
 	reagent_id = reag_id
 	name = "UNKNOWN"
 
+	WARNING("reag_id = [reag_id]")
 	var/datum/reagent/R = GLOB.chemical_reagents_list[reag_id]
 	if(R && R.type == reagent_id)
 		name = R.name
