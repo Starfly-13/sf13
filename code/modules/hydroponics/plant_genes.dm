@@ -159,6 +159,19 @@
 	reagent_id = reag_id
 	name = "UNKNOWN"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifdef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+	// See also: code/modules/reagents/chemistry/holder.dm
+	if(!GLOB.chemical_reagents_list)
+		WARNING("Building GLOB.chemical_reagents_list")
+		build_chemical_reagent_list()
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifdef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
+
 	var/datum/reagent/R = GLOB.chemical_reagents_list[reag_id]
 	if(R && R.type == reagent_id)
 		name = R.name
