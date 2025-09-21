@@ -159,13 +159,26 @@
 	reagent_id = reag_id
 	name = "UNKNOWN"
 
-	WARNING("reag_id = [reag_id]")
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifdef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+	// See also: code/modules/reagents/chemistry/holder.dm
 	if(!GLOB.chemical_reagents_list)
-		WARNING("GLOB.chemical_reagents_list = [GLOB.chemical_reagents_list] -- FALSE")
-	else
-		if(!(reag_id in GLOB.chemical_reagents_list))
-			WARNING("[reag_id] NOT IN GLOB.chemical_reagents_list")
-			WARNING("GLOB.chemical_reagents_list contains [GLOB.chemical_reagents_list]")
+		WARNING("Building GLOB.chemical_reagents_list")
+		build_chemical_reagent_list()
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifdef STARFLY13_MODULE_PATCH_UPSTREAM_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
+
+	// WARNING("reag_id = [reag_id]")
+	// if(!GLOB.chemical_reagents_list)
+	// 	WARNING("GLOB.chemical_reagents_list = [GLOB.chemical_reagents_list] -- FALSE")
+	// else
+	// 	if(!(reag_id in GLOB.chemical_reagents_list))
+	// 		WARNING("[reag_id] NOT IN GLOB.chemical_reagents_list")
+	// 		WARNING("GLOB.chemical_reagents_list contains [GLOB.chemical_reagents_list]")
 	var/datum/reagent/R = GLOB.chemical_reagents_list[reag_id]
 	if(R && R.type == reagent_id)
 		name = R.name
