@@ -160,6 +160,12 @@
 	name = "UNKNOWN"
 
 	WARNING("reag_id = [reag_id]")
+	if(!GLOB.chemical_reagents_list)
+		WARNING("GLOB.chemical_reagents_list = [GLOB.chemical_reagents_list] -- FALSE")
+	else
+		if(!(reag_id in GLOB.chemical_reagents_list))
+			WARNING("[reag_id] NOT IN GLOB.chemical_reagents_list")
+			WARNING("GLOB.chemical_reagents_list contains [GLOB.chemical_reagents_list]")
 	var/datum/reagent/R = GLOB.chemical_reagents_list[reag_id]
 	if(R && R.type == reagent_id)
 		name = R.name
