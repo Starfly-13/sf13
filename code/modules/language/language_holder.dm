@@ -389,7 +389,7 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 	spoken_languages = list(/datum/language/galactic_common = list(LANGUAGE_ATOM))
 
 /datum/language_holder/lizard/ash
-	selected_language = /datum/language/kalixcian_common
+	selected_language = /datum/language/gezena_kalixcian
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
 // STARFLY EDIT - CHANGE END
@@ -427,7 +427,7 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 /datum/language_holder/synthetic
 	understood_languages = list(/datum/language/galactic_common = list(LANGUAGE_ATOM),
 								/datum/language/machine = list(LANGUAGE_ATOM),
-								/datum/language/kalixcian_common = list(LANGUAGE_ATOM),
+								/datum/language/gezena_kalixcian = list(LANGUAGE_ATOM),
 								/datum/language/moffic = list(LANGUAGE_ATOM),
 								/datum/language/rachnidian = list(LANGUAGE_ATOM),
 								/datum/language/teceti_unified = list(LANGUAGE_ATOM),
@@ -435,7 +435,7 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 								/datum/language/sign_language = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/galactic_common = list(LANGUAGE_ATOM),
 							/datum/language/machine = list(LANGUAGE_ATOM),
-							/datum/language/kalixcian_common = list(LANGUAGE_ATOM),
+							/datum/language/gezena_kalixcian = list(LANGUAGE_ATOM),
 							/datum/language/moffic = list(LANGUAGE_ATOM),
 							/datum/language/teceti_unified = list(LANGUAGE_ATOM),
 							/datum/language/solarian_international = list(LANGUAGE_ATOM),
