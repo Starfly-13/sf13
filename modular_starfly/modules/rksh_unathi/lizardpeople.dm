@@ -29,7 +29,6 @@
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
 	species_language_holder = /datum/language_holder/lizard/ash
-	digitigrade_customization = DIGITIGRADE_FORCED
 	loreblurb = "The Rksh'Unathi are a mysterious reptilian species scattered across numerous planets, but only where the Necropolis' tendrils have scarred the land. While they are genetically related to the other species of Unathi, it is unclear how they came to be."
 
 //---------------------------------------------------------------------------------------------------------------------
