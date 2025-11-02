@@ -3771,7 +3771,6 @@
 #include "modular_starfly\modules\admin_verb_freeze\overlays.dm"
 #include "modular_starfly\modules\cryosleep_symptoms\cryopod.dm"
 #include "modular_starfly\modules\cryosleep_symptoms\game_options.dm"
-#include "modular_starfly\modules\kalixcian_as_elzuosan\kalixcian_common.dm"
 #include "modular_starfly\modules\rksh_unathi\_defines.dm"
 #include "modular_starfly\modules\rksh_unathi\lizardpeople.dm"
 #include "modular_starfly\modules\roseus_galactic\syndicate.dm"

@@ -1,7 +1,3 @@
-//---------------------------------------------------------------------------------------------------------------------
-// STARFLY EDIT - REMOVAL BEGIN
-#ifndef STARFLY13_MODULE_KALIXCIAN_AS_ELZUOSAN_ENABLED
-//---------------------------------------------------------------------------------------------------------------------
 /datum/language/gezena_kalixcian
 	name = "Gezenan"
 	desc = "The most widely spoken Kalixcian language, and the official language of the Pan-Gezena Federation."
@@ -32,7 +28,3 @@
 	mutual_understanding = list(
 		/datum/language/zohil_kalixcian = 90, // enough to sort of understand each other, but not perfectly
 	)
-//---------------------------------------------------------------------------------------------------------------------
-// STARFLY EDIT - REMOVAL END
-#endif // #ifndef STARFLY13_MODULE_KALIXCIAN_AS_ELZUOSAN_ENABLED
-//---------------------------------------------------------------------------------------------------------------------

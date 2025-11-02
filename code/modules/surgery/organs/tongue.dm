@@ -62,7 +62,7 @@
 //---------------------------------------------------------------------------------------------------------------------
 	var/static/list/languages_possible_lizard = typecacheof(list(
 		/datum/language/galactic_common,
-		/datum/language/kalixcian_common,
+		/datum/language/gezena_kalixcian,
 		/datum/language/teceti_unified,
 		/datum/language/solarian_international,
 		/datum/language/moffic,
@@ -82,7 +82,7 @@
 //---------------------------------------------------------------------------------------------------------------------
 	var/static/list/languages_possible_lizard = typecacheof(list(
 		/datum/language/galactic_common,
-		/datum/language/kalixcian_common,
+		/datum/language/gezena_kalixcian,
 		/datum/language/teceti_unified,
 		/datum/language/solarian_international,
 		/datum/language/moffic,
