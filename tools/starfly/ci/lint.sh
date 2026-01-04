@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # lint.sh
 
+set -euo pipefail
+
 echo "# Checking Dockerfile"
 tools/starfly/ci/check_dockerfile.sh
 
