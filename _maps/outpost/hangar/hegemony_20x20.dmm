@@ -1,0 +1,2384 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"af" = (
+/obj/structure/platform/industrial{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"al" = (
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 8;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/hangar)
+"ao" = (
+/obj/effect/turf_decal/techfloor{
+	dir = 6
+	},
+/turf/open/floor/plasteel/tech/grid{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"az" = (
+/obj/effect/turf_decal/arrows{
+	dir = 1
+	},
+/turf/open/floor/plasteel/tech{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"aC" = (
+/obj/machinery/conveyor/auto/outpost,
+/obj/structure/plasticflaps/outpost,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"aL" = (
+/obj/structure/chair,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"bC" = (
+/obj/machinery/door/poddoor/ert,
+/turf/open/floor/plasteel/patterned/brushed{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"bS" = (
+/obj/machinery/disposal/deliveryChute{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"cK" = (
+/obj/effect/turf_decal/industrial/warning/cee,
+/obj/machinery/light/floor/hangar,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"dU" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"ev" = (
+/turf/open/floor/plasteel,
+/area/hangar)
+"fa" = (
+/obj/effect/turf_decal/siding/wideplating/corner{
+	dir = 4;
+	color = "#CEB689"
+	},
+/turf/open/floor/plasteel,
+/area/hangar)
+"fA" = (
+/obj/structure/marker_beacon{
+	picked_color = "Teal"
+	},
+/turf/open/floor/hangar,
+/area/hangar)
+"fB" = (
+/obj/effect/turf_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"gp" = (
+/obj/structure/catwalk/over/plated_catwalk/dark,
+/turf/open/floor/plating,
+/area/hangar)
+"hY" = (
+/obj/effect/landmark/outpost/hangar_dock,
+/turf/open/floor/hangar,
+/area/hangar)
+"jj" = (
+/obj/machinery/conveyor/auto/outpost{
+	dir = 6;
+	verted = -1
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"jS" = (
+/obj/structure/sign/departments/cargo,
+/turf/closed/indestructible/reinforced,
+/area/hangar)
+"kx" = (
+/obj/effect/turf_decal/industrial/warning/cee{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"lf" = (
+/obj/effect/landmark/outpost/elevator{
+	shaft = "1"
+	},
+/turf/open/floor/plasteel/elevatorshaft{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"lx" = (
+/turf/open/floor/hangar,
+/area/hangar)
+"lA" = (
+/turf/open/floor/plasteel/stairs{
+	icon = 'icons/obj/stairs.dmi';
+	dir = 4
+	},
+/area/hangar)
+"lE" = (
+/obj/machinery/door/poddoor/multi_tile/four_tile_ver,
+/turf/closed/indestructible/reinforced,
+/area/hangar)
+"mg" = (
+/obj/machinery/conveyor/auto/outpost{
+	dir = 10
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"mk" = (
+/obj/structure/plasticflaps/outpost,
+/obj/machinery/conveyor/auto/outpost{
+	dir = 5;
+	verted = -1
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"mq" = (
+/turf/closed/indestructible/reinforced,
+/area/hangar)
+"mz" = (
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "1"
+	},
+/obj/machinery/elevator_call_button{
+	dir = 8;
+	pixel_x = 25
+	},
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 4;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/yellow,
+/turf/open/floor/plasteel,
+/area/hangar)
+"mH" = (
+/obj/effect/turf_decal/arrows,
+/turf/open/floor/plasteel/tech{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"ns" = (
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"nG" = (
+/obj/effect/turf_decal/industrial/loading/stripes{
+	color = "#C3630C"
+	},
+/obj/effect/turf_decal/arrows,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"nS" = (
+/obj/machinery/conveyor/auto/outpost{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"nT" = (
+/obj/effect/turf_decal/industrial/traffic{
+	dir = 4
+	},
+/obj/effect/turf_decal/industrial/traffic{
+	dir = 8
+	},
+/obj/effect/turf_decal/industrial/stand_clear{
+	dir = 8
+	},
+/obj/machinery/door/airlock/grunge{
+	dir = 4
+	},
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "1"
+	},
+/turf/open/floor/plasteel/tech/techmaint,
+/area/hangar)
+"oe" = (
+/obj/effect/turf_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"ov" = (
+/obj/effect/turf_decal/industrial/outline{
+	color = "#C3630C"
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"pA" = (
+/obj/effect/turf_decal/siding/wideplating/corner{
+	dir = 1;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/siding/wideplating/corner{
+	dir = 8;
+	color = "#CEB689"
+	},
+/turf/open/floor/plasteel,
+/area/hangar)
+"qI" = (
+/obj/structure/platform/industrial{
+	dir = 1
+	},
+/obj/structure/flora/ausbushes/sparsegrass/hell{
+	name = "sparse red grass"
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"sh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/closed/indestructible/reinforced,
+/area/hangar)
+"sA" = (
+/obj/structure/platform/industrial{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"sW" = (
+/obj/effect/turf_decal/siding/wideplating/corner{
+	color = "#CEB689"
+	},
+/turf/open/floor/plasteel,
+/area/hangar)
+"ta" = (
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 5;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/yellow,
+/obj/structure/chair/bench/olive/directional/south,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plasteel,
+/area/hangar)
+"tV" = (
+/turf/open/floor/plasteel/elevatorshaft{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"uV" = (
+/obj/structure/plasticflaps/outpost,
+/obj/machinery/conveyor/auto/outpost{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"vh" = (
+/obj/structure/platform/industrial{
+	dir = 10
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"vp" = (
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 6;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow,
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 8
+	},
+/obj/structure/chair/bench/olive/directional/north,
+/obj/machinery/light/directional/south,
+/turf/open/floor/plasteel,
+/area/hangar)
+"vy" = (
+/obj/structure/platform/industrial{
+	dir = 6
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"vM" = (
+/turf/open/floor/plasteel/stairs{
+	icon = 'icons/obj/stairs.dmi';
+	dir = 1
+	},
+/area/hangar)
+"vN" = (
+/obj/effect/turf_decal/industrial/warning/cee{
+	dir = 4
+	},
+/obj/machinery/light/floor/hangar,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"wf" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 3
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"wM" = (
+/obj/machinery/door/airlock{
+	dir = 4
+	},
+/obj/effect/turf_decal/industrial/warning/fulltile,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/hangar)
+"xL" = (
+/obj/effect/landmark/outpost/hangar_numbers,
+/turf/open/floor/plasteel,
+/area/hangar)
+"xU" = (
+/obj/machinery/light/floor/hangar,
+/turf/open/floor/plasteel/tech{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"xY" = (
+/obj/structure/flora/tree/cactus,
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"ym" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/turf_decal/industrial/warning{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"yq" = (
+/obj/effect/turf_decal/trimline/opaque/yellow/warning{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"zc" = (
+/obj/effect/turf_decal/techfloor{
+	dir = 5
+	},
+/turf/open/floor/plasteel/tech/grid{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"zx" = (
+/obj/effect/decal/fakelattice,
+/turf/open/floor/plasteel/elevatorshaft{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"zI" = (
+/obj/structure/platform/industrial/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"AN" = (
+/obj/machinery/conveyor/auto/outpost,
+/obj/effect/landmark/outpost/hangar_crate_spawner,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Bi" = (
+/obj/effect/turf_decal/industrial/warning/cee{
+	dir = 8
+	},
+/obj/machinery/light/floor/hangar,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Bk" = (
+/obj/effect/turf_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Cd" = (
+/obj/structure/platform/industrial,
+/obj/structure/flora/ausbushes/sparsegrass/hell{
+	name = "sparse red grass"
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"Dz" = (
+/obj/structure/platform/industrial{
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/sparsegrass/hell{
+	name = "sparse red grass"
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"Ex" = (
+/obj/effect/turf_decal/siding/wideplating{
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow,
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 8
+	},
+/obj/effect/spawner/random/vending/snack,
+/turf/open/floor/plasteel,
+/area/hangar)
+"Gj" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Go" = (
+/obj/structure/platform/industrial{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"GR" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/conveyor/auto/outpost{
+	dir = 1
+	},
+/obj/structure/disposaloutlet{
+	dir = 1
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"GU" = (
+/obj/structure/platform/industrial/corner{
+	dir = 1
+	},
+/obj/structure/flora/ausbushes/sparsegrass/hell{
+	name = "sparse red grass"
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"HX" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/turf_decal/industrial/warning{
+	dir = 3
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Ij" = (
+/obj/effect/turf_decal/techfloor{
+	dir = 9
+	},
+/turf/open/floor/plasteel/tech/grid{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"IB" = (
+/obj/effect/turf_decal/industrial/warning/cee{
+	dir = 1
+	},
+/obj/machinery/light/floor/hangar,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Jn" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/turf_decal/industrial/warning{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Jx" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Kk" = (
+/obj/structure/platform/industrial,
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"Mq" = (
+/obj/structure/chair/bench/olive/directional/north,
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 10;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow,
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/plasteel,
+/area/hangar)
+"MX" = (
+/obj/structure/flora/ausbushes/sparsegrass/hell{
+	name = "sparse red grass"
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"Nv" = (
+/obj/effect/turf_decal/industrial/warning/cee,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"NX" = (
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 4;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/yellow,
+/turf/open/floor/plasteel,
+/area/hangar)
+"Ob" = (
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 8;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/hangar)
+"Pl" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/turf_decal/industrial/warning,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Re" = (
+/obj/structure/catwalk/over/plated_catwalk/dark,
+/turf/open/floor/hangar,
+/area/hangar)
+"Rr" = (
+/turf/open/floor/plasteel/stairs{
+	icon = 'icons/obj/stairs.dmi'
+	},
+/area/hangar)
+"Sn" = (
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 1;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/obj/effect/spawner/random/vending/cola,
+/turf/open/floor/plasteel,
+/area/hangar)
+"Tc" = (
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 9;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/opaque/yellow{
+	dir = 4
+	},
+/obj/structure/chair/bench/olive/directional/south,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plasteel,
+/area/hangar)
+"UJ" = (
+/obj/structure/platform/industrial/corner{
+	dir = 5
+	},
+/obj/structure/flora/ausbushes/sparsegrass/hell{
+	name = "sparse red grass"
+	},
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"Vl" = (
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/hangar)
+"VH" = (
+/obj/effect/turf_decal/techfloor{
+	dir = 10
+	},
+/turf/open/floor/plasteel/tech/grid{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"Wq" = (
+/obj/effect/turf_decal/siding/wideplating/corner{
+	dir = 8;
+	color = "#CEB689"
+	},
+/obj/effect/turf_decal/siding/wideplating/corner{
+	dir = 1;
+	color = "#CEB689"
+	},
+/turf/open/floor/plasteel,
+/area/hangar)
+"WS" = (
+/turf/closed/indestructible/rock,
+/area/hangar)
+"Xp" = (
+/obj/effect/turf_decal/industrial/hatch/orange,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Ye" = (
+/obj/machinery/light/floor/hangar,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"Yk" = (
+/turf/open/floor/plasteel/tech{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"YD" = (
+/obj/effect/turf_decal/industrial/warning/corner,
+/turf/open/floor/plasteel/tech,
+/area/hangar)
+"YV" = (
+/obj/machinery/door/poddoor/ert,
+/turf/open/floor/plasteel/elevatorshaft{
+	planetary_atmos = 1
+	},
+/area/hangar)
+"Zg" = (
+/obj/machinery/door/airlock/grunge{
+	dir = 4
+	},
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "1"
+	},
+/obj/effect/turf_decal/industrial/traffic{
+	dir = 4
+	},
+/obj/effect/turf_decal/industrial/traffic{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech/techmaint,
+/area/hangar)
+
+(1,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+mq
+mq
+mq
+mq
+mq
+lE
+mq
+mq
+mq
+lE
+mq
+mq
+mq
+lE
+mq
+mq
+mq
+lE
+mq
+mq
+mq
+lE
+mq
+mq
+mq
+lE
+mq
+mq
+WS
+WS
+WS
+WS
+WS
+"}
+(2,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+Kk
+Ij
+VH
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+gp
+Ij
+VH
+WS
+WS
+WS
+WS
+WS
+WS
+"}
+(3,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+Vl
+Vl
+Cd
+zc
+ao
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+zc
+ao
+WS
+WS
+WS
+WS
+WS
+WS
+"}
+(4,1,1) = {"
+WS
+WS
+WS
+WS
+MX
+Vl
+Vl
+Kk
+ns
+ns
+Yk
+Yk
+Yk
+az
+xU
+Yk
+Yk
+Yk
+az
+xU
+Yk
+Yk
+xU
+mH
+Yk
+Yk
+Yk
+xU
+mH
+Yk
+Yk
+Yk
+ns
+ns
+Go
+WS
+WS
+WS
+WS
+WS
+"}
+(5,1,1) = {"
+WS
+WS
+WS
+WS
+xY
+Vl
+Vl
+Kk
+ns
+ns
+ns
+IB
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+ym
+cK
+ns
+Re
+ns
+Go
+Vl
+Vl
+WS
+WS
+WS
+"}
+(6,1,1) = {"
+WS
+WS
+WS
+WS
+Vl
+Vl
+MX
+Kk
+ns
+Re
+Bi
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+hY
+Bi
+Re
+ns
+Go
+Vl
+xY
+MX
+WS
+WS
+"}
+(7,1,1) = {"
+WS
+WS
+WS
+WS
+Vl
+Vl
+Vl
+Kk
+ns
+Re
+HX
+fA
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+fA
+Pl
+Re
+ns
+Go
+Vl
+Vl
+Vl
+WS
+WS
+"}
+(8,1,1) = {"
+WS
+WS
+WS
+WS
+Vl
+Vl
+Vl
+Kk
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+MX
+Vl
+WS
+WS
+WS
+"}
+(9,1,1) = {"
+WS
+WS
+WS
+WS
+MX
+Vl
+Vl
+Cd
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+Vl
+WS
+WS
+WS
+WS
+"}
+(10,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+Vl
+Vl
+Kk
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+Vl
+WS
+WS
+WS
+WS
+"}
+(11,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+Vl
+Kk
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+Vl
+WS
+WS
+WS
+WS
+"}
+(12,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+Vl
+Kk
+ns
+Re
+vN
+fA
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+fA
+vN
+Re
+ns
+qI
+Vl
+Vl
+WS
+WS
+WS
+"}
+(13,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+xY
+Kk
+ns
+YD
+ns
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+ns
+ns
+Bk
+Go
+Vl
+Vl
+WS
+WS
+WS
+"}
+(14,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+Vl
+Kk
+ns
+wf
+vM
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+ns
+Rr
+dU
+Go
+Vl
+Vl
+Vl
+WS
+WS
+"}
+(15,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+Vl
+Cd
+ns
+wf
+vM
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+ns
+Rr
+dU
+Go
+Vl
+Vl
+MX
+WS
+WS
+"}
+(16,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+Vl
+Kk
+ns
+wf
+vM
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+ns
+Rr
+dU
+Go
+Vl
+Vl
+Vl
+WS
+WS
+"}
+(17,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+Vl
+Vl
+Kk
+ns
+fB
+ns
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+ns
+ns
+oe
+Go
+Vl
+Vl
+xY
+WS
+WS
+"}
+(18,1,1) = {"
+WS
+WS
+WS
+WS
+UJ
+sA
+sA
+vy
+ns
+Re
+Bi
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Bi
+Re
+ns
+Go
+MX
+Vl
+Vl
+WS
+WS
+"}
+(19,1,1) = {"
+WS
+WS
+WS
+WS
+Kk
+jS
+Jx
+Jx
+ns
+Re
+HX
+fA
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+fA
+Pl
+Re
+ns
+Go
+Vl
+Vl
+Vl
+WS
+WS
+"}
+(20,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+mq
+Xp
+nG
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+Vl
+Vl
+WS
+WS
+WS
+"}
+(21,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+mq
+nS
+ns
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+Vl
+Vl
+WS
+WS
+WS
+"}
+(22,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+mq
+nS
+ns
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+Vl
+WS
+WS
+WS
+WS
+"}
+(23,1,1) = {"
+WS
+WS
+mq
+mq
+mq
+mq
+nS
+ov
+ns
+Re
+HX
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+Pl
+Re
+ns
+Go
+Vl
+WS
+WS
+WS
+WS
+"}
+(24,1,1) = {"
+WS
+WS
+mq
+mk
+aC
+aC
+mg
+ov
+ns
+Re
+HX
+fA
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+fA
+Pl
+Re
+ns
+Go
+Vl
+WS
+WS
+WS
+WS
+"}
+(25,1,1) = {"
+WS
+WS
+mq
+uV
+mq
+mq
+jS
+aL
+ns
+Re
+vN
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+lx
+kx
+Re
+ns
+Go
+Vl
+WS
+WS
+WS
+WS
+"}
+(26,1,1) = {"
+WS
+WS
+mq
+jj
+GR
+mq
+af
+vh
+ns
+ns
+ns
+IB
+Jn
+Jn
+Jn
+Jn
+Jn
+cK
+ns
+lA
+lA
+lA
+lA
+ns
+IB
+Jn
+Jn
+Jn
+Jn
+Jn
+Nv
+Ye
+ns
+ns
+Go
+Vl
+MX
+WS
+WS
+WS
+"}
+(27,1,1) = {"
+WS
+WS
+mq
+mq
+sh
+mq
+Vl
+Kk
+Ij
+VH
+ns
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+fB
+Gj
+Gj
+Gj
+Gj
+oe
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+ns
+Ij
+VH
+Go
+Vl
+Vl
+Vl
+WS
+WS
+"}
+(28,1,1) = {"
+WS
+WS
+mq
+AN
+bS
+mq
+Vl
+Kk
+zc
+ao
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+ns
+zc
+ao
+Go
+Vl
+Vl
+Vl
+WS
+WS
+"}
+(29,1,1) = {"
+WS
+WS
+mq
+mq
+mq
+mq
+Vl
+GU
+af
+af
+af
+af
+af
+Dz
+WS
+WS
+mq
+mq
+mq
+wM
+mq
+wM
+mq
+mq
+mq
+WS
+Dz
+af
+af
+af
+af
+af
+af
+af
+zI
+Vl
+Vl
+Vl
+WS
+WS
+"}
+(30,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+xY
+Vl
+Vl
+MX
+Vl
+xY
+WS
+WS
+WS
+mq
+Tc
+al
+Wq
+Ob
+pA
+Ob
+Mq
+mq
+WS
+WS
+Vl
+xY
+Vl
+Vl
+Vl
+MX
+Vl
+Vl
+MX
+xY
+WS
+WS
+WS
+"}
+(31,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+Vl
+Vl
+WS
+WS
+WS
+WS
+WS
+mq
+Sn
+ev
+ev
+xL
+ev
+ev
+Ex
+mq
+WS
+WS
+WS
+WS
+Vl
+Vl
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+"}
+(32,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+mq
+ta
+mz
+fa
+ev
+sW
+NX
+vp
+mq
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+"}
+(33,1,1) = {"
+mq
+mq
+mq
+WS
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+mq
+mq
+mq
+Zg
+nT
+Zg
+mq
+mq
+mq
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+mq
+mq
+mq
+"}
+(34,1,1) = {"
+mq
+zx
+bC
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+mq
+tV
+tV
+lf
+mq
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+YV
+zx
+mq
+"}
+(35,1,1) = {"
+mq
+zx
+bC
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+mq
+tV
+tV
+tV
+mq
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+YV
+zx
+mq
+"}
+(36,1,1) = {"
+mq
+zx
+bC
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+mq
+tV
+tV
+tV
+mq
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+YV
+zx
+mq
+"}
+(37,1,1) = {"
+mq
+mq
+mq
+WS
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+WS
+WS
+mq
+mq
+mq
+mq
+mq
+WS
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+mq
+mq
+mq
+WS
+WS
+WS
+mq
+mq
+mq
+"}
+(38,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+"}
+(39,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+"}
+(40,1,1) = {"
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+WS
+"}
