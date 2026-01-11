@@ -56,7 +56,19 @@
 #define MANUFACTURER_SHARPLITE "the Sharplite Defense logo"
 #define MANUFACTURER_SHARPLITE_NEW "the Nanotrasen-Sharplite logo"
 #define MANUFACTURER_HUNTERSPRIDE "the Hunter's Pride Arms and Ammunition logo"
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - CHANGE BEGIN
+#ifndef STARFLY13_MODULE_GUN_LORE_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 #define MANUFACTURER_SOLARARMORIES "the Solarbundswaffenkammer emblem"
+//---------------------------------------------------------------------------------------------------------------------
+#else
+//---------------------------------------------------------------------------------------------------------------------
+#define MANUFACTURER_SOLARARMORIES "the Solarian emblem"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_GUN_LORE_ENABLED
+// STARFLY EDIT - CHANGE END
+//---------------------------------------------------------------------------------------------------------------------
 #define MANUFACTURER_SCARBOROUGH "the Scarborough Arms logo"
 #define MANUFACTURER_EOEHOMA "the Eoehoma Firearms emblem"
 #define MANUFACTURER_NANOTRASEN_OLD "an outdated Nanotrasen logo"
