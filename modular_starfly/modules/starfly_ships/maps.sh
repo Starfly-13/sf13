@@ -43,7 +43,7 @@ done
 if [[ -d "$starfly_maps" ]]; then
     (
         cd "$starfly_maps"
-        find . -mindepth 1 -depth -print0 -type f
+        find . -type f -mindepth 1 -depth -print0
     ) | while IFS= read -r -d '' relpath; do
         echo "Removing: $STARFLY_MAPS_DIR/$relpath"
         rm -rf "$STARFLY_MAPS_DIR/$relpath"
