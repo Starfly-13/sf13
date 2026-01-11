@@ -26,6 +26,24 @@ Juke.setup({ file: import.meta.url }).then((code) => {
 
 const DME_NAME = "shiptest";
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN
+// #ifdef STARFLY13_MODULE_STARFLY_SHIPS_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+const DEFAULT_MAPS_DIR = "_maps";
+const STAGED_MAPS_DIR = process.env.STARFLY_MAPS_DIR; // e.g. ".staging/_maps"
+
+// Use staged maps dir if provided AND it exists; otherwise normal _maps
+const MAPS_DIR =
+  STAGED_MAPS_DIR && fs.existsSync(STAGED_MAPS_DIR) ? STAGED_MAPS_DIR : DEFAULT_MAPS_DIR;
+
+const mapsPath = (p) => `${MAPS_DIR}/${p}`;
+const stripMapsPrefix = (p) => p.replace(`${MAPS_DIR}/`, "");
+//---------------------------------------------------------------------------------------------------------------------
+// #endif // #ifdef STARFLY13_MODULE_ADMIN_VERB_FREEZE_ENABLED
+// STARFLY EDIT - ADDITION END
+//---------------------------------------------------------------------------------------------------------------------
+
 export const DefineParameter = new Juke.Parameter({
   type: "string[]",
   alias: "D",
@@ -62,7 +80,7 @@ export const DmMapsIncludeTarget = new Juke.Target({
     ];
     const content =
       folders
-        .map((file) => file.replace("_maps/", ""))
+        .map(stripMapsPrefix)
         .map((file) => `#include "${file}"`)
         .join("\n") + "\n";
     fs.writeFileSync("_maps/templates.dm", content);
@@ -80,7 +98,7 @@ export const DmTarget = new Juke.Target({
     get(DefineParameter).includes("ALL_MAPS") && DmMapsIncludeTarget,
   ],
   inputs: [
-    "_maps/map_files/**",
+    mapsPath("map_files/**"),
     "code/**",
     "html/**",
     "icons/**",
