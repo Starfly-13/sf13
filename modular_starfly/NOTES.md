@@ -4,7 +4,7 @@ Some notes about the current state of modularization of previous STARFLY-13 cont
 
 
 ## More Needs
-More things that we'll need to create to suport Modular Starfly
+More things that we'll need to create to support Modular Starfly
 
 - [ ] Create a CI action to compile shiptest.dmb with each module enabled/disabled
 - [ ] Create a CI action to compare `code/__DEFINES/__STARFLY/__modules.dm` with `tgui/packages/tgui/starfly.ts`
@@ -56,3 +56,8 @@ Upstream changes we don't intend to modularize
 
 - [-] Create MAGIC module (https://github.com/shiptest-ss13/Shiptest/pull/2877)
 - [-] Create MUTATION_TOXIN module (https://github.com/shiptest-ss13/Shiptest/pull/2659)
+
+## Further Ports
+Changes to sister servers that we would like to copy/influence our own.
+
+- [-] MODS touch-up! (https://github.com/PentestSS13/Pentest/pull/443)
