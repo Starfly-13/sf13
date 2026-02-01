@@ -116,6 +116,7 @@ jobs:
     - run: tools/starfly/ci/build_rust_g.sh
 
   build_docker:
+    if: ${{ github.event_name == 'pull_request' }}
     name: "Build Docker Image"
     runs-on: ubuntu-latest
     steps:
