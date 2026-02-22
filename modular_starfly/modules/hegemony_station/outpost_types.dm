@@ -25,8 +25,8 @@
 
 /datum/map_template/outpost/hegemony
 	name = "hegemony"
-	outpost_name = "Installation Trifuge"
-	outpost_administrator = "Caldwell"
+	outpost_name = "Hegemony Station"
+	outpost_administrator = "Madtankdriver"
 
 /datum/map_template/outpost/hangar/hegemony_20x20
 	name = "hangar/hegemony_20x20"
