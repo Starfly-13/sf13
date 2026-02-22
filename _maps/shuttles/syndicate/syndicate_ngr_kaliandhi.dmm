@@ -3117,7 +3117,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "qy" = (
-/obj/machinery/computer/apc_control{
+/obj/machinery/computer/monitor{
 	icon_state = "computer-right"
 	},
 /obj/effect/turf_decal/techfloor{
@@ -7926,6 +7926,10 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable{
 	icon_state = "0-4"
+	},
+/obj/machinery/light_switch{
+	pixel_x = -14;
+	pixel_y = 22
 	},
 /turf/open/floor/plasteel/patterned/grid/dark,
 /area/ship/maintenance/starboard)
