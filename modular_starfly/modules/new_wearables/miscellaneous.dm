@@ -22,6 +22,8 @@
 /obj/item/clothing/suit/jacket/leather/duster/syndicate
 	name = "syndicate duster"
 	desc = "A long, supple leather coat in the old Syndicate colors. Ideal for protecting its wearer from rain, sun, dust, and being mistaken for someone who's not a terrorist."
+	icon = 'modular_starfly/modules/new_wearables/icons/obj/suits.dmi'
+	mob_overlay_icon = 'modular_starfly/modules/new_wearables/icons/mob/suit.dmi'
 	icon_state = "duster_syndicate"
 	item_state = "duster_syndicate"
 

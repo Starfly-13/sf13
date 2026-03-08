@@ -22,6 +22,8 @@
 /obj/item/clothing/head/outlaw
 	name = "outlaw hat"
 	desc = "A classic stetson hat, made from real imitation leather! Wearing it gives you a strong urge to rob a train."
+	icon = 'modular_starfly/modules/new_wearables/icons/obj/hats.dmi'
+	mob_overlay_icon = 'modular_starfly/modules/new_wearables/icons/mob/head.dmi'
 	icon_state = "outlaw"
 
 //---------------------------------------------------------------------------------------------------------------------
