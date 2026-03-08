@@ -4,7 +4,10 @@ Module ID: `NEW_WEARABLES`
 
 ## Description
 
-Display STARFLY-13 branding instead of upstream Shiptest branding.
+Adds some new wearable items to the game, including many striped scarves, an
+outlaw hat, and a syndicate duster.
+
+Modifies some posters to be more in line with Starfly-13 lore.
 
 ## TG Proc/File Changes
 
