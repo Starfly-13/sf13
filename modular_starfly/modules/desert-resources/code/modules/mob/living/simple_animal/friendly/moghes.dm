@@ -1,7 +1,7 @@
 /mob/living/simple_animal/threshbeast
 	name = "threshbeast"
 	desc = "Large herbivorous reptiles native to Moghes, the azkrazal or 'threshbeast' is commonly used as a mount, beast of burden, or convenient food source by Unathi. They are highly valued for their speed and strength, capable of running at 30-42 miles per hour at top speed. Their favorite foods are grasses and cactus fruits"
-	icon = 'icons/mob/moghes/threshbeast.dmi'
+	icon = 'modular_starfly/modules/desert-resources/icon/mob/moghes/threshbeast.dmi'
 	icon_state = "threshbeast"
 	icon_living = "threshbeast"
 	icon_dead = "threshbeast_dead"
@@ -70,7 +70,7 @@
 /mob/living/simple_animal/miervesh
 	name = "Mier'vesh"
 	desc = "A small, sweet-tempered flying reptile from Moghes. Frequently samples the air with a long, thin forked tongue. They are popular animals among Ouerean Unathi as they are small and sweet tempered, making them slow to respond to danger." //'
-	icon = 'icons/mob/moghes/miervesh.dmi'
+	icon = 'modular_starfly/modules/desert-resources/icons/mob/moghes/miervesh.dmi'
 	icon_state = "miervesh-1"
 	icon_living = "miervesh-1"
 	icon_dead = "miervesh-1-dead"
