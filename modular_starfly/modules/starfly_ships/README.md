@@ -4,7 +4,30 @@ Module ID: `STARFLY_SHIPS`
 
 ## Description
 
-Removes non-lore ships and ship configurations in a modular way. New ships will appear in thier own modules.
+Removes non-lore ships and ship configurations in a modular way. New ships will
+appear in thier own modules.
+
+### Usage
+
+This module applies custom ships that provided by other modules. We start with
+the base `_maps` provided from upstream (Shiptest).
+
+We then copy the contents of `_maps` from modules under `modular_starfly`. Any
+module providing a new file will take precedence over upstream. Modules that
+provide identical filenames will conflict with each other. Those conflicts
+must be resolved between the modules if you expect the ships to work properly.
+
+Finally, anything defined in this module `STARFLY_SHIPS` will be deleted from
+the `_maps` directory. By providing a file like `_maps/configs/srm_elder.json`
+in this module, we instruct the build process to remove that file from the
+codebase at build time. It will not be present in the game.
+
+#### tl;dr
+
+- Add your new ships under `_maps` in your own new modular_starfly modules.
+
+- Add empty files in this module `STARFLY_SHIPS` if you want to DELETE a ship
+  from the Starfly version of the game.
 
 ## TG Proc/File Changes
 

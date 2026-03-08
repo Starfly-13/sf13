@@ -8909,10 +8909,7 @@
 /area/centcom/control)
 "gYy" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/beer{
-	pixel_x = 5;
-	pixel_y = -2
-	},
+/obj/item/reagent_containers/food/drinks/mead,
 /obj/item/toy/cards/deck/syndicate{
 	pixel_x = -6;
 	pixel_y = 6
@@ -10192,7 +10189,7 @@
 /area/centcom/control)
 "jFa" = (
 /obj/structure/table/reinforced,
-/obj/item/clothing/head/HoS/cybersun{
+/obj/item/clothing/head/cybersun{
 	pixel_x = 2
 	},
 /obj/machinery/light/directional/south,
