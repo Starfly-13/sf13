@@ -250,10 +250,18 @@
 		)
 
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/contraband/free_tonto
 	name = "Free Tonto"
 	desc = "You're... not exactly sure what this is. In fact, nobody knows what it is, but its one of the few pieces of non-digital media that was found intact after the Night of Fire, making it a popular aesthetic, even if nobody knows what it is."
 	icon_state = "poster_2012"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/contraband/atmosia_independence
 	name = "Atmosia Declaration of Independence"
@@ -471,6 +479,10 @@
 	desc = "A poster advertising the IRMG's services. \"I hear you got a problem. You won't have one with us. No bullshit, guranteed.\""
 	icon_state = "poster_inteq"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/contraband/space_cops
 	name = "Space Cops."
 	desc = "A poster advertising the television show that showcases all the hip and cool ways how the colonial police on Nagaski City abuse their power. Suprisingly effective in keeping the Nagaski City colonial police popular."
@@ -480,6 +492,10 @@
 	name = "Steppy Flag"
 	desc = "A poster making a simple statement: \"Fuck around, Find out.\" These posters are suspiciously popular in the Northwind Shipping offices."
 	icon_state = "poster_steppy"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/contraband/syndicate
 	name = "Syndicate Logo"
@@ -761,14 +777,22 @@
 	desc = "Foam Force, it's Foam or be Foamed!"
 	icon_state = "poster_foam_force"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/official/cohiba_robusto_ad
 	name = "Cohiba Robusto Ad"
 	desc = "Cohiba Robusto, the classy cigar straight from Centcom."
 	icon_state = "poster_cohiba"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/official/fruit_bowl
 	name = "Fruit Bowl"
-	desc = " Simple, yet awe-inspiring."
+	desc = "Simple, yet awe-inspiring."
 	icon_state = "poster_fruitbowl"
 
 /obj/structure/sign/poster/official/pda_ad
@@ -976,10 +1000,18 @@
 	desc = "Kepler 453b, the only colonized planet in the Kepler 453 system. This poster in particular is trying to attract tourists to the planet, listing attractions like the salty desert and dual suns. \"Where your shadow always has company!\""
 	icon_state = "poster-solgov-kepler"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/solgov/skiing
 	name = "Lo-Fly Skiing Advert"
 	desc = "An advertisement for some low-gravity skiing resort on Mars. \"Popular with SUNS groups!\""
 	icon_state = "poster-solgov-loskiing"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/solgov/recyle
 	name = "Recycle"
@@ -1015,10 +1047,18 @@
 	desc = "Enlist to be a part of the SolGov Exploration Forces!"
 	icon_state = "poster_solgov_enlist_legit"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/solgov/nanomichi_ad
 	name = "Nanomichi Ad"
 	desc = " A poster advertising a early post-NOF solarian computer. Severely outdated, but the advert is now a pretty nifty decoration."
 	icon_state = "poster_nanomichi"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/solgov/suns
 	name = "Student Union of Natural Sciences"
@@ -1100,6 +1140,15 @@
 	/obj/structure/sign/poster/contraband/engis_unite,
 	/obj/structure/sign/poster/contraband/gec,
 	/obj/structure/sign/poster/contraband/d_day_promo,
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN
+#ifdef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+	/obj/structure/sign/poster/contraband/roseusfilm1,
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifdef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - ADDITION BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 		)
 
 //RILENA poster pool. There are only five of these, so try not to go overboard with the random posters, okay? Expect not to see these mapped onto ships except in rolled up form, since they're supposed to be bought in the RILENA merch crate.
