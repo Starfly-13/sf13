@@ -8083,9 +8083,6 @@
 /turf/open/floor/plating,
 /area/outpost/crew/bar)
 "BB" = (
-/obj/structure/sign/donk{
-	pixel_y = 32
-	},
 /turf/open/floor/carpet/nanoweave/purple,
 /area/outpost/maintenance/starboard)
 "BF" = (
