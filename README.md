@@ -1,19 +1,16 @@
 # Shiptest Codebase
 
-[![Checks](https://github.com/shiptest-ss13/Shiptest/workflows/Checks/badge.svg)](https://github.com/shiptest-ss13/Shiptest/actions/workflows/ci_suite.yml) [![Percentage of issues still open](http://isitmaintained.com/badge/open/shiptest-ss13/Shiptest.svg)](https://isitmaintained.com/project/shiptest-ss13/Shiptest "Percentage of issues still open") [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/shiptest-ss13/Shiptest.svg)](https://isitmaintained.com/project/shiptest-ss13/Shiptest "Average time to resolve an issue") [![GitHub issues](https://img.shields.io/github/issues/shiptest-ss13/Shiptest)](https://github.com/shiptest-ss13/Shiptest/issues) ![GitHub top language](https://img.shields.io/github/languages/top/shiptest-ss13/Shiptest)
+[![Checks](https://github.com/Starfly-13/sf13/workflows/Checks/badge.svg)](https://github.com/Starfly-13/sf13/actions/workflows/ci_suite.yml) [![Percentage of issues still open](http://isitmaintained.com/badge/open/Starfly-13/sf13.svg)](https://isitmaintained.com/project/Starfly-13/sf13 "Percentage of issues still open") [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Starfly-13/sf13.svg)](https://isitmaintained.com/project/Starfly-13/sf13 "Average time to resolve an issue") [![GitHub issues](https://img.shields.io/github/issues/Starfly-13/sf13)](https://github.com/Starfly-13/sf13/issues) ![GitHub top language](https://img.shields.io/github/languages/top/Starfly-13/sf13)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://user-images.githubusercontent.com/8171642/50290880-ffef5500-043a-11e9-8270-a2e5b697c86c.png) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
--   **Website:** <https://shiptest.net>
--   **Ko-Fi:** <https://ko-fi.com/shiptest>
--   **Wiki:** <https://shiptest.net/wiki>
--   **Code Docs:** <https://codedocs.shiptest.net>
--   **Discord:** <https://shiptest.net/discord>
--   **Coderbus Discord:** <https://discord.gg/Vh8TJp9>
+-   **Website:** <https://wiki.starfly13.space>
+-   **Wiki:** <https://wiki.starfly13.space>
+-   **Discord:** <https://discord.gg/4m382TKGkh>
 
-This is the codebase for the Ship-based Shiptest flavoured fork of SpaceStation 13.
+This is the codebase for the Western-inspired Starfly flavored version of the ship-based Shiptest flavored fork of SpaceStation 13.
 
-Shiptest is a thrill-packed round-based exploration and roleplaying game set against the backdrop of a whimsical metal spacefaring machine masquerading as a spaceship, with charming spritework designed to represent the sci-fi setting and it's dangerous undertones. Have fun, and survive with your crew!
+Starfly is a thrill-packed round-based exploration and roleplaying game set against the backdrop of a whimsical metal spacefaring machine masquerading as a spaceship, with charming spritework designed to represent the sci-fi setting and it's dangerous undertones. Our lore evolves over time, with the influence of in-game events that you can participate in! Have fun, and survive with your crew!
 
 ## DOWNLOADING
 
@@ -40,6 +37,7 @@ Shiptest is a thrill-packed round-based exploration and roleplaying game set aga
 -   Interstation, for bridging the gap between Oracle and Modern /tg/
 -   YogStation, for multiple different features
 -   Baystation, for the initial overmap concept and sprites
+-   Shiptest, for the base on which our code runs.
 
 And thank you to any other codebase not mentioned here that has been used in the code. Your wonderful contributions are known.
 
