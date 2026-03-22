@@ -6653,9 +6653,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/poddoor/preopen{
-	id = "out3"
-	},
 /obj/machinery/door/airlock/wood/glass{
 	id_tag = "out3"
 	},
@@ -7011,9 +7008,6 @@
 /turf/open/floor/plating,
 /area/outpost/maintenance/starboard)
 "yu" = (
-/obj/machinery/door/airlock/wood/glass{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
@@ -7022,6 +7016,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/wood/glass{
+	dir = 8
 	},
 /turf/open/floor/wood,
 /area/outpost/crew/dorm)
@@ -10907,8 +10904,8 @@
 /turf/open/floor/carpet/nanoweave/red,
 /area/outpost/exterior)
 "Ld" = (
-/obj/machinery/door/airlock/wood/glass,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
 /area/outpost/crew/dorm)
 "Le" = (
