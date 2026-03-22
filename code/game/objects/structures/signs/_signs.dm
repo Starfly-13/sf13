@@ -19,6 +19,10 @@
 	///sign_change_name is used to make nice looking, alphebetized and categorized names when you use a pen on a sign backing.
 	var/sign_change_name = "Sign - Blank" //If this is ever seen in game, something went wrong.
 
+/obj/structure/sign/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_WALLMOUNTED, type)
+
 /obj/item/sign
 	name = "sign backing"
 	desc = "A plastic sign backing, use a pen to change the decal. It can be placed on a wall."
@@ -241,13 +245,6 @@
 	sign_change_name = "Corporate Logo - Syndicate"
 	desc = "A sign with the Syndicate logo on it. Death to Nanotrasen."
 	icon_state = "syndicate"
-	is_editable = TRUE
-
-/obj/structure/sign/donk	//based off a collection of simplfied syndicate logos
-	name = "\improper Donk Co. logo sign"
-	sign_change_name = "Corporate Logo - Donk Co."
-	desc = "A sign with the Donk Co. logo on it. Fight for your Donk Pockets!"
-	icon_state = "donkco"
 	is_editable = TRUE
 
 // some solgov stuff

@@ -250,10 +250,18 @@
 		)
 
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/contraband/free_tonto
 	name = "Free Tonto"
 	desc = "You're... not exactly sure what this is. In fact, nobody knows what it is, but its one of the few pieces of non-digital media that was found intact after the Night of Fire, making it a popular aesthetic, even if nobody knows what it is."
 	icon_state = "poster_2012"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/contraband/atmosia_independence
 	name = "Atmosia Declaration of Independence"
@@ -471,6 +479,10 @@
 	desc = "A poster advertising the IRMG's services. \"I hear you got a problem. You won't have one with us. No bullshit, guranteed.\""
 	icon_state = "poster_inteq"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/contraband/space_cops
 	name = "Space Cops."
 	desc = "A poster advertising the television show that showcases all the hip and cool ways how the colonial police on Nagaski City abuse their power. Suprisingly effective in keeping the Nagaski City colonial police popular."
@@ -480,6 +492,10 @@
 	name = "Steppy Flag"
 	desc = "A poster making a simple statement: \"Fuck around, Find out.\" These posters are suspiciously popular in the Northwind Shipping offices."
 	icon_state = "poster_steppy"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/contraband/syndicate
 	name = "Syndicate Logo"
@@ -551,6 +567,92 @@
 	name = "Bigass Horns"
 	desc = "This poster depicts a trio of PGF sailors. The elzuose's horns are sticking up through the text block. \"Get your bigass horns out of the caption!\""
 	icon_state = "poster-pgf_bigass-horns"
+
+/obj/structure/sign/poster/contraband/diet_guide
+	name = "Dietary Guide"
+	desc = "It's a food safety infographic outlining the types of food that different species can and cannot eat."
+	icon_state = "poster-diet-guide"
+	/// Static string containing the pre-generated diet guide.
+	var/static/diet_guide_text
+	/// Static list with positioning of the food icons.
+	var/static/list/icon_positions = list()
+	var/base_text = {"
+<center><h1>Species Dietary Guide</h1></center>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="table-layout: fixed;" class="main">
+	DIET_DATA_HERE
+</table>
+<br />
+<table align="center" width="300px" border="1" cellpadding="0" cellspacing="0" style="table-layout: fixed">
+	<tr bgcolor="d9f5e1">
+		<td><font size="6" color="3bbf2a"><center>✓</center></font></td>
+		<td><b><center>Safe to eat</b></center></td>
+	</tr>
+	<tr bgcolor="ffffff">
+		<td><font size="6" color="fc8403"><center>✗</center></font></td>
+		<td><b><center>Cannot be digested</center></b></td>
+	</tr>
+	<tr bgcolor="d9f5e1">
+		<td><font size="6" color="c91625"><center>✗</center></font></td>
+		<td><b><center>Toxic if ingested</center></b></td>
+	</tr>
+</table>
+"}
+
+/obj/structure/sign/poster/contraband/diet_guide/ComponentInitialize()
+	. = ..()
+	if(!diet_guide_text || !LAZYLEN(icon_positions))
+		var/static/list/food_images = list(
+			"Meat, Eggs" = "food-cooked_meat",
+			"Raw Meat" = "food-raw_meat",
+			"Grains" = "food-bread",
+			"Fruits" = "food-fruit",
+			"Veggies" = "food-vegetable",
+			"Dairy" = "food-dairy",
+			"Cloth" = "food-cloth",
+			"Fried Foods" = "food-fried",
+		)
+		var/diet_text_data = "<tr><td width=\"80px\" valign=\"top\" bgcolor=\"80c294\" />"
+		var/stamp_x_pos = 81
+		for(var/food_name in food_images) // <img src=\"[food_sprites[food_name]]\" /><br / >
+			diet_text_data += "<th valign=\"center\" bgcolor=\"ffffff\" width=\"80px\" height=\"80px\"><br/><br/><br/><center>[food_name]</center></th>"
+			icon_positions[food_images[food_name]] = stamp_x_pos
+			stamp_x_pos += 62
+		diet_text_data += "</td></tr>"
+		var/species_count = 0
+		var/static/list/food_groups = list(MEAT, RAW, GRAIN, FRUIT, VEGETABLES, DAIRY, CLOTH, FRIED)
+		for(var/species_id in GLOB.roundstart_races)
+			var/datum/species/species = GLOB.species_list[species_id]
+			species = new species()
+			if(species.reagent_tag == PROCESS_SYNTHETIC)
+				continue // you don't need a poster to tell you that robots don't eat food
+			if(TRAIT_NOHUNGER in species.inherent_traits)
+				continue // duh
+			species_count++
+			diet_text_data += "<tr><td width=\"96px\" bgcolor=\"80c294\"><b><center>[replacetext(species.name, "\improper ", "")]</center></b></td>"
+			var/background_color = (species_count % 2) ? "d9f5e1" : "ffffff"
+			for(var/food_group in food_groups)
+				diet_text_data += "<td width=\"80px\" bgcolor=\"[background_color]\">"
+				if(species.toxic_food & food_group)
+					diet_text_data += "<font size=\"6\" color=\"c91625\"><center>✗</center></font></td>"
+					continue
+				if(species.disliked_food & food_group)
+					diet_text_data += "<font size=\"6\" color=\"fc8403\"><center>✗</center></font></td>"
+					continue
+				diet_text_data += "<font size=\"6\" color=\"3bbf2a\"><center>✓</center></font></td>"
+			diet_text_data += "</tr>"
+			qdel(species)
+		diet_guide_text = replacetext(base_text, "DIET_DATA_HERE", diet_text_data)
+
+	var/datum/component/writing/diet_guide = AddComponent(/datum/component/writing, \
+		raw_text = diet_guide_text, \
+		window_width = 600, \
+		window_height = 640, \
+		resizable = FALSE, \
+	)
+
+	var/datum/asset/spritesheet/simple/paper_assets = get_asset_datum(/datum/asset/spritesheet/simple/paper)
+	for(var/food_name in icon_positions)
+		diet_guide.add_graphic(paper_assets.icon_class_name(food_name), icon_positions[food_name], 44, 0, food_name)
 
 //beginning of Nanotrasen approved posters. Expect corprate propaganda and motavation. You will usually only see this on Nanotrasen ships and stations
 /obj/structure/sign/poster/official
@@ -675,14 +777,22 @@
 	desc = "Foam Force, it's Foam or be Foamed!"
 	icon_state = "poster_foam_force"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/official/cohiba_robusto_ad
 	name = "Cohiba Robusto Ad"
 	desc = "Cohiba Robusto, the classy cigar straight from Centcom."
 	icon_state = "poster_cohiba"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/official/fruit_bowl
 	name = "Fruit Bowl"
-	desc = " Simple, yet awe-inspiring."
+	desc = "Simple, yet awe-inspiring."
 	icon_state = "poster_fruitbowl"
 
 /obj/structure/sign/poster/official/pda_ad
@@ -890,10 +1000,18 @@
 	desc = "Kepler 453b, the only colonized planet in the Kepler 453 system. This poster in particular is trying to attract tourists to the planet, listing attractions like the salty desert and dual suns. \"Where your shadow always has company!\""
 	icon_state = "poster-solgov-kepler"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/solgov/skiing
 	name = "Lo-Fly Skiing Advert"
 	desc = "An advertisement for some low-gravity skiing resort on Mars. \"Popular with SUNS groups!\""
 	icon_state = "poster-solgov-loskiing"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/solgov/recyle
 	name = "Recycle"
@@ -929,10 +1047,18 @@
 	desc = "Enlist to be a part of the SolGov Exploration Forces!"
 	icon_state = "poster_solgov_enlist_legit"
 
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - REMOVAL BEGIN
+#ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
 /obj/structure/sign/poster/solgov/nanomichi_ad
 	name = "Nanomichi Ad"
 	desc = " A poster advertising a early post-NOF solarian computer. Severely outdated, but the advert is now a pretty nifty decoration."
 	icon_state = "poster_nanomichi"
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifndef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - REMOVAL BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 
 /obj/structure/sign/poster/solgov/suns
 	name = "Student Union of Natural Sciences"
@@ -1014,6 +1140,15 @@
 	/obj/structure/sign/poster/contraband/engis_unite,
 	/obj/structure/sign/poster/contraband/gec,
 	/obj/structure/sign/poster/contraband/d_day_promo,
+//---------------------------------------------------------------------------------------------------------------------
+// STARFLY EDIT - ADDITION BEGIN
+#ifdef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+	/obj/structure/sign/poster/contraband/roseusfilm1,
+//---------------------------------------------------------------------------------------------------------------------
+#endif // #ifdef STARFLY13_MODULE_NEW_WEARABLES_ENABLED
+// STARFLY EDIT - ADDITION BEGIN
+//---------------------------------------------------------------------------------------------------------------------
 		)
 
 //RILENA poster pool. There are only five of these, so try not to go overboard with the random posters, okay? Expect not to see these mapped onto ships except in rolled up form, since they're supposed to be bought in the RILENA merch crate.

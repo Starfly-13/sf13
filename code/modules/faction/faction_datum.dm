@@ -69,13 +69,6 @@
 	check_prefix = FALSE
 	color = "#97150B"
 
-/datum/faction/syndicate/suns
-	name = FACTION_SUNS
-	short_name = "SUNS"
-	official_language = /datum/language/solarian_international
-	prefixes = PREFIX_SUNS
-	color = "#CD94D3"
-
 /datum/faction/syndicate/scarborough
 	name = "Scarborough Arms"
 	prefixes = PREFIX_NONE
@@ -85,8 +78,17 @@
 	name = FACTION_SOLCON
 	parent_faction = /datum/faction/solgov
 	official_language = /datum/language/solarian_international
+	allowed_factions = list(/datum/faction/suns)
 	prefixes = PREFIX_SOLCON
 	color = "#444e5f"
+
+/datum/faction/suns
+	name = FACTION_SUNS
+	short_name = "SUNS"
+	parent_faction = /datum/faction/suns
+	official_language = /datum/language/solarian_international
+	prefixes = PREFIX_SUNS
+	color = "#CD94D3"
 
 /datum/faction/srm
 	name = FACTION_SRM
@@ -106,7 +108,7 @@
 	name = FACTION_CLIP
 	short_name = "CLIP"
 	parent_faction = /datum/faction/clip
-	official_language = /datum/language/zohil_kalixcian
+	official_language = /datum/language/league_kalixcian
 	prefixes = PREFIX_CLIP
 	color = "#3F90DF"
 
@@ -142,6 +144,14 @@
 	official_language = /datum/language/gezena_kalixcian
 	prefixes = PREFIX_PGF
 	color = "#359829"
+
+/datum/faction/zohil // in case anyone wants to give zohil a ship
+	name = FACTION_ZOHIL
+	short_name = "ZHL"
+	parent_faction = /datum/faction/zohil
+	official_language = /datum/language/zohil_kalixcian
+	prefixes = PREFIX_ZOHIL
+	color = "#6b2ba0"
 
 /datum/faction/independent
 	name = FACTION_INDEPENDENT

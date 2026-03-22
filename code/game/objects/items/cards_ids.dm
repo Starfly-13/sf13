@@ -127,18 +127,6 @@
 			if(uses_left == 0)
 				emag_on = FALSE
 
-/obj/item/card/emagfake
-	desc = "It's a card with a magnetic strip attached to some circuitry. Closer inspection shows that this card is a poorly made replica, with a \"DonkCo\" logo stamped on the back."
-	name = "cryptographic sequencer"
-	icon_state = "emag"
-	item_state = "card-id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-
-/obj/item/card/emagfake/afterattack()
-	. = ..()
-	playsound(src, 'sound/items/bikehorn.ogg', 50, TRUE)
-
 /obj/item/card/id
 	name = "access card"
 	desc = "These cards provide access to different sections of a ship."
@@ -202,7 +190,7 @@
 		. += "[registered_name]"
 	if(registered_age)
 		. += "<B>AGE:</B>"
-		. += "[registered_age] years old [(registered_age < AGE_MINOR) ? "There's a holographic stripe that reads <b>[span_danger("'MINOR: DO NOT SERVE ALCOHOL OR TOBACCO'")]</b> along the bottom of the card." : ""]"
+		. += "[registered_age] years old [(registered_age < AGE_DRINKING) ? "There's a holographic stripe that reads <b>[span_danger("'DO NOT SERVE ALCOHOL OR TOBACCO'")]</b> along the bottom of the card." : ""]"
 	if(length(ship_access))
 		var/list/ship_factions = list()
 		var/list/ship_names = list()

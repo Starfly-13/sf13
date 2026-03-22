@@ -525,26 +525,22 @@
 /obj/structure/table/reinforced,
 /obj/item/bodycamera{
 	pixel_y = 8;
-	pixel_x = -7
+	pixel_x = -4
 	},
 /obj/item/bodycamera{
 	pixel_y = 6;
-	pixel_x = 1
+	pixel_x = 6
 	},
 /obj/item/bodycamera{
 	pixel_y = 4;
-	pixel_x = -9
+	pixel_x = -6
 	},
 /obj/item/bodycamera{
 	pixel_y = 2;
-	pixel_x = -1
+	pixel_x = 4
 	},
 /obj/item/bodycamera{
-	pixel_x = -11
-	},
-/obj/item/multitool{
-	pixel_x = 8;
-	pixel_y = 3
+	pixel_x = -8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
@@ -1312,11 +1308,7 @@
 	pixel_y = 5;
 	pixel_x = -8
 	},
-/obj/item/reagent_containers/food/drinks/beer{
-	pixel_x = 9;
-	pixel_y = 4;
-	list_reagents = null
-	},
+/obj/item/reagent_containers/food/drinks/mead,
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
 "iW" = (
@@ -4549,6 +4541,9 @@
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/machinery/light/directional/west,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/table/emptycomputer{
+	icon_state = "emptycomputer-left"
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "Ge" = (
