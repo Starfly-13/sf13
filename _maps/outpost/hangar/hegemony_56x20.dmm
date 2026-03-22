@@ -361,7 +361,17 @@
 /turf/closed/indestructible/rock,
 /area/hangar)
 "BY" = (
-/obj/structure/chair,
+/obj/structure/table/greyscale{
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/obj/item/weldingtool/mini{
+	pixel_x = -6
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = 5;
+	pixel_y = 8
+	},
 /turf/open/floor/plasteel/tech,
 /area/hangar)
 "Ch" = (
