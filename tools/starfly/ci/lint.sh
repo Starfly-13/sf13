@@ -11,6 +11,9 @@ echo "# Checking shiptest.dme"
 echo "## Checking FILE_DIR directives in shiptest.dme"
 tools/starfly/ci/check_file_dir.sh
 
+echo "## Checking include types in shiptest.dme"
+python3 tools/starfly/python/check_dme_includes.py shiptest.dme
+
 echo "## Checking include order in shiptest.dme"
 python3 tools/starfly/python/check_dme_order.py shiptest.dme
 
