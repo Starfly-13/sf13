@@ -510,24 +510,6 @@
 	},
 /turf/open/floor/plating,
 /area/outpost/crew/janitor)
-"bL" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/obj/structure/table/reinforced,
-/obj/item/paper{
-	pixel_x = -5;
-	name = "Refineries instructions";
-	default_raw_text = "Please use the provided multiool to connect the production machine console to the furnace first. Then, use the multitool to connect the ice crusher to the elecrolyzer console. "
-	},
-/obj/item/multitool{
-	pixel_x = 8
-	},
-/turf/open/floor/plasteel/patterned,
-/area/outpost/cargo/smeltery)
 "bM" = (
 /obj/structure/railing{
 	color = "#a3a2a0"
@@ -5667,6 +5649,24 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/wood,
 /area/outpost/maintenance/starboard)
+"sV" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/item/paper{
+	pixel_x = -5;
+	name = "Refineries instructions";
+	default_raw_text = "Please use the provided multiool to connect the production machine console to the furnace first. Then, use the multitool to connect the ice crusher to the elecrolyzer console. "
+	},
+/obj/item/multitool{
+	pixel_x = 8
+	},
+/turf/open/floor/plasteel/patterned,
+/area/outpost/cargo/smeltery)
 "sY" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -20892,7 +20892,7 @@ jz
 kp
 Hu
 qZ
-bL
+sV
 IC
 cO
 KM
