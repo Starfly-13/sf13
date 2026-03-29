@@ -24,7 +24,7 @@
 
 
 /datum/map_template/outpost/hegemony
-	name = "hegemony"
+	name = "hegemony_station"
 	outpost_name = "Hegemony Station"
 	outpost_administrator = "Madtankdriver"
 
