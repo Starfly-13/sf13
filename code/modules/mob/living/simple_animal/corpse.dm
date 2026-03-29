@@ -114,6 +114,19 @@
 	back = /obj/item/storage/backpack
 	r_pocket = /obj/item/tank/internals/emergency_oxygen
 
+/datum/outfit/ramzi/sniper
+	name = "Ramzi Clique Sniper"
+	uniform = /obj/item/clothing/under/syndicate/ramzi
+	head = /obj/item/clothing/head/helmet/space/hardsuit/stealth/ramzi
+	suit = /obj/item/clothing/suit/space/hardsuit/stealth/ramzi
+	back = /obj/item/tank/jetpack/oxygen/harness
+	r_pocket = /obj/item/tank/internals/emergency_oxygen
+
+/obj/effect/mob_spawn/human/corpse/ramzi/sniper
+	name = "Ramzi Clique Sniper"
+	id_job = "Operative"
+	outfit = /datum/outfit/ramzi/sniper
+
 /obj/effect/mob_spawn/human/corpse/ramzi/stormtrooper
 	name = "Ramzi Clique Trooper"
 	id_job = "Operative"
@@ -175,11 +188,11 @@
 
 /datum/outfit/cybersunmedicaldirectorcorpse
 	name = "Cybersun Medical Director Corpse"
-	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/cybersun
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace/cybersun
+	uniform = /obj/item/clothing/under/cybersun/doctor
+	suit = /obj/item/clothing/suit/cybersun
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile/evil
-	ears = /obj/item/radio/headset/syndicate
+	ears = /obj/item/radio/headset/syndicate/cybersun
 	belt = /obj/item/gun/ballistic/automatic/pistol/challenger
 	head = /obj/item/clothing/head/soft/cybersun/medical
 	id = /obj/item/card/id
@@ -193,11 +206,11 @@
 
 /datum/outfit/cybersunfieldmediccorpse
 	name = "Cybersun Field Medic Corpse"
-	uniform = /obj/item/clothing/under/syndicate/medic
+	uniform = /obj/item/clothing/under/cybersun/medic
 	suit = /obj/item/clothing/suit/toggle/labcoat/raincoat
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile/evil
-	ears = /obj/item/radio/headset/syndicate
+	ears = /obj/item/radio/headset/syndicate/cybersun
 	belt = /obj/item/storage/belt/medical/paramedic
 	head = /obj/item/clothing/head/soft/cybersun/medical
 	back = /obj/item/storage/backpack/messenger
@@ -249,13 +262,13 @@
 
 /datum/outfit/vigilitas
 	name = "VI Corpse"
-	uniform = /obj/item/clothing/under/nanotrasen/security
-	suit = /obj/item/clothing/suit/armor/nanotrasen
+	uniform = /obj/item/clothing/under/warra/security
+	suit = /obj/item/clothing/suit/armor/warra
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset/headset_sec/alt
 	mask = /obj/item/clothing/mask/gas/vigilitas
-	head = /obj/item/clothing/head/nanotrasen/cap/security
+	head = /obj/item/clothing/head/warra/cap/security
 	back = /obj/item/storage/backpack/messenger
 	id = /obj/item/card/id
 
@@ -273,9 +286,9 @@
 
 /datum/outfit/vigilitas/director
 	name = "VI director"
-	uniform = /obj/item/clothing/under/nanotrasen/security/director
-	suit = /obj/item/clothing/suit/armor/nanotrasen/sec_director
-	head = /obj/item/clothing/head/nanotrasen/beret/security/command
+	uniform = /obj/item/clothing/under/warra/security/director
+	suit = /obj/item/clothing/suit/armor/warra/sec_director
+	head = /obj/item/clothing/head/warra/beret/security/command
 
 /datum/outfit/vigilitas/private
 	name = "VI Private"
