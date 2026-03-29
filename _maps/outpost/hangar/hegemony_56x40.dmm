@@ -134,14 +134,14 @@
 /turf/open/floor/plasteel/tech,
 /area/hangar)
 "jq" = (
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 4;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 4;
+	color = "#CEB689"
+	},
 /turf/open/floor/plasteel,
 /area/hangar)
 "kc" = (
@@ -192,9 +192,6 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/hangar)
-"mJ" = (
-/turf/open/space/basic,
-/area/hangar)
 "mP" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
@@ -232,10 +229,6 @@
 /turf/closed/indestructible/reinforced,
 /area/hangar)
 "qy" = (
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 9;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 1
 	},
@@ -247,6 +240,10 @@
 	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
+	},
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 9;
+	color = "#CEB689"
 	},
 /obj/structure/chair/bench/olive/directional/south,
 /obj/machinery/light/directional/north,
@@ -307,15 +304,15 @@
 	},
 /area/hangar)
 "tC" = (
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 1;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
 	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 1;
+	color = "#CEB689"
 	},
 /obj/effect/spawner/random/vending/cola,
 /turf/open/floor/plasteel,
@@ -333,10 +330,6 @@
 /turf/open/floor/hangar,
 /area/hangar)
 "uf" = (
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 5;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
 	},
@@ -347,6 +340,10 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 5;
+	color = "#CEB689"
+	},
 /obj/structure/chair/bench/olive/directional/south,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel,
@@ -429,10 +426,6 @@
 /obj/machinery/light/floor/hangar,
 /turf/open/floor/plasteel/tech,
 /area/hangar)
-"Ex" = (
-/obj/machinery/door/poddoor/multi_tile/four_tile_ver,
-/turf/open/space/basic,
-/area/hangar)
 "EM" = (
 /obj/effect/landmark/outpost/elevator_machine{
 	shaft = "1"
@@ -441,14 +434,14 @@
 	dir = 8;
 	pixel_x = 25
 	},
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 4;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 4;
+	color = "#CEB689"
+	},
 /turf/open/floor/plasteel,
 /area/hangar)
 "Fh" = (
@@ -507,12 +500,12 @@
 /turf/open/floor/plasteel/tech,
 /area/hangar)
 "HU" = (
-/obj/effect/turf_decal/siding/wideplating{
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 8
+	},
+/obj/effect/turf_decal/siding/wideplating{
+	color = "#CEB689"
 	},
 /obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plasteel,
@@ -562,29 +555,29 @@
 /turf/open/floor/plasteel/tech,
 /area/hangar)
 "NH" = (
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 8;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 1
 	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 8
 	},
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 8;
+	color = "#CEB689"
+	},
 /turf/open/floor/plasteel,
 /area/hangar)
 "OH" = (
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 6;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
 	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 8
+	},
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 6;
+	color = "#CEB689"
 	},
 /obj/structure/chair/bench/olive/directional/north,
 /obj/machinery/light/directional/south,
@@ -669,16 +662,16 @@
 /area/hangar)
 "TO" = (
 /obj/structure/chair/bench/olive/directional/north,
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 10;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 10;
+	color = "#CEB689"
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel,
@@ -731,10 +724,6 @@
 /turf/open/floor/plasteel/tech,
 /area/hangar)
 "YS" = (
-/obj/effect/turf_decal/siding/wideplating{
-	dir = 8;
-	color = "#CEB689"
-	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 8
 	},
@@ -743,6 +732,10 @@
 	},
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating{
+	dir = 8;
+	color = "#CEB689"
 	},
 /turf/open/floor/plasteel,
 /area/hangar)
@@ -785,26 +778,26 @@ xx
 xx
 xx
 nP
-mJ
-mJ
-mJ
-Ex
-mJ
-mJ
-mJ
-Ex
-mJ
-mJ
-mJ
-Ex
-mJ
-mJ
-mJ
-Ex
-mJ
-mJ
-mJ
-Ex
+xx
+xx
+xx
+nP
+xx
+xx
+xx
+nP
+xx
+xx
+xx
+nP
+xx
+xx
+xx
+nP
+xx
+xx
+xx
+nP
 xx
 xx
 kc
