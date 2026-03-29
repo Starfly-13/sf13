@@ -5629,12 +5629,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
-"tK" = (
-/obj/structure/platform/industrial{
-	dir = 4
-	},
-/turf/closed/wall/mineral/wood,
-/area/outpost/maintenance/starboard)
 "tL" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -25316,7 +25310,7 @@ wL
 Qt
 dl
 rO
-tK
+rO
 rO
 rO
 rO
