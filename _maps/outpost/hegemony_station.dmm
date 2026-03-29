@@ -58,7 +58,10 @@
 /area/outpost/maintenance/starboard)
 "ai" = (
 /obj/item/clothing/mask/gas,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ak" = (
 /turf/open/floor/plating,
@@ -190,7 +193,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "aD" = (
 /obj/effect/turf_decal/sand/plating,
@@ -202,7 +208,10 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "aF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -394,7 +403,10 @@
 /area/outpost/maintenance/starboard)
 "bv" = (
 /obj/structure/fence,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "bw" = (
 /obj/machinery/power/floodlight{
@@ -560,7 +572,10 @@
 	pixel_y = -17;
 	pixel_x = -4
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "bX" = (
 /obj/structure/rack,
@@ -917,6 +932,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/structure/crate_shelf,
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
 "dc" = (
@@ -983,7 +1000,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 5
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "dn" = (
 /obj/structure/table/wood{
@@ -1029,11 +1049,11 @@
 /turf/open/floor/plating,
 /area/outpost/maintenance/central)
 "du" = (
-/obj/machinery/conveyor_switch/oneway{
-	pixel_y = 8;
-	layer = 3.09;
-	id = "outpost2"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
 	},
+/obj/structure/crate_shelf,
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
 "dx" = (
@@ -1070,7 +1090,10 @@
 /area/outpost/maintenance/starboard)
 "dE" = (
 /obj/structure/flora/rock/asteroid,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "dF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -1079,7 +1102,10 @@
 	icon_state = "1-2"
 	},
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "dG" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1241,8 +1267,9 @@
 	dir = 1
 	},
 /obj/machinery/mineral/processing_unit{
+	input_dir = 8;
 	output_dir = 4;
-	input_dir = 8
+	CONSOLE = "production machine console"
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
@@ -1318,7 +1345,10 @@
 	pixel_x = -3;
 	pixel_y = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "eA" = (
 /obj/effect/turf_decal/siding/wideplating{
@@ -1640,7 +1670,10 @@
 /area/outpost/cargo/smeltery)
 "fv" = (
 /obj/structure/flora/tree/cactus,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "fw" = (
 /obj/effect/spawner/random/trash/mess,
@@ -1967,7 +2000,10 @@
 /obj/structure/flora/rock/pile{
 	density = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "gJ" = (
 /obj/structure/railing/wood{
@@ -2043,7 +2079,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "gW" = (
 /obj/effect/decal/cleanable/oil{
@@ -2055,7 +2094,10 @@
 /obj/structure/railing/corner/wood{
 	dir = 1
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "gY" = (
 /obj/effect/turf_decal/industrial/traffic{
@@ -2212,7 +2254,10 @@
 /obj/item/clothing/gloves/boxing/yellow{
 	pixel_y = 6
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "hC" = (
 /turf/open/floor/plating/asteroid/sand/lit,
@@ -2254,7 +2299,10 @@
 /obj/structure/flora/ausbushes/lavendergrass{
 	pixel_x = -3
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "hL" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2294,7 +2342,10 @@
 /obj/structure/fence/door{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "hT" = (
 /obj/structure/railing/corner{
@@ -2343,7 +2394,10 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "if" = (
 /turf/closed/indestructible/sandstone,
@@ -2416,7 +2470,10 @@
 	pixel_x = 1;
 	pixel_y = -10
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "iy" = (
 /obj/structure/railing,
@@ -2477,7 +2534,10 @@
 	pixel_x = 12;
 	pixel_y = -5
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "iR" = (
 /obj/item/reagent_containers/glass/bucket{
@@ -2560,7 +2620,10 @@
 /obj/structure/sign/departments/medbay/alt{
 	pixel_y = 35
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "je" = (
 /obj/structure/girder/displaced{
@@ -2574,7 +2637,10 @@
 /obj/structure/sign/directions/security{
 	pixel_y = 32
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "jh" = (
 /obj/effect/turf_decal/corner/transparent/pink/half,
@@ -2687,7 +2753,8 @@
 /obj/machinery/computer/electrolyzer_console{
 	dir = 8;
 	pixel_x = 24;
-	density = 0
+	density = 0;
+	linked_electrolyzer = "Hegemony"
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
@@ -2702,7 +2769,10 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/maintenance/starboard)
 "jz" = (
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "jB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2770,7 +2840,10 @@
 /obj/structure/fence{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "jN" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2803,7 +2876,10 @@
 	dir = 1
 	},
 /obj/item/binoculars,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "jW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2823,7 +2899,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ka" = (
 /obj/structure/railing/wood{
@@ -2849,7 +2928,10 @@
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/central)
 "ke" = (
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/external)
 "kf" = (
 /obj/structure/platform/industrial{
@@ -2957,7 +3039,10 @@
 	name = "bush";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "kw" = (
 /obj/structure/cable{
@@ -3030,7 +3115,10 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "kQ" = (
 /obj/structure/railing/corner{
@@ -3156,7 +3244,10 @@
 /obj/structure/flora/ausbushes/stalkybush{
 	pixel_y = 12
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "lh" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3211,7 +3302,10 @@
 /obj/structure/flora/rock{
 	icon_state = "basalt2"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ls" = (
 /obj/effect/turf_decal/industrial/hatch/orange,
@@ -3261,7 +3355,10 @@
 	dir = 4
 	},
 /obj/item/binoculars,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "lD" = (
 /obj/structure/lattice/catwalk,
@@ -3283,7 +3380,10 @@
 /area/outpost/maintenance/starboard)
 "lH" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/external)
 "lI" = (
 /obj/effect/turf_decal/siding/wood{
@@ -3353,13 +3453,12 @@
 /turf/open/floor/plasteel/patterned/brushed,
 /area/outpost/security/armory)
 "lN" = (
-/obj/machinery/portable_atmospherics/canister{
-	icon_state = "orangews"
-	},
 /obj/effect/turf_decal/industrial/outline/orange,
 /obj/effect/turf_decal/corner/opaque/tan{
 	dir = 9
 	},
+/obj/machinery/atmospherics/components/binary/volume_pump,
+/obj/effect/turf_decal/industrial/shutoff,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/cargo/smeltery)
 "lQ" = (
@@ -3710,7 +3809,10 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "nm" = (
 /obj/machinery/door/airlock/glass_large,
@@ -3736,7 +3838,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ns" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible/layer2,
@@ -3780,15 +3885,16 @@
 /turf/open/floor/wood,
 /area/outpost/crew/bar)
 "nA" = (
-/obj/machinery/computer/hydrogen_exchange{
-	dir = 1
-	},
 /obj/structure/railing{
 	dir = 8;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/lightgrey{
 	dir = 8
+	},
+/obj/structure/catwalk/over/plated_catwalk,
+/obj/machinery/computer/hydrogen_exchange{
+	dir = 1
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
@@ -3885,7 +3991,10 @@
 "nT" = (
 /obj/structure/mineral_door/sandstone,
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "nU" = (
 /obj/structure/railing{
@@ -3906,7 +4015,10 @@
 /area/outpost/maintenance/central)
 "nV" = (
 /obj/structure/fence/corner,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "nW" = (
 /obj/effect/decal/cleanable/dirt/dust{
@@ -4231,7 +4343,10 @@
 /area/outpost/maintenance/starboard)
 "oW" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "oZ" = (
 /obj/effect/decal/fakelattice,
@@ -4477,7 +4592,10 @@
 /area/outpost/vacant_rooms/shop)
 "pK" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "pL" = (
 /obj/structure/bodycontainer/morgue{
@@ -4492,7 +4610,10 @@
 /obj/item/clothing/gloves/boxing/blue{
 	pixel_y = 6
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "pN" = (
 /obj/effect/turf_decal/corner/transparent/pink/half{
@@ -4728,7 +4849,10 @@
 /area/outpost/maintenance/starboard)
 "qB" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "qD" = (
 /turf/open/floor/carpet/royalblack,
@@ -4825,7 +4949,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "rd" = (
 /obj/effect/decal/fakelattice,
@@ -4886,7 +5013,10 @@
 /obj/structure/fence/door{
 	dir = 4
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "rr" = (
 /obj/structure/bookcase/random,
@@ -4894,7 +5024,10 @@
 /area/outpost/vacant_rooms/office)
 "rt" = (
 /obj/structure/flora/tree/cactus,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/external)
 "ru" = (
 /obj/effect/turf_decal/trimline/transparent/vired/warning,
@@ -4927,7 +5060,10 @@
 /area/outpost/vacant_rooms/office)
 "ry" = (
 /obj/structure/sink/puddle,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "rz" = (
 /obj/structure/urinal{
@@ -5013,7 +5149,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "rL" = (
 /obj/machinery/light/small/directional/east,
@@ -5114,7 +5253,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 10
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "rX" = (
 /obj/machinery/door/airlock/maintenance,
@@ -5413,7 +5555,10 @@
 /obj/structure/flora/rock/asteroid{
 	icon_state = "lavarocks2"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "sU" = (
 /obj/machinery/power/terminal{
@@ -5505,7 +5650,10 @@
 /area/outpost/maintenance/starboard)
 "tn" = (
 /obj/structure/flora/ausbushes/grassybush,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "tr" = (
 /obj/structure/elevator_platform,
@@ -5608,7 +5756,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "tG" = (
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -5650,7 +5801,10 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "tO" = (
 /obj/effect/turf_decal/siding/wood{
@@ -5785,7 +5939,10 @@
 /obj/structure/railing/wood{
 	layer = 3.1
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "uh" = (
 /obj/structure/flora/ausbushes/fullgrass{
@@ -5796,7 +5953,10 @@
 	pixel_y = 13;
 	pixel_x = 24
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ui" = (
 /obj/machinery/light/directional/south,
@@ -5850,7 +6010,10 @@
 /obj/structure/sign/directions/engineering{
 	pixel_y = 32
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "uq" = (
 /obj/structure/lattice,
@@ -5929,7 +6092,10 @@
 /area/outpost/maintenance/port)
 "uE" = (
 /obj/structure/railing/corner/wood,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "uG" = (
 /obj/structure/janitorialcart,
@@ -5989,11 +6155,11 @@
 /turf/open/floor/plasteel,
 /area/outpost/maintenance/port)
 "uQ" = (
-/obj/machinery/atmospherics/components/unary/hydrogen_pump,
 /obj/effect/turf_decal/industrial/outline/orange,
 /obj/effect/turf_decal/corner/opaque/tan{
 	dir = 9
 	},
+/obj/machinery/atmospherics/components/unary/hydrogen_pump,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/cargo/smeltery)
 "uS" = (
@@ -6023,9 +6189,10 @@
 	dir = 1
 	},
 /obj/machinery/mineral/processing_unit_console{
-	name = "furnace controller";
-	machinedir = 9;
-	pixel_y = 23
+	output_dir = 4;
+	dist = 7;
+	pixel_y = 24;
+	machine = "production machine console"
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
@@ -6068,7 +6235,10 @@
 	name = "sparse red grass";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "vd" = (
 /obj/structure/platform/industrial{
@@ -6179,6 +6349,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/structure/ore_box,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
 "vz" = (
@@ -6248,7 +6419,10 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "vM" = (
 /obj/structure/rack,
@@ -6396,7 +6570,10 @@
 /obj/structure/sign/poster/official/random{
 	pixel_x = 32
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "wg" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -6617,7 +6794,8 @@
 "xh" = (
 /obj/effect/turf_decal/industrial/outline/orange,
 /obj/machinery/mineral/electrolyzer{
-	output_dir = 4
+	output_dir = 4;
+	linked_console = "Hegemony"
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
@@ -6835,7 +7013,10 @@
 	pixel_y = -11;
 	pixel_x = 18
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "xU" = (
 /obj/structure/sign/poster/official/pda_ad{
@@ -6940,7 +7121,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "yj" = (
 /obj/machinery/light/dim/directional/west,
@@ -6973,7 +7157,10 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "yo" = (
 /obj/structure/closet/firecloset,
@@ -7157,7 +7344,10 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "yN" = (
 /obj/effect/decal/cleanable/ash,
@@ -7408,7 +7598,10 @@
 	pixel_x = -12;
 	pixel_y = 5
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "zs" = (
 /obj/structure/cable{
@@ -7436,7 +7629,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "zu" = (
 /turf/open/floor/wood,
@@ -7477,7 +7673,10 @@
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "zA" = (
 /turf/open/floor/wood,
@@ -7523,7 +7722,10 @@
 	pixel_x = 10;
 	pixel_y = 15
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "zJ" = (
 /obj/effect/decal/fakelattice,
@@ -7788,6 +7990,16 @@
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel,
 /area/outpost/maintenance/port)
+"AI" = (
+/obj/effect/decal/fakelattice{
+	layer = 2.010
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/status_display/elevator{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/elevatorshaft,
+/area/outpost/maintenance/central)
 "AJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/salvageable/machine{
@@ -7865,7 +8077,10 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "floor2-old"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "AY" = (
 /obj/effect/turf_decal/corner/opaque/lightgrey/diagonal,
@@ -8066,7 +8281,10 @@
 	pixel_y = 3;
 	pixel_x = 2
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "BG" = (
 /obj/structure/table/wood,
@@ -8095,7 +8313,10 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "BQ" = (
 /obj/machinery/light/small/directional/north,
@@ -8154,7 +8375,10 @@
 /area/outpost/medical)
 "Cc" = (
 /obj/structure/flora/rock,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Cd" = (
 /obj/effect/turf_decal/corner/opaque/neutral/full,
@@ -8283,16 +8507,10 @@
 /turf/open/floor/carpet/blue,
 /area/outpost/exterior)
 "Cr" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/turf_decal/corner/opaque/tan/border{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
 	},
 /obj/structure/ore_box,
-/obj/effect/turf_decal/corner/opaque/tan{
-	dir = 10
-	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
 "Cs" = (
@@ -8365,7 +8583,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "CD" = (
 /obj/effect/turf_decal/corner/opaque/neutral/full,
@@ -8472,7 +8693,10 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "CR" = (
 /obj/structure/table/glass,
@@ -8569,18 +8793,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/outpost/maintenance/central)
-"Dj" = (
-/obj/structure/flora/ausbushes/sparsegrass/hell{
-	name = "sparse red grass";
-	pixel_x = 0;
-	pixel_y = 0;
-	light_range = 0
-	},
-/turf/open/floor/holofloor/beach{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/area/outpost/exterior)
 "Dl" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -8964,7 +9176,10 @@
 	name = "sparse red grass";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/external)
 "EA" = (
 /obj/structure/table/wood,
@@ -9083,7 +9298,10 @@
 /area/outpost/exterior)
 "EZ" = (
 /obj/structure/flora/rock/pile,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Fa" = (
 /obj/machinery/door/airlock{
@@ -9244,7 +9462,10 @@
 /obj/structure/railing/corner/wood{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "FA" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
@@ -9592,7 +9813,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "GD" = (
 /obj/effect/turf_decal/corner/opaque/brown/full,
@@ -9630,7 +9854,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "GJ" = (
 /obj/structure/curtain/cloth/grey,
@@ -9709,7 +9936,10 @@
 	name = "sparse red grass";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "GY" = (
 /obj/structure/grille,
@@ -9754,7 +9984,10 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Hi" = (
 /obj/effect/turf_decal/box/corners{
@@ -9784,7 +10017,10 @@
 	name = "sparse red grass";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Hs" = (
 /obj/structure/railing{
@@ -9909,7 +10145,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "HM" = (
 /obj/effect/turf_decal/corner/transparent/pink/three_quarters{
@@ -9931,7 +10170,10 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "HO" = (
 /obj/structure/railing/corner{
@@ -10091,7 +10333,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Ir" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -10135,7 +10380,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Iw" = (
 /obj/structure/chair/wood,
@@ -10217,14 +10465,11 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/maintenance/central)
 "II" = (
-/obj/structure/railing{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
 	},
-/obj/effect/turf_decal/corner/opaque/tan/border{
-	dir = 1
-	},
-/obj/effect/turf_decal/corner/opaque/tan{
-	dir = 10
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
 	},
 /obj/structure/crate_shelf,
 /obj/structure/closet/crate,
@@ -10295,7 +10540,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "IU" = (
 /obj/structure/lattice,
@@ -10323,7 +10571,10 @@
 	name = "sparse red grass";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "IZ" = (
 /obj/effect/turf_decal/trimline/transparent/vired/warning{
@@ -10481,7 +10732,10 @@
 	pixel_x = -9;
 	pixel_y = -11
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "JD" = (
 /obj/structure/bed/double,
@@ -10526,10 +10780,6 @@
 /turf/open/floor/plasteel/patterned/brushed,
 /area/outpost/security/armory)
 "JI" = (
-/obj/machinery/atmospherics/pipe/simple/orange/hidden{
-	dir = 9
-	},
-/obj/item/wrench,
 /obj/structure/catwalk/over/plated_catwalk,
 /turf/open/floor/plating,
 /area/outpost/cargo/smeltery)
@@ -10607,7 +10857,10 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "JU" = (
 /obj/effect/turf_decal/trimline/transparent/vired/warning,
@@ -10620,16 +10873,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
-"Ka" = (
-/obj/effect/decal/fakelattice{
-	layer = 2.010
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/status_display/elevator{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/elevatorshaft,
-/area/outpost/maintenance/central)
 "Ke" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/maintenance,
@@ -10672,7 +10915,10 @@
 	dir = 8
 	},
 /obj/item/binoculars,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Kl" = (
 /obj/effect/turf_decal/industrial/warning{
@@ -10739,7 +10985,10 @@
 /obj/structure/flora/ausbushes/sparsegrass{
 	pixel_y = -3
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Kx" = (
 /obj/structure/railing{
@@ -10790,8 +11039,7 @@
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
 "KH" = (
-/obj/machinery/atmospherics/components/binary/volume_pump,
-/obj/effect/turf_decal/industrial/shutoff,
+/obj/item/wrench,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/cargo/smeltery)
 "KI" = (
@@ -10869,7 +11117,10 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "La" = (
 /obj/machinery/firealarm/directional/south,
@@ -11065,7 +11316,10 @@
 /area/outpost/maintenance/starboard)
 "LH" = (
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "LL" = (
 /obj/item/stack/ore/salvage/scrapmetal,
@@ -11157,15 +11411,15 @@
 /obj/machinery/portable_atmospherics/canister{
 	icon_state = "orangews"
 	},
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 4
-	},
 /obj/effect/turf_decal/industrial/outline/orange,
 /obj/effect/turf_decal/corner/opaque/tan{
 	dir = 9
 	},
 /obj/effect/turf_decal/corner/opaque/tan{
 	dir = 3
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
 	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/cargo/smeltery)
@@ -11477,7 +11731,10 @@
 /obj/item/banner/medical{
 	anchored = 1
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Nn" = (
 /obj/machinery/telecomms/relay/preset/telecomms,
@@ -11498,7 +11755,10 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Nq" = (
 /obj/machinery/jukebox,
@@ -11665,7 +11925,10 @@
 	dir = 8;
 	network = list("cricket")
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "NV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -11720,7 +11983,10 @@
 	pixel_x = 7;
 	pixel_y = -4
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Oe" = (
 /turf/open/floor/carpet/blue,
@@ -11751,7 +12017,10 @@
 	pixel_y = 0;
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Oj" = (
 /obj/effect/turf_decal/siding/wood,
@@ -11778,7 +12047,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Om" = (
 /obj/structure/railing{
@@ -11863,6 +12135,11 @@
 "Ov" = (
 /obj/structure/railing/corner{
 	dir = 4
+	},
+/obj/machinery/conveyor_switch/oneway{
+	pixel_y = 8;
+	layer = 3.09;
+	id = "outpost2"
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
@@ -12436,7 +12713,10 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "QN" = (
 /turf/open/floor/plating{
@@ -12539,7 +12819,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Ri" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
@@ -12640,7 +12923,10 @@
 	pixel_x = -19;
 	pixel_y = 20
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "RF" = (
 /obj/effect/spawner/random/maintenance/two,
@@ -12707,7 +12993,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 9
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "RQ" = (
 /turf/closed/indestructible/reinforced,
@@ -12859,7 +13148,10 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Sx" = (
 /obj/structure/railing{
@@ -12900,11 +13192,17 @@
 	pixel_x = 9;
 	pixel_y = 4
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "SF" = (
 /obj/structure/fence/door,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "SJ" = (
 /obj/structure/cable{
@@ -12957,7 +13255,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "SW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13127,7 +13428,10 @@
 "TI" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "TJ" = (
 /obj/structure/salvageable/machine{
@@ -13178,7 +13482,10 @@
 /area/outpost/maintenance/port)
 "TT" = (
 /obj/structure/destructible/tribal_torch/lit,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "TU" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible/layer2,
@@ -13233,7 +13540,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Ue" = (
 /obj/structure/cable{
@@ -13552,7 +13862,10 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "UX" = (
 /obj/structure/chair/wood{
@@ -13579,7 +13892,10 @@
 	name = "sparse red grass";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/external)
 "Vf" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -13640,7 +13956,10 @@
 	name = "sparse red grass";
 	light_range = 0
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Vq" = (
 /obj/structure/sign/painting/library{
@@ -13657,7 +13976,10 @@
 	pixel_y = -6;
 	pixel_x = -3
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Vs" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/o2{
@@ -13848,7 +14170,10 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "VU" = (
 /obj/structure/rack,
@@ -13864,13 +14189,6 @@
 /obj/item/stack/ore/salvage/scrapmetal,
 /turf/open/floor/plating,
 /area/outpost/maintenance/starboard)
-"VY" = (
-/obj/machinery/atmospherics/pipe/simple/orange/hidden{
-	dir = 10
-	},
-/obj/structure/catwalk/over/plated_catwalk,
-/turf/open/floor/plating,
-/area/outpost/cargo/smeltery)
 "VZ" = (
 /obj/item/cigbutt/cigarbutt{
 	pixel_y = 6;
@@ -13931,7 +14249,10 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Wp" = (
 /obj/structure/table/wood,
@@ -14105,7 +14426,10 @@
 	pixel_y = 10;
 	pixel_x = -8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Xi" = (
 /obj/effect/turf_decal/sand/plating,
@@ -14118,7 +14442,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Xj" = (
 /obj/machinery/computer/helm/viewscreen/directional/east,
@@ -14336,7 +14663,10 @@
 /obj/structure/sign/directions/security{
 	pixel_y = 42
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "XW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14357,7 +14687,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Yb" = (
 /obj/structure/platform/industrial{
@@ -14421,7 +14754,10 @@
 /area/outpost/maintenance/port)
 "Yj" = (
 /obj/structure/flora/rock/pile,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/external)
 "Yl" = (
 /obj/effect/turf_decal/sand/plating,
@@ -14434,7 +14770,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "Yn" = (
 /obj/structure/table/wood,
@@ -14556,7 +14895,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "YV" = (
 /turf/closed/wall/mineral/titanium,
@@ -14699,7 +15041,10 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ZB" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -14762,7 +15107,10 @@
 /area/outpost/crew/bar)
 "ZJ" = (
 /obj/item/chair,
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ZK" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -14785,7 +15133,10 @@
 	pixel_x = 4;
 	pixel_y = 7
 	},
-/turf/open/floor/holofloor/beach,
+/turf/open/floor/holofloor/beach{
+	light_power = 0.8;
+	light_range = 2
+	},
 /area/outpost/exterior)
 "ZP" = (
 /obj/effect/turf_decal/corner/opaque/brown/full,
@@ -19468,7 +19819,7 @@ os
 Gt
 ky
 iy
-VY
+JI
 KH
 JI
 zL
@@ -19712,7 +20063,7 @@ oW
 jz
 kp
 Ra
-du
+ky
 ZK
 ky
 Ra
@@ -19959,7 +20310,7 @@ Hr
 kp
 dO
 qZ
-OP
+Cr
 IC
 Br
 KM
@@ -20081,8 +20432,8 @@ oW
 jz
 Vk
 fu
-Cr
-OP
+qZ
+du
 IC
 cO
 CP
@@ -20204,7 +20555,7 @@ oW
 jz
 Vk
 PO
-II
+qZ
 cZ
 IC
 cO
@@ -20327,8 +20678,8 @@ oW
 jz
 kp
 Hu
+qZ
 II
-vy
 IC
 cO
 KM
@@ -20450,8 +20801,8 @@ oW
 jz
 kp
 eg
+qZ
 II
-vy
 IC
 xh
 KM
@@ -20573,8 +20924,8 @@ oW
 jz
 kp
 Hu
+qZ
 II
-vy
 IC
 cO
 KM
@@ -20696,7 +21047,7 @@ oW
 fv
 zL
 Hu
-Cr
+qZ
 vy
 IC
 cO
@@ -21091,7 +21442,7 @@ HL
 jz
 jz
 jz
-Dj
+Oi
 jz
 EZ
 jz
@@ -22370,7 +22721,7 @@ Ek
 Ek
 Ek
 CG
-Ka
+AI
 Co
 ta
 lY
