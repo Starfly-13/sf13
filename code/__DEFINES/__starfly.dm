@@ -47,18 +47,3 @@
 #define STARFLY13_MODULE_STARFLY_BRANDING_ENABLED
 #define STARFLY13_MODULE_STARFLY_MAPS_ENABLED
 #define STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
-
-//---------------------------------------------------------------------------
-
-// if we weren't provided with a MAPROOT at build time
-#ifndef MAPROOT
-	// if we're using STARFLY-13 maps...
-	#ifdef STARFLY13_MODULE_STARFLY_MAPS_ENABLED
-		// STARFLY-13 maps are located at _maps 2: electric boogaloo
-		#define MAPROOT "_maps2eb"
-	// otherwise...
-	#else
-		// Shiptest maps are located at _maps 
-		#define MAPROOT "_maps"
-	#endif // #ifdef STARFLY13_MODULE_STARFLY_MAPS_ENABLED
-#endif // #ifndef MAPROOT
