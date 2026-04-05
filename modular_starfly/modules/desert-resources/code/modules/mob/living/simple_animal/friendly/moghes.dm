@@ -1,11 +1,11 @@
 /mob/living/simple_animal/threshbeast
 	name = "threshbeast"
 	desc = "Large herbivorous reptiles native to Moghes, the azkrazal or 'threshbeast' is commonly used as a mount, beast of burden, or convenient food source by Unathi. They are highly valued for their speed and strength, capable of running at 30-42 miles per hour at top speed. Their favorite foods are grasses and cactus fruits"
-	icon = 'modular_starfly/modules/desert-resources/icon/mob/moghes/threshbeast.dmi'
+	icon = 'modular_starfly/modules/desert-resources/icons/mob/moghes/threshbeast.dmi'
 	icon_state = "threshbeast"
 	icon_living = "threshbeast"
 	icon_dead = "threshbeast_dead"
-	butcher_results = list(/obj/item/stack/sheet/animalhide/lizard = 2, /obj/item/reagent_containers/food/snacks/meat/slab = 6)
+	butcher_results = list(/obj/item/stack/sheet/animalhide/lizard = 2, /obj/item/food/meat/slab = 6)
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "pushes"
@@ -19,7 +19,7 @@
 	emote_see = list("shakes its head", "thumps its tail")
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST|MOB_REPTILE
 	move_resist = MOVE_FORCE_VERY_STRONG
-	food_type = list(/obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit, /obj/item/reagent_containers/food/snacks/grown/ash_flora/fern, /obj/item/reagent_containers/food/snacks/grown/grass, /obj/item/reagent_containers/food/snacks/grown/grass/fairy, /obj/item/reagent_containers/food/snacks/grown/grass/carpet)		// Herbivore
+	food_type = list(/obj/item/food/grown/ash_flora/cactus_fruit, /obj/item/food/grown/ash_flora/fern, /obj/item/food/grown/grass, /obj/item/food/grown/grass/fairy, /obj/item/food/grown/grass/carpet)		// Herbivore
 	base_pixel_x = -15
 	maxHealth = 100
 	health = 100
@@ -77,7 +77,7 @@
 	density = FALSE
 	health = 4
 	maxHealth = 4
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/chicken = 1)
+	butcher_results = list(/obj/item/food/meat/slab/chicken = 1)
 	melee_damage_upper = 2
 	melee_damage_lower = 0
 	speak_chance = 1
