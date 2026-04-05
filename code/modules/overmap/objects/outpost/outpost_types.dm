@@ -12,7 +12,7 @@
 	var/outpost_administrator = "Fallback Administration"
 
 /datum/map_template/outpost/New()
-	. = ..(path = "_maps/outpost/[name].dmm")
+	. = ..(path = MAPROOT + "/outpost/[name].dmm")
 
 /datum/map_template/outpost/hangar
 	var/dock_width

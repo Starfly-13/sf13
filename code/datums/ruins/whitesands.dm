@@ -1,7 +1,7 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/whitesands
-	prefix = "_maps/RandomRuins/SandRuins/"
+	prefix = MAPROOT + "/RandomRuins/SandRuins/"
 	ruin_type = RUINTYPE_SAND
 
 /datum/map_template/ruin/whitesands/pubbyslopcrash

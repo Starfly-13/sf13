@@ -1,5 +1,6 @@
 import argparse
 import glob
+import os
 import pathlib
 import traceback
 import yaml
@@ -12,6 +13,14 @@ def green(text):
 
 def red(text):
     return "\033[31m" + str(text) + "\033[0m"
+
+def get_map_folder():
+    try:
+        map_folder = os.environ['MAPROOT']
+    except KeyError:
+        map_folder = '_maps'
+   
+    return map_folder
 
 def process_dmm(map_filename, lints: dict[str, lint.Lint]) -> list[MaplintError]:
     problems: list[MaplintError] = []
@@ -75,7 +84,8 @@ def main(args):
             traceback.print_exc()
             any_failed = True
 
-    for map_filename in (args.maps or glob.glob("_maps/**/*.dmm", recursive = True)):
+    map_folder = get_map_folder()
+    for map_filename in (args.maps or glob.glob(f"{map_folder}/**/*.dmm", recursive = True)):
         print(map_filename, end = " ")
 
         success = True

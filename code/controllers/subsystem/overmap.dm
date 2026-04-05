@@ -1283,5 +1283,5 @@ SUBSYSTEM_DEF(overmap)
 	name = "Abandoned - New Dawn"
 	can_be_selected_randomly = FALSE
 	can_jump_to = FALSE
-	json = '_maps/sectors/sunset_starsystem.json'
+	json = MAPROOT + "/sectors/sunset_starsystem.json"
 	generator_type = OVERMAP_GENERATOR_JSON
