@@ -1,7 +1,7 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/space
-	prefix = "_maps/RandomRuins/SpaceRuins/"
+	prefix = MAPROOT + "/RandomRuins/SpaceRuins/"
 	cost = 1
 	allow_duplicates = FALSE
 	ruin_type = RUINTYPE_SPACE

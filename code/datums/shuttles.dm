@@ -55,7 +55,7 @@
 	if(path)
 		mappath = path
 	else if(category && file_name)
-		mappath = "_maps/shuttles/[category]/[file_name].dmm"
+		mappath = MAPROOT + "/shuttles/[category]/[file_name].dmm"
 	. = ..()
 
 /datum/map_template/shuttle/preload_size(path, cache)

@@ -136,7 +136,7 @@ SUBSYSTEM_DEF(mapping)
 
 #define INIT_ANNOUNCE(X) to_chat(world, span_boldannounce("[X]")); log_world(X)
 
-/datum/controller/subsystem/mapping/proc/preloadTemplates(path = "_maps/templates/") //see master controller setup
+/datum/controller/subsystem/mapping/proc/preloadTemplates(path = MAPROOT + "/templates/") //see master controller setup
 	var/list/filelist = flist(path)
 	for(var/map in filelist)
 		var/datum/map_template/T = new(path = "[path][map]", rename = "[map]")
@@ -181,12 +181,12 @@ SUBSYSTEM_DEF(mapping)
 #define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { stack_trace("[##X] missing from json!"); continue; }
 /datum/controller/subsystem/mapping/proc/load_ship_templates()
 	ship_purchase_list = list()
-	var/list/filelist = flist("_maps/configs/")
+	var/list/filelist = flist(MAPROOT + "/configs/")
 
 	filelist = sortList(filelist)
 
 	for(var/filename in filelist)
-		var/file = file("_maps/configs/" + filename)
+		var/file = file(MAPROOT + "/configs/" + filename)
 		if(!file)
 			stack_trace("Could not open map config: [filename]")
 			continue
@@ -203,8 +203,9 @@ SUBSYSTEM_DEF(mapping)
 		CHECK_STRING_EXISTS("map_name")
 		CHECK_STRING_EXISTS("map_path")
 		CHECK_LIST_EXISTS("job_slots")
-		var/datum/map_template/shuttle/S = new(data["map_path"], data["map_name"], TRUE)
-		S.file_name = data["map_path"]
+		var/fixed_path = fix_map_path(data["map_path"])
+		var/datum/map_template/shuttle/S = new(fixed_path, data["map_name"], TRUE)
+		S.file_name = fixed_path
 		S.ship_class = data["map_name"]
 
 		if(istext(data["map_short_name"]))
@@ -446,3 +447,20 @@ SUBSYSTEM_DEF(mapping)
 	height--
 	var/list/allocation_coords = SSmapping.get_free_allocation(allocation_type, width, height, allocation_jump)
 	return new /datum/virtual_level(new_name, traits, mapzone, allocation_coords[1], allocation_coords[2], allocation_coords[1] + width, allocation_coords[2] + height, allocation_coords[3])
+
+
+
+/proc/fix_map_path(var/path)
+	if(!istext(path))
+		return path
+
+	// Match everything up to and including "_maps"
+	var/regex/r = regex(@"^.*_maps")
+
+	// If it matches, replace that portion with MAPROOT
+	if(r.Find(path))
+		var/new_path = r.Replace(path, MAPROOT)
+		return new_path
+
+	// If no match, just return original (or you could warn)
+	return path

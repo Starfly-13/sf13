@@ -143,7 +143,7 @@
 	can_jump_to = FALSE
 
 	//the json file itself, you can change the directory of this if '_maps/sectors/*_starsystem.json' isn't a good enough naming scheme
-	json = '_maps/sectors/teagarden_starsystem.json'
+	json = MAPROOT + "/sectors/teagarden_starsystem.json"
 
 	//to avoid loading shit on top of hte map, and to copy the system information from the file
 	generator_type = OVERMAP_GENERATOR_JSON
