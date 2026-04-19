@@ -8,7 +8,7 @@
 ///Pistols
 /obj/item/gun/ballistic/automatic/powered/gauss/modelh
 	name = "Model H"
-	desc = "A standard-issue pistol exported from the Solarian Confederation. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor."
+	desc = "A standard-issue pistol exported from the Solar Federation. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor."
 
 	icon = 'icons/obj/guns/manufacturer/solararmories/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/solararmories/lefthand.dmi'
@@ -52,18 +52,19 @@
 	default_ammo_type = FALSE
 
 /obj/item/gun/ballistic/automatic/powered/gauss/modelh/suns
-	desc = "A standard-issue pistol exported from the Solarian Confederation. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor. It is painted in the colors of SUNS."
+	desc = "A standard-issue pistol exported from the Solar Federation. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor. This is a replica produced by Roseus Galactic."
 	default_ammo_type = /obj/item/ammo_box/magazine/modelh
 	allowed_ammo_types = list(
 		/obj/item/ammo_box/magazine/modelh,
 	)
 	icon_state = "model-h_suns"
 	item_state = "model-h_suns"
+	manufacturer = MANUFACTURER_ROSEUS
 
 //not gauss pistol
 /obj/item/gun/ballistic/automatic/pistol/solgov
 	name = "\improper Pistole C"
-	desc = "A favorite of the Terran Regency that is despised by the Solarian bureaucracy. Shifted out of military service centuries ago, though still popular among civilians. Chambered in 5.56mm caseless."
+	desc = "A favorite of the Solar Federation that is despised by the Solarian bureaucracy. Shifted out of military service centuries ago, though still popular among civilians. Chambered in 5.56mm caseless."
 	icon_state = "pistole-c"
 	icon = 'icons/obj/guns/manufacturer/solararmories/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/solararmories/lefthand.dmi'
@@ -131,9 +132,10 @@
 
 
 /obj/item/gun/ballistic/automatic/powered/gauss/claris/suns
-	desc = "An antiquated Solarian rifle. Chambered in ferromagnetic pellets, just as the founding Solarians intended. Evidently, SUNS' founders echo the sentiment, as it appears to be painted in their colors."
+	desc = "A replica of an antiquated Solarian rifle. Chambered in ferromagnetic pellets, just as the founding Solarians intended. Evidently, Roseus Galactic's executives agree, considering they've ripped off the design."
 	icon_state = "claris_suns"
 	item_state = "claris_suns"
+	manufacturer = MANUFACTURER_ROSEUS
 
 /obj/item/gun/ballistic/automatic/powered/gauss/gar
 	name = "Solar 'GAR' Carbine"
@@ -177,9 +179,10 @@
 	fire_select_icon_state_prefix = "lance_"
 
 /obj/item/gun/ballistic/automatic/powered/gauss/gar/suns
-	desc = "A Solarian carbine, unusually modern for its producers. It's just modern enough for SUNS, however, who have painted the weapon in their colors. Launches ferromagnetic lances at alarming speeds."
+	desc = "A Solarian carbine, replicated by Roseus Galactic. Launches ferromagnetic lances at alarming speeds."
 	icon_state = "gar_suns"
 	item_state = "gar_suns"
+	manufacturer = MANUFACTURER_ROSEUS
 
 ///Sniper
 /obj/item/gun/ballistic/rifle/solgov

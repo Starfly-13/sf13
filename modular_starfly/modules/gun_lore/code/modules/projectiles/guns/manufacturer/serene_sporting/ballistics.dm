@@ -234,7 +234,7 @@ EMPTY_GUN_HELPER(automatic/m12_sporter/mod)
 
 /obj/item/gun/ballistic/automatic/marksman/woodsman
 	name = "Model 23 Woodsman"
-	desc = "A large semi-automatic hunting rifle manufactured by Serene Outdoors. Its powerful cartridge, excellent ergonomics and ease of use make it highly popular for hunting big game Chambered in 8x50mmR."
+	desc = "A large semi-automatic hunting rifle manufactured by Serene Outdoors. Its powerful cartridge, excellent ergonomics and ease of use make it highly popular for hunting big game. Chambered in 8x50mmR."
 
 	icon = 'icons/obj/guns/manufacturer/serene_outdoors/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/serene_outdoors/lefthand.dmi'
