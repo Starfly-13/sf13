@@ -952,7 +952,7 @@ NO_MAG_GUN_HELPER(automatic/assault/hydra/dmr)
 // Bulldog shotgun //
 
 /obj/item/gun/ballistic/shotgun/automatic/bulldog
-	name = "SG-60r \"Bulldog\""
+	name = "AS-14 \"Bulldog\""
 	desc = "A bullpup combat shotgun usually seen with a characteristic drum magazine. Wildly popular among Syndicate strike teams during the ICW, although it proved less useful against military-grade equipment. Still popular among former Syndicate factions, especially the Ramzi Clique pirates. Chambered in 12g."
 	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/scarborough/lefthand.dmi'

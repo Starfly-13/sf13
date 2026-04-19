@@ -132,7 +132,7 @@
 	bolt_type = BOLT_TYPE_OPEN
 	weapon_weight = WEAPON_LIGHT
 	show_magazine_on_sprite = TRUE
-	manufacturer = MANUFACTURER_IMPORT
+	manufacturer = MANUFACTURER_LAKVAR
 
 	spread = 20
 	spread_unwielded = 35
@@ -201,7 +201,7 @@
 
 /obj/item/gun/ballistic/automatic/smg/pounder
 	name = "Pounder"
-	desc = "An unusual submachine gun of Frontiersman make. A miniscule cartridge lacking both stopping power and armor penetration is compensated for with best-in-class ammunition capacity and cycle rate. Chambered in .22 LR."
+	desc = "An unusual submachine gun of unknown make. A miniscule cartridge lacking both stopping power and armor penetration is compensated for with best-in-class ammunition capacity and cycle rate. Chambered in .22 LR."
 	icon = 'icons/obj/guns/manufacturer/frontier_import/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/frontier_import/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/frontier_import/righthand.dmi'
@@ -235,7 +235,7 @@
 	gun_firemodes = list(FIREMODE_FULLAUTO)
 	default_firemode = FIREMODE_FULLAUTO
 
-	manufacturer = MANUFACTURER_IMPORT
+	manufacturer = MANUFACTURER_LAKVAR
 	wield_slowdown = SMG_SLOWDOWN
 	safety_multiplier = 2
 
