@@ -4,7 +4,7 @@
 
 /obj/item/gun/ballistic/revolver/montagne
 	name = "\improper HP Montagne"
-	desc = "An ornate break-open revolver issued to high-ranking members of the Saint-Roumain Militia. Chambered in .44."
+	desc = "An ornate break-open revolver made by master craftsmen. Chambered in .44."
 	icon = 'icons/obj/guns/manufacturer/hunterspride/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
@@ -29,7 +29,7 @@ EMPTY_GUN_HELPER(revolver/montagne)
 
 /obj/item/gun/ballistic/revolver/ashhand
 	name = "HP Ashhand"
-	desc = "A massive, long-barreled revolver often used by the Saint-Roumain Militia as protection against big game. Can only be reloaded one cartridge at a time due to its reinforced frame. Uses .45-70 ammo."
+	desc = "A massive, long-barreled revolver often used as protection against big game. Can only be reloaded one cartridge at a time due to its reinforced frame. Uses .45-70 ammo."
 	icon = 'icons/obj/guns/manufacturer/hunterspride/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
@@ -261,8 +261,8 @@ NO_MAG_GUN_HELPER(automatic/pistol/candor/factory)
 	. += "[initial(icon_state)]_factory"
 
 /obj/item/gun/ballistic/automatic/pistol/candor/phenex
-	name = "\improper HP Phenex"
-	desc = "A uniquely modified version of the Candor, famously created by Hunter's Pride. Named after the daemonic Phoenix of legend that the Ashen Huntsman had once slain, this hell-kissed weapon is more visually intimidating than its original counterpart, but mechanically acts the same. Chambered in .45."
+	name = "\improper HP Phoenix"
+	desc = "A uniquely modified version of the Candor, famously created by Hunter's Pride. Its casing was designed by hellish flames of the legendary phoenix from ancient sol mythology and uses more expensive materials, but the insides are identical. Chambered in .45."
 	icon_state = "phenex"
 	item_state = "hp_phenex"
 
@@ -270,7 +270,7 @@ NO_MAG_GUN_HELPER(automatic/pistol/candor/factory)
 
 /obj/item/gun/ballistic/automatic/smg/firestorm //weapon designed by Apogee-dev
 	name = "HP Firestorm"
-	desc = "An unconventional submachinegun, rarely issued to Saint-Roumain Militia mercenary hunters for outstanding situations where normal hunting weapons fall short. Chambered in .44 Roumain."
+	desc = "An unconventional submachinegun that some mercenaries absolutely swear by. Chambered in .44 Roumain."
 	icon = 'icons/obj/guns/manufacturer/hunterspride/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
@@ -322,8 +322,8 @@ NO_MAG_GUN_HELPER(automatic/pistol/candor/factory)
 
 /obj/item/gun/ballistic/shotgun/doublebarrel
 	name = "double-barreled shotgun"
-	desc = "A classic break action shotgun, hand-made in a Hunter's Pride workshop. Both barrels can be fired in quick succession or even simultaneously. Guns like this have been popular with hunters, sporters, and criminals for millennia. Chambered in 12g."
-	sawn_desc = "A break action shotgun cut down to the size of a sidearm. While the recoil is even harsher, it offers a lot of power in a very small package. Chambered in 12g."
+	desc = "A classic break action shotgun, as seen in countless media throughout the last 700 years, risen to stardom as the staple stagecoach gun. Both barrels can be fired in quick succession or even simultaneously. Guns like this have been popular with hunters, sporters, and criminals for millennia. Chambered in 12g."
+	sawn_desc = "A break action shotgun cut down to the size of a sidearm. While the recoil is even harsher, it offers a lot of power in a very small package, making this modification very popular among criminals. Chambered in 12g."
 
 	icon = 'icons/obj/guns/manufacturer/hunterspride/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
@@ -353,7 +353,7 @@ NO_MAG_GUN_HELPER(automatic/pistol/candor/factory)
 	can_be_sawn_off = TRUE
 	bolt_type = BOLT_TYPE_NO_BOLT
 	pb_knockback = 3 // it's a super shotgun!
-	manufacturer = MANUFACTURER_HUNTERSPRIDE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 	bolt_wording = "barrel"
 
 	burst_delay = 0.05 SECONDS
@@ -458,7 +458,7 @@ EMPTY_GUN_HELPER(shotgun/doublebarrel)
 /obj/item/gun/ballistic/shotgun/doublebarrel/presawn
 	//init gives it the sawn_off name
 	name = "double-barreled shotgun"
-	desc = "A break action shotgun cut down to the size of a sidearm. While the recoil is even harsher, it offers a lot of power in a very small package. Chambered in 12g."
+	desc = "A break action shotgun cut down to the size of a sidearm. While the recoil is even harsher, it offers a lot of power in a very small package, making this modification very popular among criminals. Chambered in 12g."
 	sawn_off = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
@@ -481,13 +481,13 @@ EMPTY_GUN_HELPER(shotgun/doublebarrel/presawn)
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/roumain
 	name = "HP antique double-barreled shotgun"
-	desc = "A special-edition shotgun hand-made by Hunter's Pride with a high-quality walnut stock inlaid with brass scrollwork. Shotguns like this are very rare outside of the Saint-Roumain Militia's ranks. Otherwise functionally identical to a common double-barreled shotgun. Chambered in 12g."
-	sawn_desc = "A special-edition Hunter's Pride shotgun, cut down to the size of a sidearm by some barbarian. The brass inlay on the stock and engravings on the barrel have been obliterated in the process, destroying any value beyond its use as a crude sidearm."
+	desc = "A shotgun by Hunter's Pride with a high-quality walnut stock inlaid with brass scrollwork. Otherwise functionally identical to a common double-barreled shotgun. Chambered in 12g."
+	sawn_desc = "A Hunter's Pride shotgun, cut down to the size of a sidearm by some barbarian. The brass inlay on the stock and engravings on the barrel have been obliterated in the process, destroying any value beyond its use as a crude sidearm."
 	base_icon_state = "dshotgun_srm"
 	icon_state = "dshotgun_srm"
 	item_state = "dshotgun_srm"
 	unique_reskin = null
-
+	manufacturer = MANUFACTURER_HUNTERSPRIDE
 EMPTY_GUN_HELPER(shotgun/doublebarrel/roumain)
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/roumain/sawoff(forced = FALSE)
@@ -498,8 +498,8 @@ EMPTY_GUN_HELPER(shotgun/doublebarrel/roumain)
 // BRIMSTONE //
 
 /obj/item/gun/ballistic/shotgun/brimstone
-	name = "HP Brimstone"
-	desc = "A simple and sturdy pump-action shotgun sporting a 5-round capacity, manufactured by Hunter's Pride. Found widely throughout the Frontier in the hands of hunters, pirates, police, and countless others. Chambered in 12g."
+	name = "Brimstone P5"
+	desc = "A simple and sturdy pump-action shotgun sporting a 5-round capacity, manufactured by Hephaestus Industries. Found widely throughout the Frontier in the hands of hunters, pirates, police, and countless others. Chambered in 12g."
 	sawn_desc = "A stockless and shortened pump-action shotgun. The worsened recoil and accuracy make it a poor sidearm anywhere beyond punching distance."
 	fire_sound = 'sound/weapons/gun/shotgun/brimstone.ogg'
 	icon = 'icons/obj/guns/manufacturer/hunterspride/48x32.dmi'
@@ -517,7 +517,7 @@ EMPTY_GUN_HELPER(shotgun/doublebarrel/roumain)
 	allowed_ammo_types = list(
 		/obj/item/ammo_box/magazine/internal/shot/lethal,
 	)
-	manufacturer = MANUFACTURER_HUNTERSPRIDE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 	fire_delay = 0.05 SECONDS //slamfire
 	rack_delay = 0.2 SECONDS
 
@@ -557,14 +557,15 @@ EMPTY_GUN_HELPER(shotgun/brimstone)
 // HELLFIRE //
 
 /obj/item/gun/ballistic/shotgun/hellfire
-	name = "HP Hellfire"
-	desc = "A hefty pump-action riot shotgun with an eight-round tube, manufactured by Hunter's Pride. Especially popular among the Frontier's police forces. Chambered in 12g."
+	name = "Hellfire p7"
+	desc = "A hefty pump-action riot shotgun with an eight-round tube, manufactured by Hephaestus Industries. Especially popular among the Frontier's police forces. Chambered in 12g."
 	icon = 'icons/obj/guns/manufacturer/hunterspride/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 	icon_state = "hellfire"
 	item_state = "hellfire"
+	manufacturer = MANUFACTURER_HEPHAESTUS
 
 	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/riot
 	allowed_ammo_types = list(
