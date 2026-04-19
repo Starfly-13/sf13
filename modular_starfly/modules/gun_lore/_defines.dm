@@ -24,6 +24,7 @@
 #define MANUFACTURER_ROSEUS "the Roseus Galactic logo"
 #define MANUFACTURER_ADHOMAI "a Tajaran emblem"
 #define MANUFACTURER_LAKVAR "the letters LKV"
+#define MANUFACTURER_DONKCO "the Donk! Co. logo"
 #define MANUFACTURER_HEPHAESTUS "the Hephaestus Industries logo"
 
 //---------------------------------------------------------------------------------------------------------------------
