@@ -449,9 +449,13 @@
 	return ((!secondsMainPowerLost || !secondsBackupPowerLost) && !(machine_stat & NOPOWER))
 
 /obj/machinery/door/airlock/requiresID()
+	if(!wires)
+		return FALSE
 	return !(wires.is_cut(WIRE_IDSCAN) || aiDisabledIdScanner)
 
 /obj/machinery/door/airlock/proc/isAllPowerCut()
+	if(!wires)
+		return TRUE
 	if((wires.is_cut(WIRE_POWER1) || wires.is_cut(WIRE_POWER2)) && (wires.is_cut(WIRE_BACKUP1) || wires.is_cut(WIRE_BACKUP2)))
 		return TRUE
 
@@ -461,6 +465,8 @@
 	update_appearance()
 
 /obj/machinery/door/airlock/proc/handlePowerRestore()
+	if(!wires)
+		return
 	var/cont = TRUE
 	while (cont)
 		sleep(10)
@@ -1292,7 +1298,7 @@
 
 
 /obj/machinery/door/airlock/close(forced=0)
-	if(operating || welded || locked || seal)
+	if(operating || welded || locked || seal || !wires)
 		return
 	if(density)
 		return TRUE
@@ -1452,7 +1458,8 @@
 
 	if(!panel_open)
 		panel_open = TRUE
-	wires.cut_all()
+	if(wires)
+		wires.cut_all()
 
 /obj/machinery/door/airlock/proc/set_electrified(seconds, mob/user)
 	secondsElectrified = seconds
@@ -1583,16 +1590,28 @@
 	data["opened"] = !density // opened
 
 	var/list/wire = list()
-	wire["main_1"] = !wires.is_cut(WIRE_POWER1)
-	wire["main_2"] = !wires.is_cut(WIRE_POWER2)
-	wire["backup_1"] = !wires.is_cut(WIRE_BACKUP1)
-	wire["backup_2"] = !wires.is_cut(WIRE_BACKUP2)
-	wire["shock"] = !wires.is_cut(WIRE_SHOCK)
-	wire["id_scanner"] = !wires.is_cut(WIRE_IDSCAN)
-	wire["bolts"] = !wires.is_cut(WIRE_BOLTS)
-	wire["lights"] = !wires.is_cut(WIRE_LIGHT)
-	wire["safe"] = !wires.is_cut(WIRE_SAFETY)
-	wire["timing"] = !wires.is_cut(WIRE_TIMING)
+	if(wires)
+		wire["main_1"] = !wires.is_cut(WIRE_POWER1)
+		wire["main_2"] = !wires.is_cut(WIRE_POWER2)
+		wire["backup_1"] = !wires.is_cut(WIRE_BACKUP1)
+		wire["backup_2"] = !wires.is_cut(WIRE_BACKUP2)
+		wire["shock"] = !wires.is_cut(WIRE_SHOCK)
+		wire["id_scanner"] = !wires.is_cut(WIRE_IDSCAN)
+		wire["bolts"] = !wires.is_cut(WIRE_BOLTS)
+		wire["lights"] = !wires.is_cut(WIRE_LIGHT)
+		wire["safe"] = !wires.is_cut(WIRE_SAFETY)
+		wire["timing"] = !wires.is_cut(WIRE_TIMING)
+	else
+		wire["main_1"] = TRUE
+		wire["main_2"] = TRUE
+		wire["backup_1"] = TRUE
+		wire["backup_2"] = TRUE
+		wire["shock"] = TRUE
+		wire["id_scanner"] = TRUE
+		wire["bolts"] = TRUE
+		wire["lights"] = TRUE
+		wire["safe"] = TRUE
+		wire["timing"] = TRUE
 
 	data["wires"] = wire
 	return data
@@ -1658,6 +1677,8 @@
 /obj/machinery/door/airlock/proc/shock_restore(mob/user)
 	if(!user_allowed(user))
 		return
+	if(!wires)
+		return
 	if(wires.is_cut(WIRE_SHOCK))
 		to_chat(user, span_warning("Can't un-electrify the airlock - The electrification wire is cut."))
 	else if(isElectrified())
@@ -1665,6 +1686,8 @@
 
 /obj/machinery/door/airlock/proc/shock_temp(mob/user)
 	if(!user_allowed(user))
+		return
+	if(!wires)
 		return
 	if(wires.is_cut(WIRE_SHOCK))
 		to_chat(user, span_warning("The electrification wire has been cut."))
@@ -1674,6 +1697,8 @@
 /obj/machinery/door/airlock/proc/shock_perm(mob/user)
 	if(!user_allowed(user))
 		return
+	if(!wires)
+		return
 	if(wires.is_cut(WIRE_SHOCK))
 		to_chat(user, span_warning("The electrification wire has been cut."))
 	else
@@ -1681,6 +1706,8 @@
 
 /obj/machinery/door/airlock/proc/toggle_bolt(mob/user)
 	if(!user_allowed(user))
+		return
+	if(!wires)
 		return
 	if(wires.is_cut(WIRE_BOLTS))
 		to_chat(user, span_warning("The door bolt drop wire is cut - you can't toggle the door bolts."))
