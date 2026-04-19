@@ -68,13 +68,13 @@
 
 /obj/item/gun/syringe/rapidsyringe
 	name = "rapid syringe gun"
-	desc = "A modification of the syringe gun design, using a rotating cylinder to store up to six syringes."
+	desc = "An evolution of the classic syringe gun courtesy of Interdyne Pharmaceuticals, using a rotating cylinder to store up to six syringes."
 	icon_state = "rapidsyringegun"
 	max_syringes = 6
 
 /obj/item/gun/syringe/syndicate
 	name = "dart pistol"
-	desc = "A small spring-loaded sidearm that functions identically to a syringe gun."
+	desc = "An Interdyne-designed small spring-loaded sidearm that functions identically to a syringe gun."
 	icon_state = "syringe_pistol"
 	item_state = "gun" //Smaller inhand
 	w_class = WEIGHT_CLASS_SMALL
