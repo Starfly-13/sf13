@@ -1,6 +1,6 @@
 /obj/item/gun/energy/kalix
 	name = "\improper Etherbor BG-12"
-	desc = "Etherbor Industries's current civilian energy weapon model. The BG-12 energy beam gun is identical to the military model, minus the removal of the full auto mode. Otherwise, it's no different from older hunting beams from Kalixcis's history."
+	desc = "Etherbor Industries's current civilian energy weapon model. The BG-12 energy beam gun is identical to the military model, minus the removal of the full auto mode. Otherwise, it's no different from standard hunting beams history."
 	icon_state = "kalixgun"
 	item_state = "kalixgun"
 	icon = 'icons/obj/guns/manufacturer/etherbor/48x32.dmi'
@@ -140,7 +140,7 @@
 
 /obj/item/gun/energy/kalix/pgf/nock
 	name = "\improper Etherbor VG-A5"
-	desc = "Piggybacking off the success of the VG-F3, the Etherbor Industries VG-A5 Beam Volleygun was designed specifically for contract sale to the PGFMC. With the addition of a stronger capacitor and a forward grip, the VG-A5 has found itself popular among marine raiders for its ability to take control of tight spaces."
+	desc = "Piggybacking off the success of the VG-F3, the Etherbor Industries VG-A5 Beam Volleygun was designed specifically for contract sale to Nanotrasen in a deal that ultimately fell through. With the addition of a stronger capacitor and a forward grip, the VG-A5 has found itself popular among marine raiders for its ability to take control of tight spaces. Its popularity among the independent Epsilon Eridani movement has lead people to try connecting it to Etherbor's failed deal with Nanotrasen."
 	icon_state = "pgfnock"
 	item_state = "pgfnock"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE
@@ -185,7 +185,7 @@
 
 /obj/item/gun/energy/kalix/pgf
 	name = "\improper Etherbor BG-16"
-	desc = "The BG-16 is the military-grade beam gun designed and manufactured by Etherbor Industries as the standard-issue close-range weapon of the PGF."
+	desc = "The BG-16 is the military-grade beam gun designed and manufactured by Etherbor Industries in a failed partnership with Nanotrasen."
 	icon_state = "pgfgun"
 	item_state = "pgfgun"
 
@@ -274,7 +274,7 @@
 
 /obj/item/gun/energy/kalix/pgf/medium
 	name = "\improper Etherbor BGC-10"
-	desc = "Etherbor's answer to the PGFMC's request for a carbine style weapon; the BGC-10 offers greater accuracy and power than the BG-16, while being less cumbersome than the DMR mode equipped HBG series rifles."
+	desc = "Etherbor's proposed answer to Vigilitas' request for a carbine style weapon; the BGC-10 offers greater accuracy and power than the BG-16, while being less cumbersome than the DMR mode equipped HBG series rifles. Despite its rejection from Nanotrasen's corporate offices, it found massive success in a niche with the revolutionaries declaring independence for Epsilon Eridani, causing speculation of corporate sabotage from Etherbor."
 	icon_state = "pgfmedium"
 	item_state = "pgfmedium"
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
@@ -305,7 +305,7 @@
 
 /obj/item/gun/energy/kalix/pgf/heavy
 	name = "\improper Etherbor HBG-7"
-	desc = "The HBG-7 is the standard-issue rifle weapon of the PGF. It comes with a special DMR mode that has greater armor piercing for dealing with armored targets."
+	desc = "A fairly standard combat rifle popular in Epsilon Eridani. It comes with a special DMR mode that has greater armor piercing for dealing with armored targets."
 	icon_state = "pgfheavy"
 	item_state = "pgfheavy"
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
