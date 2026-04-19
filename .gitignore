@@ -208,3 +208,6 @@ check_regex_output.txt
 
 # local development secrets
 /secret
+
+# map build directory
+/_maps2eb

@@ -1,7 +1,7 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/wasteplanet
-	prefix = "_maps/RandomRuins/WasteRuins/"
+	prefix = MAPROOT + "/RandomRuins/WasteRuins/"
 	ruin_type = RUINTYPE_WASTE
 
 /datum/map_template/ruin/wasteplanet/radiation

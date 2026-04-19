@@ -1,7 +1,7 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/jungle
-	prefix = "_maps/RandomRuins/JungleRuins/"
+	prefix = MAPROOT + "/RandomRuins/JungleRuins/"
 	ruin_type = RUINTYPE_JUNGLE
 
 /datum/map_template/ruin/jungle/syndicate

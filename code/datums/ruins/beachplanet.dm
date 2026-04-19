@@ -1,7 +1,7 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/beachplanet
-	prefix = "_maps/RandomRuins/BeachRuins/"
+	prefix = MAPROOT + "/RandomRuins/BeachRuins/"
 	ruin_type = RUINTYPE_BEACH
 
 /datum/map_template/ruin/beachplanet/ancient

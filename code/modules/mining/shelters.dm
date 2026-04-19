@@ -37,7 +37,7 @@
 		built-in navigation, entertainment, medical facilities and a \
 		sleeping area! Order now, and we'll throw in a TINY FAN, \
 		absolutely free!"
-	mappath = "_maps/templates/shelter_1.dmm"
+	mappath = MAPROOT + "/templates/shelter_1.dmm"
 
 /datum/map_template/shelter/beta
 	name = "Shelter Beta"
@@ -47,7 +47,7 @@
 		running water, a gourmet three course meal, cooking facilities, \
 		and a deluxe companion to keep you from getting lonely during \
 		an ash storm."
-	mappath = "_maps/templates/shelter_2.dmm"
+	mappath = MAPROOT + "/templates/shelter_2.dmm"
 
 /datum/map_template/shelter/charlie
 	name = "Shelter Charlie"
@@ -57,4 +57,4 @@
 		also has a sink. This isn't a survival capsule and so you can \
 		expect that this won't save you if you're bleeding out to \
 		death."
-	mappath = "_maps/templates/shelter_3.dmm"
+	mappath = MAPROOT + "/templates/shelter_3.dmm"

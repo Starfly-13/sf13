@@ -79,81 +79,81 @@
 
 /datum/map_template/greeble/whitesands/sulfurpool1
 	name = "Sulfur Greeble 1"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_1.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_1.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool2
 	name = "Sulfur Greeble 2"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_2.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_2.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool3
 	name = "Sulfur Greeble 3"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_3.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_3.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool4
 	name = "Sulfur Greeble 4"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_4.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_4.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool5
 	name = "Sulfur Greeble 5"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_5.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_5.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool6
 	name = "Sulfur Greeble 6"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_6.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_6.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool7
 	name = "Sulfur Greeble 7"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_7.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_7.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool8
 	name = "Sulfur Greeble 8"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_8.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_8.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool9
 	name = "Sulfur Greeble 9"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_9.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_9.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool10
 	name = "Sulfur Greeble 10"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_10.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_10.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool11
 	name = "Sulfur Greeble 11"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_11.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_11.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool12
 	name = "Sulfur Greeble 12"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_12.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_12.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool13
 	name = "Sulfur Greeble 13"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_13.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_13.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool14
 	name = "Sulfur Greeble 14"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_14.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_14.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool15
 	name = "Sulfur Greeble 15"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_15.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_15.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool16
 	name = "Sulfur Greeble 16"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_16.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_16.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool17
 	name = "Sulfur Greeble 17"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_17.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_17.dmm"
 
 /datum/map_template/greeble/whitesands/sulfurpool18
 	name = "Sulfur Greeble 18"
-	mappath = "_maps/templates/greebles/whitesands/sulfur_pool_18.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/sulfur_pool_18.dmm"
 
 /obj/effect/greeble_spawner/whitesands/oasis
 	template = /datum/map_template/greeble/whitesands/oasis
 
 /datum/map_template/greeble/whitesands/oasis
 	name = "Rare Oasis"
-	mappath = "_maps/templates/greebles/whitesands/oasis_1.dmm"
+	mappath = MAPROOT + "/templates/greebles/whitesands/oasis_1.dmm"
 	clear_everything = TRUE
 

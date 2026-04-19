@@ -92,7 +92,7 @@
 			"title": "Map File Path",
 			"type": "string",
 			"description": "The path to the ship class's map file. Use forward slashes (/) for directories, and include the .dmm extension. Map files must be somewhere under the _maps folder.",
-			"pattern": "^_maps/([a-zA-Z0-9_/.-]*)dmm$"
+			"pattern": "^.*_maps/([a-zA-Z0-9_/.-]*)dmm$"
 		},
 		"job_slots": {
 			"title": "Job Slots",

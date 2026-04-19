@@ -1,7 +1,7 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/icemoon
-	prefix = "_maps/RandomRuins/IceRuins/"
+	prefix = MAPROOT + "/RandomRuins/IceRuins/"
 	ruin_type = RUINTYPE_ICE
 
 /datum/map_template/ruin/icemoon/ice_lodge
