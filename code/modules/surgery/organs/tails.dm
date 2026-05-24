@@ -7,6 +7,12 @@
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_TAIL
 	var/tail_type = "None"
+	var/tail_trait = null
+
+/obj/item/organ/tail/Insert(mob/living/carbon/human/H, special = 0, drop_if_replaced = TRUE)
+	..()
+	if(tail_trait)
+		ADD_TRAIT(owner, tail_trait, ORGAN_TRAIT)
 
 /obj/item/organ/tail/Remove(mob/living/carbon/human/H,  special = 0)
 	..()
@@ -49,6 +55,7 @@
 	desc = "A severed Sarathi's tail. Can't they regrow these...?"
 	icon_state = "severedlizard"
 	color = "#116611"
+	tail_trait = TRAIT_TAILED
 	tail_type = "Smooth"
 	var/spines = "None"
 //---------------------------------------------------------------------------------------------------------------------
@@ -98,6 +105,7 @@
 	desc = "A detached Elzuose's tail. You probably shouldn't plant this."
 	color = "#d3e8e9"
 	tail_type = "Long"
+	tail_trait = TRAIT_TAILED
 
 /obj/item/organ/tail/elzu/Insert(mob/living/carbon/human/H, special = 0, drop_if_replaced = TRUE)
 	..()

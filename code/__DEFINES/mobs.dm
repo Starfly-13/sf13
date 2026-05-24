@@ -89,16 +89,20 @@
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"
 #define SPECIES_ANDROID "android"
+#define SPECIES_ASHWALKER "ashwalker"
 #define SPECIES_CORPORATE "corporate"
-#define SPECIES_DULLAHAN "dullahan"
 #define SPECIES_ELZUOSE "elzuose"
 #define SPECIES_FLYPERSON "fly"
 #define SPECIES_HUMAN "human"
 #define SPECIES_IPC "ipc"
 #define SPECIES_JELLYPERSON "jelly"
-#define SPECIES_SLIMEPERSON "slime_person"
+#define SPECIES_KEPORI "kepori"
+#define SPECIES_KOBOLD "kobold"
 #define SPECIES_LUMINESCENT "luminescent"
-#define SPECIES_STARGAZER "stargazer"
+#define SPECIES_MONKEY "monkey"
+#define SPECIES_MOTH "moth"
+#define SPECIES_PLASMAMAN "plasmaman"
+#define SPECIES_RACHNID "rachnid"
 //---------------------------------------------------------------------------------------------------------------------
 // STARFLY EDIT - CHANGE BEGIN
 #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
@@ -112,19 +116,13 @@
 #endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
 // STARFLY EDIT - CHANGE END
 //---------------------------------------------------------------------------------------------------------------------
-#define SPECIES_ASHWALKER "ashwalker"
-#define SPECIES_KOBOLD "kobold"
-#define SPECIES_MONKEY "monkey"
-#define SPECIES_MOTH "moth"
-#define SPECIES_PLASMAMAN "plasmaman"
-#define SPECIES_POD "pod"
-#define SPECIES_SHADOW "shadow"
 #define SPECIES_SKELETON "skeleton"
+#define SPECIES_SLIMEPERSON "slime_person"
 #define SPECIES_SNAIL "snail"
-#define SPECIES_RACHNID "rachnid"
-#define SPECIES_KEPORI "kepori"
+#define SPECIES_STARGAZER "stargazer"
 #define SPECIES_VAMPIRE "vampire"
 #define SPECIES_VOX "vox"
+#define SPECIES_XENOMORPH "xenomorph"
 //---------------------------------------------------------------------------------------------------------------------
 // STARFLY EDIT - ADDITION BEGIN
 #ifdef STARFLY13_MODULE_YEOSA_UNATHI_ENABLED
@@ -135,7 +133,6 @@
 // STARFLY EDIT - ADDITION END
 //---------------------------------------------------------------------------------------------------------------------
 #define SPECIES_ZOMBIE "zombie"
-#define SPECIES_XENOMORPH "xenomorph"
 
 #define DIGITIGRADE_NEVER 0
 #define DIGITIGRADE_OPTIONAL 1
