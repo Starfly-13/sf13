@@ -285,9 +285,7 @@
 //---------------------------------------------------------------------------------------------------------------------
 		"Moth" = /datum/species/moth,
 		"Elzuose" = /datum/species/elzuose,
-		"Pod" = /datum/species/pod,
 		"Fly" = /datum/species/fly,
-		"Jelly" = /datum/species/jelly,
 		"IPC" = /datum/species/ipc,
 		"Kepori" = /datum/species/kepori,
 		"Rachnid" = /datum/species/spider
