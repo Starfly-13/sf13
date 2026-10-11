@@ -38,14 +38,14 @@
 		"moon",
 		"plasma giant",
 		"reebe",
-		"rockplanet",
+		"rock",
 		"sand",
 		"shroudedplanet",
 		"snowball",
 		"space",
 		"superflat",
 		"test",
-		"wasteplanet",
+		"waste",
 		"waterplanet",
 	)
 	// for each type on our known types list, make sure it's in the code
