@@ -3876,6 +3876,7 @@
 #include "modular_starfly\modules\desert-resources\code\game\objects\structures\signs\signs_flags.dm"
 #include "modular_starfly\modules\desert-resources\code\modules\mob\living\simple_animal\friendly\moghes.dm"
 #include "modular_starfly\modules\desert-resources\code\modules\power\lighting.dm"
+#include "modular_starfly\modules\hegemony_station\outpost_types.dm"
 #include "modular_starfly\modules\new_wearables\contraband.dm"
 #include "modular_starfly\modules\new_wearables\loadout_accessories.dm"
 #include "modular_starfly\modules\new_wearables\loadout_hat.dm"
