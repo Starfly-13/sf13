@@ -10623,7 +10623,7 @@
 /obj/effect/turf_decal/corner/opaque/tan{
 	dir = 10
 	},
-/obj/machinery/mineral/processing_unit_console{
+/obj/machinery/computer/processing_unit_console/directional/south{
 	dir = 1;
 	pixel_x = 32;
 	pixel_y = 54
