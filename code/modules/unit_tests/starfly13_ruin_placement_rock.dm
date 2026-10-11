@@ -1,4 +1,4 @@
-// starfly13_ruin_placement_rockplanet.dm
+// starfly13_ruin_placement_rock.dm
 // Copyright 2025 Patrick Meade.
 //
 // This program is free software: you can redistribute it and/or modify
@@ -16,4 +16,4 @@
 //---------------------------------------------------------------------------
 
 /datum/unit_test/ruin_placement/Run()
-	test_placement("rockplanet")
+	test_placement("rock")
