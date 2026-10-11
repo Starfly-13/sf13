@@ -6356,7 +6356,7 @@
 /area/outpost/medical)
 "vm" = (
 /obj/item/ammo_casing/spent/pistol_brass,
-/obj/structure/flippedtable{
+/obj/structure/barricade/directional/flippedtable{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -6778,7 +6778,7 @@
 "wG" = (
 /obj/item/ammo_casing/spent/pistol_brass,
 /obj/item/ammo_casing/spent/pistol_brass,
-/obj/structure/flippedtable{
+/obj/structure/barricade/directional/flippedtable{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -9467,7 +9467,7 @@
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
 "Ff" = (
-/obj/structure/flippedtable{
+/obj/structure/barricade/directional/flippedtable{
 	dir = 4
 	},
 /obj/item/ammo_casing/spent/pistol_brass,
