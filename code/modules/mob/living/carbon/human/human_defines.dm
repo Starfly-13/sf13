@@ -47,9 +47,6 @@
 	var/jumpsuit_style = PREF_SUIT		//suit/skirt
 	var/exowear = PREF_EXOWEAR			//exowear
 
-	///Whether this human started with a full-body prosthesis
-	var/fbp = FALSE
-
 	//Equipment slots
 	var/obj/item/clothing/wear_suit = null
 	var/obj/item/clothing/w_uniform = null
@@ -80,6 +77,13 @@
 	var/blood_in_hands = 0
 	///blood particle effect
 	var/obj/effect/abstract/particle_holder/blood_particle
+
+	/// The core temperature of the human compaired to the skin temp of the body
+	var/coretemperature = HUMAN_BODYTEMP_NORMAL
+
+	///Exposure to damaging heat levels increases stacks, stacks clean over time when temperatures are lower. Stack is consumed to add a wound.
+	var/heat_exposure_stacks = 0
+
 
 	COOLDOWN_DECLARE(bloodloss_message)
 

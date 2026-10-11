@@ -487,15 +487,20 @@
 			M.mothdust += 10; // End WS edit
 
 	else if(M.zone_selected == BODY_ZONE_PRECISE_MOUTH) // Nose boops!
+		SEND_SIGNAL(src, COMSIG_CARBON_BOOP, M)
 		nosound = TRUE
 		playsound(src, 'sound/effects/boop.ogg', 50, 0)
 		if (HAS_TRAIT(M, TRAIT_FRIENDLY))
-			M.visible_message(span_notice("[M] playfully boops your nose."), span_notice("You playfully boop [src]'s nose."))
+			M.visible_message(span_notice("[M] playfully boops [src]'s nose."), \
+						span_notice("You playfully boop [src]'s nose."), null, DEFAULT_MESSAGE_RANGE, list(M, src))
+			to_chat(src, span_notice("[M] playfully boops your nose."))
 			if (hugger_mood.sanity >= SANITY_GREAT)
 				new /obj/effect/temp_visual/heart(loc)
 				SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "best_boop", /datum/mood_event/best_boop, M)
 		else
-			M.visible_message(span_notice("[M] boops [src]'s nose."), span_notice("You boop [src] on the nose."))
+			M.visible_message(span_notice("[M] boops [src]'s nose."), \
+						span_notice("You boop [src]'s nose."), null, DEFAULT_MESSAGE_RANGE, list(M, src))
+			to_chat(src, span_notice("[M] boops your nose."))
 		if(HAS_TRAIT(src, TRAIT_BADTOUCH))
 			to_chat(M, span_warning("A scowl forms on [src]'s face as you daringly press your finger against [p_their()] nose."))
 			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "bad_boop", /datum/mood_event/bad_boop, M)
@@ -523,7 +528,7 @@
 						null, span_hear("You hear the rustling of clothes."), DEFAULT_MESSAGE_RANGE, list(M, src))
 			to_chat(M, span_notice("You wrap [src] into a tight bear hug!"))
 			to_chat(src, span_notice("[M] squeezes you super tightly in a firm bear hug!"))
-		else if((M.grab_state == GRAB_PASSIVE) && (M.pulling))
+		else if((M.grab_state == GRAB_PASSIVE) && (M.pulling == src))
 			M.visible_message(span_notice("[M] hugs [src] to make [p_them()] feel better!"), \
 					span_notice("You hug [src] to make [p_them()] feel better!"))
 		else
@@ -552,7 +557,7 @@
 				SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "hug", /datum/mood_event/bad_touch_bear_hug)
 
 		// Let people know if they hugged someone really warm or really cold
-		if ((M.grab_state == GRAB_PASSIVE) && (M.pulling))
+		if ((M.grab_state == GRAB_PASSIVE) && (M.pulling == src))
 			if(M.bodytemperature > M.dna.species.bodytemp_heat_damage_limit)
 				to_chat(src, span_warning("It feels like [M] is over heating as they hug you."))
 			else if(M.bodytemperature < M.dna.species.bodytemp_cold_damage_limit)
@@ -576,7 +581,7 @@
 	else if((M.zone_selected == BODY_ZONE_L_ARM) || (M.zone_selected == BODY_ZONE_R_ARM))
 		if(!get_bodypart(check_zone(M.zone_selected)))
 			to_chat(M, span_warning("[src] does not have a [M.zone_selected == BODY_ZONE_L_ARM ? "left" : "right"] arm!"))
-		else if((M.grab_state == GRAB_PASSIVE) && (M.pulling))
+		else if((M.grab_state == GRAB_PASSIVE) && (M.pulling == src))
 			M.visible_message(span_notice("[M] shakes [src]'s hand."), \
 						span_notice("You shake [src]'s hand."))
 		else

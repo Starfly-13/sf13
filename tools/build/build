@@ -1,5 +1,4 @@
 #!/bin/sh
 set -e
-modular_starfly/modules/starfly_ships/maps.sh
 cd "$(dirname "$0")"
 exec ../bootstrap/node build.js "$@"

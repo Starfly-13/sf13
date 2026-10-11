@@ -30,13 +30,19 @@
 	quickdraw = FALSE
 	silent = FALSE
 
+/datum/component/storage/concrete/pockets/exo/Initialize()
+	. = ..()
+	var/static/list/exception_cache = typecacheof(list(
+		/obj/item/storage/pouch
+		))
+	exception_hold = exception_cache
+
 /datum/component/storage/concrete/pockets/exo/large
 	max_items = 3
 
 /datum/component/storage/concrete/pockets/small/fedora/Initialize()
 	. = ..()
 	var/static/list/exception_cache = typecacheof(list(
-		/obj/item/toy/katana, /obj/item/melee/sword/katana,
 		/obj/item/melee/sword/energy_katana, /obj/item/gun/ballistic/automatic/smg/firestorm/pan
 		))
 	exception_hold = exception_cache
@@ -114,9 +120,13 @@
 		/obj/item/gun/ballistic/revolver,
 		/obj/item/gun/energy/laser,
 		/obj/item/gun/energy/disabler,
-		/obj/item/gun/energy/sharplite/x26,
+		/obj/item/gun/energy/sharplite/ohm,
+		/obj/item/gun/energy/sharplite/yari,
 		/obj/item/gun/energy/kalix/pistol,
+		/obj/item/gun/energy/clover/pistol,
 		/obj/item/stock_parts/cell/gun,
+		/obj/item/gun/energy/cybersun/troubleshooter,
+		/obj/item/gun/energy/cybersun/lorentz/opportunist,
 		/obj/item/ammo_box)) // this doesnt let you put hades into holsters trust me
 	can_hold_max_of_items = typecacheof(list(
 		/obj/item/gun = 1,
@@ -143,7 +153,7 @@
 	can_hold = typecacheof(list(
 		/obj/item/gun/ballistic/automatic,
 		/obj/item/gun/ballistic/revolver,
-		/obj/item/gun/energy/sharplite/x26,
+		/obj/item/gun/energy/sharplite/ohm,
 		/obj/item/gun/energy/disabler,
 		/obj/item/gun/energy/pulse/carbine,
 		/obj/item/gun/energy/dueling,

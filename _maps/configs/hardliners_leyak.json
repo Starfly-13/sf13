@@ -10,7 +10,7 @@
 	],
 	"map_name": "Y600-H Leyak-class Covert Frigate",
 	"map_short_name": "Leyak-class",
-	"description": "The Leyak-class found its origin as a personal commission by the earliest Hardliner groups associated with cybersun, requested to be under the radar at a glance, but to also be suitable for surprise ambushes and direct combat, or other mercenary work. Notably, these vessels have found varying success rates due to crew composition, some deemed too dysfunctional to function, and others garnering a reputation of being brutal and effective.",
+	"description": "The Leyak-class found its origin as a personal commission by the earliest Hardliner groups associated with cybersun, with the requirements of being a vessel able to catch any target quickly by suprise, and to flee just as fast as it strikes. While the vessel did reach this goal with its robust thruster setup and cloaking technology, the power drain caused by these devices leaves the upkeep costs of the vessel quite high. While most know of the Leyak's existence, ISF and Cybersun often deny being involved in its production, claiming the design was stolen by a third party. Despite the theoretically fearsome design, a Leyak's presence can be found often disregarded by most who would be weary of it, simply due to the disorganized nature of the Hardliners, along with Cybersun limiting any outbursts it could cause.",
 	"tags": [
 		"RP Focus",
 		"Combat"
@@ -18,6 +18,7 @@
 	"map_path": "_maps/shuttles/hardliner/hardliners_leyak.dmm",
 	"map_id": "hardliners_leyak",
 	"limit": 1,
+	"tranist_y_offset": -11,
 	"starting_funds": 1500,
 	"job_slots": {
 		"Captain": {
@@ -35,7 +36,7 @@
 			"officer": true,
 			"slots": 1
 		},
-		"Medical Doctor": {
+		"Field Medic": {
 			"outfit": "/datum/outfit/job/syndicate/doctor/gorlex",
 			"slots": 1
 		},
@@ -43,17 +44,13 @@
 			"outfit": "/datum/outfit/job/syndicate/engineer/gorlex",
 			"slots": 1
 		},
-		"Wrecker": {
-			"outfit": "/datum/outfit/job/syndicate/miner/gorlex",
-			"slots":1
-		},
 		"Trooper": {
 			"outfit": "/datum/outfit/job/syndicate/security/gorlex",
 			"slots": 2
 		},
 		"Junior Agent": {
 			"outfit": "/datum/outfit/job/syndicate/assistant/gorlex",
-			"slots": 2
+			"slots": 1
 		}
 	},
 	"enabled": true

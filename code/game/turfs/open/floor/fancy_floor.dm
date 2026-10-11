@@ -21,6 +21,14 @@
 	color = WOOD_COLOR_GENERIC
 	flammability = 3
 
+/turf/open/floor/wood/beach
+	initial_gas_mix = BEACHPLANET_DEFAULT_ATMOS
+
+/turf/open/floor/wood/beach/lit
+	light_range = 2
+	light_power = 0.80
+	light_color = COLOR_BEACHPLANET_LIGHT
+
 /turf/open/floor/wood/mahogany
 	color = WOOD_COLOR_RICH
 
@@ -47,6 +55,14 @@
 
 /turf/open/floor/wood/birch
 	color = WOOD_COLOR_PALE3
+
+/turf/open/floor/wood/birch/beach
+	initial_gas_mix = BEACHPLANET_DEFAULT_ATMOS
+
+/turf/open/floor/wood/birch/beach/lit
+	light_range = 2
+	light_power = 0.80
+	light_color = COLOR_BEACHPLANET_LIGHT
 
 /turf/open/floor/wood/yew
 	color = WOOD_COLOR_YELLOW
@@ -379,6 +395,13 @@
 	floor_tile = /obj/item/stack/tile/carpet/nanoweave/orange
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_NWORANGE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_NWORANGE)
+
+/turf/open/floor/carpet/nanoweave/green
+	name = "nanoweave carpet (green)"
+	icon = 'icons/turf/floors/nanoweave_green.dmi'
+	floor_tile = /obj/item/stack/tile/carpet/nanoweave/green
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_NWGREEN)
+	canSmoothWith = list(SMOOTH_GROUP_CARPET_NWGREEN)
 
 //*****Airless versions of most of the above.*****
 /turf/open/floor/carpet/airless

@@ -212,10 +212,14 @@
 	max_ammo = 30
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
+/obj/item/ammo_box/magazine/e40/empty
+	start_empty = TRUE
+
 //laser
 
 /obj/item/gun/energy/laser/e40_laser_secondary
 	name = "secondary e40 laser gun"
+	autowiki_hidden = TRUE //part of the E-40, not a weapon itself
 	desc = "The laser component of a E-40 Hybrid Rifle. You probably shouldn't see this. If you can though, you should probably know lorewise, this is primary, the ballistic compontent in universe is secondary. Unfortunately, we cannot simulate this, So codewise this is secondary."
 	fire_sound = 'sound/weapons/gun/laser/e40_las.ogg'
 	w_class = WEIGHT_CLASS_NORMAL

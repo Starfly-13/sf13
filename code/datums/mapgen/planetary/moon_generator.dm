@@ -138,24 +138,24 @@
 
 /datum/map_template/greeble/moon/crater1
 	name = "Crater 1"
-	mappath = "_maps/templates/greebles/moon_crater1.dmm"
+	mappath = MAPROOT + "/templates/greebles/moon_crater1.dmm"
 
 /datum/map_template/greeble/moon/crater2
 	name = "Crater 2"
-	mappath = "_maps/templates/greebles/moon_crater2.dmm"
+	mappath = MAPROOT + "/templates/greebles/moon_crater2.dmm"
 
 /datum/map_template/greeble/moon/crater3
 	name = "Crater 3"
-	mappath = "_maps/templates/greebles/moon_crater3.dmm"
+	mappath = MAPROOT + "/templates/greebles/moon_crater3.dmm"
 
 /datum/map_template/greeble/moon/crater4
 	name = "Crater 4"
-	mappath = "_maps/templates/greebles/moon_crater4.dmm"
+	mappath = MAPROOT + "/templates/greebles/moon_crater4.dmm"
 
 /datum/map_template/greeble/moon/crater5
 	name = "Crater 5"
-	mappath = "_maps/templates/greebles/moon_crater5.dmm"
+	mappath = MAPROOT + "/templates/greebles/moon_crater5.dmm"
 
 /datum/map_template/greeble/moon/crater6
 	name = "Crater 6"
-	mappath = "_maps/templates/greebles/moon_crater6.dmm"
+	mappath = MAPROOT + "/templates/greebles/moon_crater6.dmm"

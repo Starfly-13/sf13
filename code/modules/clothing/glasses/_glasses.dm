@@ -239,6 +239,17 @@
 	desc = "More expensive, more fragile and much less practical, but oh so fashionable."
 	icon_state = "thin_glasses"
 
+/obj/item/clothing/glasses/regular/pincher
+	name = "pincher glasses"
+	desc = "Armless glasses that clip onto the face of the wearer. Perfect for old timey professors and those without ears."
+	icon_state = "glasses_pincher"
+	item_state = "glasses_pincher"
+
+/obj/item/clothing/glasses/regular/pincher/thin
+	name = "thin pincher glasses"
+	desc = "Armless glasses that clip onto the face of the wearer. These ones are thinner and much more stylish."
+	icon_state = "glasses_pincher_thin"
+
 //Here lies green glasses, so ugly they died. RIP
 
 /obj/item/clothing/glasses/sunglasses
@@ -290,6 +301,7 @@
 	desc = "Protects the eyes from bright flashes; approved by the mad scientist association."
 	icon_state = "welding-g"
 	item_state = "welding-g"
+	alternate_worn_layer = FACEMASK_LAYER
 	actions_types = list(/datum/action/item_action/toggle)
 	flash_protect = FLASH_PROTECTION_WELDER
 	custom_materials = list(/datum/material/iron = 250)

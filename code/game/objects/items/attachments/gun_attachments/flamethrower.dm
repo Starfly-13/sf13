@@ -45,7 +45,7 @@
 	examine_list += span_notice("-You can empty the [attached_flamethrower.beaker] by pressing the <b>secondary action</b> key. By default, this is <b>shift + space</b>")
 	return examine_list
 
-/obj/item/attachment/gun/flamethrower/on_ctrl_click(obj/item/gun/gun, mob/user)
+/obj/item/attachment/gun/flamethrower/on_safety(obj/item/gun/gun, mob/user)
 	. = ..()
 	attached_flamethrower.toggle_igniter(user)
 
@@ -89,3 +89,23 @@
 	icon = 'icons/obj/chemical/hypovial.dmi'
 	icon_state = "hypovial"
 	volume = 20
+
+/obj/item/reagent_containers/glass/beaker/flamethrower_underbarrel/scorcher
+
+	volume = 40
+
+/obj/item/attachment/gun/flamethrower/scorcher
+	autowiki_hidden = TRUE //integral to scorcher
+	size_mod = 0
+	attach_features_flags = ATTACH_NO_SPRITE
+
+/obj/item/attachment/gun/flamethrower/scorcher/Initialize()
+	. = ..()
+	attached_flamethrower = new /obj/item/flamethrower/underbarrel/scorcher(src)
+
+/obj/item/flamethrower/underbarrel/scorcher
+	create_full = TRUE
+
+/obj/item/flamethrower/underbarrel/scorcher/Initialize(mapload)
+	. = ..()
+	beaker = new /obj/item/reagent_containers/glass/beaker/flamethrower_underbarrel/scorcher(src)

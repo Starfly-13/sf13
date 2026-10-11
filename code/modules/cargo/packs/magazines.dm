@@ -8,15 +8,15 @@
 /* VI */
 
 /datum/supply_pack/magazine/co9mm_mag
-	name = "9x18mm Commander Magazine Crate"
-	desc = "Contains a 9x18mm magazine for the standard-issue Commander pistol, with a capacity of twelve rounds."
+	name = "9mm Pistol Magazine Crate"
+	desc = "Contains a 9mm magazine for the Challenger and Champion pistols, with a capacity of twelve rounds."
 	contains = list(/obj/item/ammo_box/magazine/co9mm/empty)
 	cost = 150
 	faction = /datum/faction/warra
 
 /datum/supply_pack/magazine/smgm9mm_mag
-	name = "9x18mm SMG Magazine Crate"
-	desc = "Contains a 9x18mm magazine for the Vector and Saber SMGs, with a capacity of thirty rounds."
+	name = "9mm SMG Magazine Crate"
+	desc = "Contains a 9mm magazine for the Vector and Saber SMGs, with a capacity of thirty rounds."
 	contains = list(/obj/item/ammo_box/magazine/m9mm_expedition/empty)
 	cost = 250
 	faction = /datum/faction/warra
@@ -134,14 +134,14 @@
 
 /datum/supply_pack/magazine/m10mm_mag
 	name = "Ringneck Magazine Crate"
-	desc = "Contains a 10x22mm magazine for the Ringneck pistol, with a capacity of eight rounds."
+	desc = "Contains a 10mm magazine for the Ringneck pistol, with a capacity of eight rounds."
 	contains = list(/obj/item/ammo_box/magazine/m10mm_ringneck/empty)
 	cost = 150
 	faction = /datum/faction/syndicate/scarborough
 
 /datum/supply_pack/magazine/m9mm_rattlesnake
 	name = "Rattlesnake Magazine Crate"
-	desc = "Contains a 9x18mm magazine for the Rattlesnake machine pistol, with a capacity of 18 rounds."
+	desc = "Contains a 9mm magazine for the Rattlesnake machine pistol, with a capacity of 18 rounds."
 	contains = list(/obj/item/ammo_box/magazine/m9mm_rattlesnake/empty)
 	cost = 300
 	faction = /datum/faction/syndicate/scarborough
@@ -210,14 +210,14 @@
 
 /datum/supply_pack/magazine/cm23_mag
 	name = "CM-23 Magazine Crate"
-	desc = "Contains a 10x22mm magazine for the CM-23 handgun with a capacity of 10 rounds."
+	desc = "Contains a 10mm magazine for the CM-23 handgun with a capacity of 10 rounds."
 	contains = list(/obj/item/ammo_box/magazine/cm23/empty)
 	cost = 150
 	faction = /datum/faction/clip
 
 /datum/supply_pack/magazine/cm70_mag
 	name = "CM-70 Magazine Crate"
-	desc = "Contains a 9x18mm magazine for the CM-70 machinepistol."
+	desc = "Contains a 9mm magazine for the CM-70 machinepistol."
 	contains = list(/obj/item/ammo_box/magazine/m9mm_cm70/empty)
 	cost = 150
 	faction = /datum/faction/clip
@@ -232,7 +232,7 @@
 
 /datum/supply_pack/magazine/cm5_mag
 	name = "CM-5 Magazine Crate"
-	desc = "Contains a 9x18mm magazine for the CM-5 SMG with a capacity of 30 rounds."
+	desc = "Contains a 9mm magazine for the CM-5 SMG with a capacity of 30 rounds."
 	contains = list(/obj/item/ammo_box/magazine/cm5_9mm/empty)
 	cost = 300
 	faction = /datum/faction/clip
@@ -245,17 +245,30 @@
 	cost = 300
 	faction = /datum/faction/clip
 
+/datum/supply_pack/magazine/cm82_extended_mag
+	name = "Extended CM-82 Magazine Crate"
+	desc = "Contains a 5.56mm magazine for the CM-82 rifle, with a capacity of fourty-five rounds."
+	contains = list(/obj/item/ammo_box/magazine/p16/extended/empty)
+	cost = 750
+	faction = /datum/faction/clip
+
 /datum/supply_pack/magazine/skm_ammo
 	name = "SKM Magazine Crate"
 	desc = "Contains a 7.62x40mm magazine for the SKM rifles, with a capacity of twenty rounds."
 	contains = list(/obj/item/ammo_box/magazine/skm_762_40/empty)
 	cost = 300
 
+/datum/supply_pack/magazine/heater
+	name = "Heater Magazine Crate"
+	desc = "Contains a 30-round 5.7 magazine for the Heater."
+	contains = list(/obj/item/ammo_box/magazine/heater)
+	cost = 300
+
 /datum/supply_pack/magazine/skm_ammo_extended
 	name = "SKM Extended Magazine Crate"
 	desc = "Contains a 7.62x40mm magazine for the SKM rifles, with a capacity of fourty rounds."
 	contains = list(/obj/item/ammo_box/magazine/skm_762_40/extended/empty)
-	cost = 1250
+	cost = 750
 	faction = /datum/faction/inteq
 	faction_discount = 0
 	faction_locked = TRUE
@@ -269,7 +282,7 @@
 
 /datum/supply_pack/magazine/f90
 	name = "CM-F90 Magazine Crate"
-	desc = "Contains a 5-round 6.5mm magazine for use with the CM-F90 sniper rifle."
+	desc = "Contains a 6-round 6.5mm magazine for use with the CM-F90 sniper rifle."
 	contains = list(/obj/item/ammo_box/magazine/f90/empty)
 	cost = 200
 	faction = /datum/faction/clip
@@ -338,7 +351,7 @@
 
 /datum/supply_pack/magazine/mongrel_mag
 	name = "Mongrel Magazine Crate"
-	desc = "Contains a 10x22mm magazine for the SKM-44v 'Mongrel' SMG, with a capacity of twenty-four rounds."
+	desc = "Contains a 10mm magazine for the SKM-44v 'Mongrel' SMG, with a capacity of twenty-four rounds."
 	contains = list(/obj/item/ammo_box/magazine/smgm10mm/empty)
 	cost = 200
 	faction = /datum/faction/inteq
@@ -373,13 +386,56 @@
 	contains = list(/obj/item/ammo_box/magazine/m12g_slammer)
 	cost = 300
 
+/* E-40 */
+
+/datum/supply_pack/magazine/e40
+	name = "E-40 Caseless Magazine Crate"
+	desc = "Contains a 30-round magazine for the E-40 Hybrid Rifle in .299 Eohoma Caseless."
+	contains = list(/obj/item/ammo_box/magazine/e40/empty)
+	cost = 400
+
+/* CS Gauss */
+
+/datum/supply_pack/magazine/convergence
+	name = "Convergence Magazine"
+	desc = "Contains a 60-round magazine for the SG49 Convergence filled with 2x15mm Tav'Sha Dart."
+	contains = list(/obj/item/ammo_box/magazine/cs_gauss)
+	cost = 100
+
+/datum/supply_pack/magazine/rectifier
+	name = "Rectifier Magazine"
+	desc = "Contains a 30-round magazine for the SG29 Convergence filled with 2x15mm Tav'Sha Dart."
+	contains = list(/obj/item/ammo_box/magazine/cs_gauss/pistol)
+	cost = 50
+
+/datum/supply_pack/magazine/vector
+	name = "Vector Magazine"
+	desc = "Contains a 40-round magazine for the SG95 Vector filled with 3x20mm Deu'Sha Dart."
+	contains = list(/obj/item/ammo_box/magazine/cs_gauss/rifle)
+	cost = 150
+
 /* energy weapons */
+
+/datum/supply_pack/magazine/miniguncell
+	name = "Eoehoma-style Mini Power Cell"
+	desc = "Contains a Clover Photonics copy of an Eoehoma Mini Cell, compatable with systems that use Eoehoma Mini-style cells."
+	contains = list(/obj/item/stock_parts/cell/gun/mini)
+	cost = 200
 
 /datum/supply_pack/magazine/guncell
 	name = "Eoehoma-style Power Cell"
-	desc = "Contains a weapon power cell built to be compatible with Eoehoma weapons, and systems that still use Eoehoma's style of cell."
+	desc = "Contains a Clover Photonics copy of an Eoehoma cell, compatible with Eoehoma weapons, and systems that still use Eoehoma-style cells."
 	contains = list(/obj/item/stock_parts/cell/gun)
 	cost = 500
+
+/datum/supply_pack/magazine/upgradedguncellclip
+	name = "High-Capacity Eoehoma-style Power Cell"
+	desc = "Contains a Clover Photonics copy of a High-Cap Eoehoma cell, compatible with Eoehoma weapons, and systems that still use Eoehoma-style cells."
+	contains = list(/obj/item/stock_parts/cell/gun/upgraded)
+	cost = 800
+	faction = /datum/faction/clip
+	faction_discount = 0
+	faction_locked = TRUE
 
 /datum/supply_pack/magazine/solgovcell
 	name = "SolCon Weapon Cell Crate"
@@ -395,22 +451,22 @@
 	desc = "Contains a proprietary weapon cell, compatible with most Sharplite energy weapons."
 	contains = list(/obj/item/stock_parts/cell/gun/sharplite)
 	faction = /datum/faction/warra
-	faction_discount = 30
-	cost = 700
+	faction_discount = 25 /*300 credits*/
+	cost = 400
 
 /datum/supply_pack/magazine/tinyguncell
 	name = "Sharplite Mini Power Cell"
 	desc = "Contains a proprietary weapon cell, compatible with the Ohm self-defence pistol."
 	contains = list(/obj/item/stock_parts/cell/gun/sharplite/mini)
 	faction = /datum/faction/warra
-	faction_discount = 30
-	cost = 300
+	faction_discount = 20 /*200 credits*/
+	cost = 250
 
 /datum/supply_pack/magazine/upgradedguncell
 	name = "Sharplite Plus Proprietary Weapon Cell"
 	desc = "Contains an upgraded weapon cell, compatible with most Sharplite models. For MW use only."
 	contains = list(/obj/item/stock_parts/cell/gun/sharplite/plus)
-	cost = 1000
+	cost = 750
 	faction = /datum/faction/warra
 	faction_discount = 0
 	faction_locked = TRUE
@@ -419,7 +475,7 @@
 	name = "Sharplite Plus Proprietary Weapon Cell"
 	desc = "Contains an upgraded weapon cell, compatible with most Sharplite models."
 	contains = list(/obj/item/stock_parts/cell/gun/sharplite/plus)
-	cost = 1000
+	cost = 750
 	faction = /datum/faction/inteq
 	faction_discount = 0
 	faction_locked = TRUE
@@ -430,16 +486,38 @@
 	name = "Etherbor Cell Crate"
 	desc = "Contains an Etherbor weapon cell, compatible with Etherbor armaments with a slightly higher capacity."
 	contains = list(/obj/item/stock_parts/cell/gun/kalix)
-	cost = 600
+	cost = 500
 	faction = /datum/faction/pgf
 
 /datum/supply_pack/magazine/pgfcell
 	name = "Military-Grade Etherbor Cell Crate"
 	desc = "Contains a military-grade Etherbor weapon cell produced for the PGFMC, compatible with Etherbor armaments with a significantly higher capacity."
 	contains = list(/obj/item/stock_parts/cell/gun/pgf)
-	cost = 1000
+	cost = 750
 	faction = /datum/faction/pgf
 	faction_discount = 0
 	faction_locked = TRUE
 
 /* Expand once the energy weapons have been actually expanded upon */
+
+/datum/supply_pack/magazine/cybersun_cell
+	name = "Cybersun Plasma Cell"
+	desc = "Contains a Cybersun Plasma Cell, compatible with most Cybersun energy weapons"
+	contains = list(/obj/item/stock_parts/cell/gun/cybersun)
+	cost = 750
+	faction = /datum/faction/syndicate/cybersun
+	faction_discount = 10
+
+/datum/supply_pack/magazine/cybersun_cell/mini
+	name = "Micro Cybersun Plasma Cell"
+	desc = "Contains a micro Cybersun Plasma Cell, compatible with pistol-scale Cybersun energy weapons"
+	contains = list(/obj/item/stock_parts/cell/gun/cybersun/mini)
+	cost = 300
+
+/datum/supply_pack/magazine/cybersun_cell/heavy
+	name = "Heavy Cybersun Plasma  Cell"
+	desc = "Contains the heaviest plasma cell manufactured by Cybersun. Perfect for heavy weaponry."
+	contains = list(/obj/item/stock_parts/cell/gun/cybersun/heavy)
+	cost = 1500
+	faction_discount = 0
+	faction_locked = TRUE

@@ -126,153 +126,153 @@
 
 /datum/map_template/greeble/jungleplanet
 	name = "Jungle Greeble 1"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_1.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_1.dmm"
 	description = "A small attempt at a fishing pier"
 	clear_everything = TRUE
 
 /datum/map_template/greeble/jungleplanet/two
 	name = "Jungle Greeble 2"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_2.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_2.dmm"
 	description = "A simple garden, abandoned."
 
 /datum/map_template/greeble/jungleplanet/three
 	name = "Jungle Greeble 3"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_3.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_3.dmm"
 	description = "A grave for the damned."
 
 /datum/map_template/greeble/jungleplanet/four
 	name = "Jungle Greeble 4"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_4.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_4.dmm"
 	description = "Beware of bear caves."
 
 /datum/map_template/greeble/jungleplanet/five
 	name = "Jungle Greeble 5"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_5.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_5.dmm"
 	description = "Murdered frontiersman bits."
 
 /datum/map_template/greeble/jungleplanet/six
 	name = "Jungle Greeble 6"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_6.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_6.dmm"
 	description = "Radioactive hole."
 
 /datum/map_template/greeble/jungleplanet/seven
 	name = "Jungle Greeble 7"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_7.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_7.dmm"
 	description = "A radioactive incident."
 
 /datum/map_template/greeble/jungleplanet/eight
 	name = "Jungle Greeble 8"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_8.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_8.dmm"
 	description = "Radioactive Hole 2"
 
 /datum/map_template/greeble/jungleplanet/nine
 	name = "Jungle Greeble 9"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_9.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_9.dmm"
 	description = "Radioactive debris."
 
 /datum/map_template/greeble/jungleplanet/ten
 	name = "Jungle Greeble 10"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_10.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_10.dmm"
 	description = "A simple pond."
 
 /datum/map_template/greeble/jungleplanet/eleven
 	name = "Jungle Greeble 11"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_11.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_11.dmm"
 	description = "A radioactive trench left to rot."
 
 /datum/map_template/greeble/jungleplanet/twelve
 	name = "Jungle Greeble 12"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_12.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_12.dmm"
 	description = "A friend's grave adorned with a flower"
 
 /datum/map_template/greeble/jungleplanet/thirteen
 	name = "Jungle Greeble 13"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_13.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_13.dmm"
 	description = "Industrial decay."
 
 /datum/map_template/greeble/jungleplanet/fourteen
 	name = "Jungle Greeble 14"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_14.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_14.dmm"
 	description = "Industrial decay 2"
 
 /datum/map_template/greeble/jungleplanet/fifteen
 	name = "Jungle Greeble 15"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_15.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_15.dmm"
 	description = "Industrial decay the third."
 
 /datum/map_template/greeble/jungleplanet/sixteen
 	name = "Jungle Greeble 16"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_16.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_16.dmm"
 	description = "A broken road."
 
 /datum/map_template/greeble/jungleplanet/seventeen
 	name = "Jungle Greeble 17"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_17.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_17.dmm"
 	description = "Who let the chickens out? Who put them here? A chicken coop."
 
 /datum/map_template/greeble/jungleplanet/eighteen
 	name = "Jungle Greeble 18"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_18.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_18.dmm"
 	description = "Mangrooves in the water."
 
 /datum/map_template/greeble/jungleplanet/nineteen
 	name = "Jungle Greeble 19"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_19.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_19.dmm"
 	description = "Syndicate-flavored debris."
 
 /datum/map_template/greeble/jungleplanet/twenty
 	name = "Jungle Greeble 20"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_20.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_20.dmm"
 	description = "Frontiersmen aren't very good pilots, are they?"
 
 /datum/map_template/greeble/jungleplanet/twentyone
 	name = "Jungle Greeble 21"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_21.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_21.dmm"
 	description = "Be careful where you dig! Not every site is safe."
 
 /datum/map_template/greeble/jungleplanet/twentytwo
 	name = "Jungle Greeble 22"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_22.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_22.dmm"
 	description = "A crashed vessel, completely out of place."
 
 /datum/map_template/greeble/jungleplanet/twentythree
 	name = "Jungle Greeble 23"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_23.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_23.dmm"
 	description = "Not every colonization effort works out."
 
 /datum/map_template/greeble/jungleplanet/twentyfour
 	name = "Jungle Greeble 24"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_24.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_24.dmm"
 	description = "A quaint little rest from a hostile world."
 
 /datum/map_template/greeble/jungleplanet/twentyfive
 	name = "Jungle Greeble 25"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_25.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_25.dmm"
 	description = "An overgrown landing pad. The trees have reclaimed the concrete."
 
 /datum/map_template/greeble/jungleplanet/twentysix
 	name = "Jungle Greeble 26"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_26.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_26.dmm"
 	description = "Another scar from the war. A platform."
 
 /datum/map_template/greeble/jungleplanet/twentyseven
 	name = "Jungle Greeble 27"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_27.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_27.dmm"
 	description = "Poor bastard exploded."
 
 /datum/map_template/greeble/jungleplanet/twentyeight
 	name = "Jungle Greeble 28"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_28.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_28.dmm"
 	description = "A very small, unbroken trench segment."
 
 /datum/map_template/greeble/jungleplanet/twentynine
 	name = "Jungle Greeble 29"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_29.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_29.dmm"
 	description = "A watchtower. Better times to be had."
 
 /datum/map_template/greeble/jungleplanet/thirty
 	name = "Jungle Greeble 30"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_30.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_30.dmm"
 	description = "Water has come to the surface here, and the ground around it has eroded."
 
 /* Cave Greebles */
@@ -324,52 +324,52 @@
 
 /datum/map_template/greeble/jungleplanet/cave
 	name = "Jungle Cave Greeble 1"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_1.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_1.dmm"
 	description = "Nuclear waste dumping incident"
 
 /datum/map_template/greeble/jungleplanet/cave/two
 	name = "Jungle Cave Greeble 2"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_2.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_2.dmm"
 	description = "Broken mineshaft."
 
 /datum/map_template/greeble/jungleplanet/cave/three
 	name = "Jungle Cave Greeble 3"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_3.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_3.dmm"
 	description = "A den of wolves."
 
 /datum/map_template/greeble/jungleplanet/cave/four
 	name = "Jungle Cave Greeble 4"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_4.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_4.dmm"
 	description = "Deep in the world lay shelters for people long-gone."
 
 /datum/map_template/greeble/jungleplanet/cave/five
 	name = "Jungle Cave Greeble 5"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_5.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_5.dmm"
 	description = "Wolves have feasted upon those who sought shelter here."
 
 /datum/map_template/greeble/jungleplanet/cave/six
 	name = "Jungle Cave Greeble 6"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_6.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_6.dmm"
 	description = "Radioactive trash incident"
 
 /datum/map_template/greeble/jungleplanet/cave/seven
 	name = "Jungle Cave Greeble 7"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_7.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_7.dmm"
 	description = "Oil? Don't let the PGF hear."
 
 /datum/map_template/greeble/jungleplanet/cave/eight
 	name = "Jungle Cave Greeble 8"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_8.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_8.dmm"
 	description = "A small damp grotto."
 
 /datum/map_template/greeble/jungleplanet/cave/nine
 	name = "Jungle Cave Greeble 9"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_9.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_9.dmm"
 	description = "A blossoming corpse left to its own devices."
 
 /datum/map_template/greeble/jungleplanet/cave/ten
 	name = "Jungle Cave Greeble 10"
-	mappath = "_maps/templates/greebles/jungle/greeble_junglecave_10.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_junglecave_10.dmm"
 	description = "Diamonds in the rough."
 
 /* Anomaly Greebles
@@ -437,61 +437,61 @@
 
 /datum/map_template/greeble/jungleplanet/anomaly
 	name = "Jungle Anomaly Greeble 1"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_1.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_1.dmm"
 	description = "A pool of blood and its conductor."
 	clear_everything = TRUE
 
 /datum/map_template/greeble/jungleplanet/anomaly/two
 	name = "Jungle Anomaly Greeble 2"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_2.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_2.dmm"
 	description = "Death comes for us all eventually."
 
 /datum/map_template/greeble/jungleplanet/anomaly/three
 	name = "Jungle Anomaly Greeble 3"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_3.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_3.dmm"
 	description = "This doesn't seem right."
 
 /datum/map_template/greeble/jungleplanet/anomaly/four
 	name = "Jungle Anomaly Greeble 4"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_4.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_4.dmm"
 	description = "Jungle carpets."
 
 /datum/map_template/greeble/jungleplanet/anomaly/five
 	name = "Jungle Anomaly Greeble 5"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_5.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_5.dmm"
 	description = "A lone heartbeat chokes the land around it."
 
 /datum/map_template/greeble/jungleplanet/anomaly/six
 	name = "Jungle Anomaly Greeble 6"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_6.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_6.dmm"
 	description = "Go ahead, dump your waste. The frontier has a way with it."
 
 /datum/map_template/greeble/jungleplanet/anomaly/seven
 	name = "Jungle Anomaly Greeble 7"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_7.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_7.dmm"
 	description = "Something from outside! Something different!"
 
 /datum/map_template/greeble/jungleplanet/anomaly/eight
 	name = "Jungle Anomaly Greeble 8"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_8.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_8.dmm"
 	description = "KILL YOUR TELEVISION"
 
 /datum/map_template/greeble/jungleplanet/anomaly/nine
 	name = "Jungle Anomaly Greeble 9"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_9.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_9.dmm"
 	description = "Feed the fountain of life with your corpse."
 
 /datum/map_template/greeble/jungleplanet/anomaly/ten
 	name = "Jungle Anomaly Greeble 10"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_10.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_10.dmm"
 	description = "Not every dead mercenary gets buried."
 
 /datum/map_template/greeble/jungleplanet/anomaly/eleven
 	name = "Jungle Anomaly Greeble 11"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_11.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_11.dmm"
 	description = "Reach out and touch  me."
 
 /datum/map_template/greeble/jungleplanet/anomaly/twelve
 	name = "Jungle Anomaly Greeble 12"
-	mappath = "_maps/templates/greebles/jungle/greeble_jungle_anomaly_12.dmm"
+	mappath = MAPROOT + "/templates/greebles/jungle/greeble_jungle_anomaly_12.dmm"
 	description = "Will you join my friends and I?"

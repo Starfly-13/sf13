@@ -1114,6 +1114,21 @@
 	desc = "Serene, the fifth planet of the Druja system. Covered with a thick sheet of snow, the atmosphere has been described as \"Breathable, if it weren't so darn cold.\" This poster is attempting to encounrage tourism with this poster by listing several tourist attractions, such as old Frontiersmen War sites and Xenofauna war sites."
 	icon_state = "poster-clip_serene"
 
+/obj/structure/sign/poster/clip/ryuunosuke
+	name = "Ryuunosuke"
+	desc = "Ryuunosuke, the jewel of the Maebta system and seat of power for the CLIP member state of the Noble Confederation of Ryuunosuke. It's known for being one of the few Frontier planets to have been actively terraformed while inhabited, and lists several tourist attractions, including seaside noble estates, picturesque beaches, and the sites of battle against the Solar Companies."
+	icon_state = "poster-clip_ryuunosuke"
+
+/obj/structure/sign/poster/clip/clover
+	name = "Clover"
+	desc = "The ever-fortuitous colony of Clover, once one of many Makosso-Warra corporate colonies- now turned into an industrious and affluent CLIP member state. A peculiar corporatocracy that values its employees; it is a chill, humid planet that headquarters Clover Corporation, which produces many League consumer goods. The poster offers attractions such as high-end seafood restaurants, stargazing under its iconic coniferous woodlands as well as employment opportunities under Clover Corp."
+	icon_state = "poster-clip_clover"
+
+/obj/structure/sign/poster/clip/star_city
+	name = "Star City"
+	desc = "Star City, the desert flower of the great frontier. Many within the Confederated League seek to make great fortunes within its arid environment, or end up penniless, gambling it all away. This poster promotes the iconic metropolis' most ubiquitous tourist attraction: casinos of all income brackets, from the exorbitantly wealthy to the middle-class."
+	icon_state = "poster-clip_star"
+
 // Syndicate posters. Since syndicate are dived lorewise, this would only make sense on pre-split ships.
 /obj/structure/sign/poster/syndicate
 	poster_item_name = "suspicious looking poster"
@@ -1194,6 +1209,39 @@
 	desc = "A RILENA: LMR poster split in two to represent the series' disregard for conventional timeline aspects."
 	icon_state = "poster-rilena_timeline"
 
+//Etherbor Corporate Posters.
+/obj/structure/sign/poster/etherbor
+	poster_item_name = "etherbor poster"
+	poster_item_desc = "A poster that is produced by Etherbor Industries. It comes with adhesive backing, for easy pinning to any vertical surface."
+	poster_item_icon_state = "rolled_legit"
+
+/obj/structure/sign/poster/etherbor/random
+	name = "random official poster"
+	random_basetype = /obj/structure/sign/poster/etherbor
+	icon_state = "poster-etherbor_random"
+	never_random = TRUE
+	random_type = POSTER_SUBTYPES
+
+/obj/structure/sign/poster/etherbor/civilian
+	name = "Etherbor Industries Beam Weapons"
+	desc = "A poster depicting a selection Etherbor Industries' line of civilian beam weapons. \"Flexible, Reliable, Etherbor\""
+	icon_state = "poster-etherbor_civ"
+
+/obj/structure/sign/poster/etherbor/military
+	name = "Etherbor Industries Beam Weapons"
+	desc = "A poster depicting a selection Etherbor Industries' line of military beam weapons. \"Flexible, Reliable, Etherbor\""
+	icon_state = "poster-etherbor_mil"
+
+/obj/structure/sign/poster/etherbor/corporate
+	name = "Etherbor Industries"
+	desc = "A poster depicting the logo of Etherbor Industries. \"Flexible, Reliable, Etherbor\""
+	icon_state = "poster-etherbor_logo"
+
+/obj/structure/sign/poster/etherbor/gay
+	name = "Etherbor Industries"
+	desc = "A poster depicting the logo of Etherbor Industries on a striking rainbow backdrop. \"Fleixble, Reliable, Etherbor\""
+	icon_state = "poster-etherbor_rainbow"
+
 //PGF recruitment diversity posters.
 /obj/structure/sign/poster/pgf
 	poster_item_name = "pgf poster"
@@ -1256,6 +1304,21 @@
 	name = "In It Together"
 	desc = "This poster depicts a trio of PGF sailors. \"All together now!\""
 	icon_state = "poster-pgf_together"
+
+/obj/structure/sign/poster/pgf/raider
+	name = "PGF Marine Raiders"
+	desc = "This poster depicts a PGF Marine Raider stalking a city skyline at night. \"Trained for infiltration, extraction, and all other matter of high risk mission, the PGF Marine Raiders are the best of the best. Do you have what it takes?\""
+	icon_state = "poster-pgf_raider"
+
+/obj/structure/sign/poster/pgf/juggernaut
+	name = "The Tool For the Job"
+	desc = "This poster depicts a PGF Marine in heavy armor looking out over a foggy mountaintop. \"Scalpel. Tweezers. Sledghammer. No matter the situation, the PGF Marines have the right tool for the job. Ready to put them to work?\""
+	icon_state = "poster-pgf_juggernaut"
+
+/obj/structure/sign/poster/pgf/dreadnaut
+	name = "See it for Yourself"
+	desc = "This poster depicts a PGF Sailor on an EVA mission in front of a cloudy nebula. \"The galaxy is dangerous, but in the PGFN, so are we. If we haven't been there? We're going. Ready to see it for yourself?\""
+	icon_state = "poster-pgf_dreadnaut"
 
 //PGF Mission Accomplished
 /obj/structure/sign/poster/pgf/mission_accomplished_1
@@ -1435,6 +1498,7 @@
 	icon_state = "rolled_poster"
 
 #undef PLACE_SPEED
+#undef POSTER_NORANDOM
 #undef POSTER_SUBTYPES
 #undef POSTER_LIST
 #undef POSTER_ADD_FROM_LIST
