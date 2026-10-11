@@ -449,9 +449,7 @@
 	return ((!secondsMainPowerLost || !secondsBackupPowerLost) && !(machine_stat & NOPOWER))
 
 /obj/machinery/door/airlock/requiresID()
-	if(!wires)
-		return FALSE
-	return !(wires.is_cut(WIRE_IDSCAN) || aiDisabledIdScanner)
+	return !(wires?.is_cut(WIRE_IDSCAN) || aiDisabledIdScanner)
 
 /obj/machinery/door/airlock/proc/isAllPowerCut()
 	if(!wires)

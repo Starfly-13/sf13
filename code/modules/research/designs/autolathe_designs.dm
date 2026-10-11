@@ -255,6 +255,22 @@
 	build_path = /obj/item/clothing/ears/earmuffs
 	category = list("initial", "Misc")
 
+/datum/design/glassvase
+	name = "Glass Vase"
+	id = "glassvase"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/glass = 200)
+	build_path = /obj/item/glassvase
+	category = list("initial", "Misc")
+
+/datum/design/ashtray
+	name = "Ashtray"
+	id = "ashtray"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 200)
+	build_path = /obj/item/ashtray
+	category = list("initial", "Misc")
+
 /datum/design/pipe_painter
 	name = "Pipe Painter"
 	id = "pipe_painter"
@@ -489,6 +505,22 @@
 	build_path = /obj/item/reagent_containers/food/drinks/modglass/large
 	category = list("initial", "Dinnerware")
 
+/datum/design/mug
+	name = "Mug"
+	id = "mug"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/glass=400)
+	build_path = /obj/item/reagent_containers/food/drinks/mug
+	category = list("initial", "Dinnerware")
+
+/datum/design/teacup
+	name = "Teacup"
+	id = "teacup"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/glass=300)
+	build_path = /obj/item/reagent_containers/food/drinks/teacup
+	category = list("initial", "Dinnerware")
+
 /datum/design/glassbottle
 	name = "Glass Bottle"
 	id = "glass_bottle"
@@ -651,6 +683,14 @@
 	build_path = /obj/item/storage/pill_bottle
 	category = list("initial", "Medical", "Medical Designs")
 
+/datum/design/hypospray_vial_tiny
+	name = "Hypospray Vial"
+	id = "vial_tiny"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/glass = 250)
+	build_path = /obj/item/reagent_containers/glass/bottle/vial/tiny
+	category = list("initial", "Medical", "Medical Designs")
+
 /datum/design/hypospray_vial
 	name = "Hypospray Vial"
 	id = "vial"
@@ -658,6 +698,23 @@
 	materials = list(/datum/material/plastic = 100, /datum/material/glass = 500)
 	build_path = /obj/item/reagent_containers/glass/bottle/vial/small
 	category = list("initial", "Medical", "Medical Designs")
+
+/datum/design/hypospray_vial_large
+	name = "Hypospray Vial"
+	id = "vial_large"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/silver = 200, /datum/material/glass = 1000)
+	build_path = /obj/item/reagent_containers/glass/bottle/vial/large
+	category = list("initial", "Medical", "Medical Designs")
+
+/datum/design/inhaler_caniser
+	name = "Inhaler Canister"
+	id = "inhaler_canister"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 200)
+	build_path = /obj/item/reagent_containers/inhaler_canister
+	category = list("initial", "Medical", "Medical Designs")
+
 
 /datum/design/chemical_bottle
 	name = "Bottle"
@@ -861,6 +918,14 @@
 	build_path = /obj/item/weaponcrafting/receiver
 	category = list("initial", "Security")
 
+/datum/design/ammo_box
+	name = "Ammo Box (Empty)"
+	id = "ammo-box"
+	build_type = AUTOLATHE | PROTOLATHE
+	materials = list(/datum/material/iron = 500)
+	build_path = /obj/item/storage/box/ammo/empty
+	category = list("initial", "Security", "Ammo")
+
 /datum/design/c38_surplus
 	name = "Ammo Box (.38 surplus)"
 	id = "c38_surplus"
@@ -910,7 +975,7 @@
 	category = list("initial", "Security")
 
 /datum/design/c10mm_surplus
-	name = "Ammo Box (10x22mm surplus)"
+	name = "Ammo Box (10mm surplus)"
 	id = "c10mm-surplus"
 	build_type = AUTOLATHE | PROTOLATHE
 	materials = list(/datum/material/iron = 16000)
@@ -926,7 +991,7 @@
 	category = list("initial", "Security", "Ammo")
 
 /datum/design/c9mm_surplus
-	name = "Ammo Box (9x18mm surplus)"
+	name = "Ammo Box (9mm surplus)"
 	id = "c9mm-surplus"
 	build_type = AUTOLATHE | PROTOLATHE
 	materials = list(/datum/material/iron = 16000)
@@ -1223,7 +1288,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SERVICE
 
 /datum/design/zip_ammo_9mm
-	name = "Budget Pistol 9x18mm Magazine"
+	name = "Budget Pistol 9mm Magazine"
 	id = "ZipAmmo9mm"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = 20000)
