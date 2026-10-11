@@ -111,45 +111,83 @@
 	burst_size = 6
 	burst_delay = 2
 
-/* Nanotrasen Derelict Turrets */
+/* Makosso-Warra Derelict Turrets */
 
-/obj/machinery/porta_turret/ruin/nt
+/obj/machinery/porta_turret/ruin/warra
 	name = "Sharplite Defense Turret"
-	desc = "A cheap and effective turret designed by Sharplite and purchased and installed on most Nanotrasen Vessels."
-	faction = list(FACTION_PLAYER_NANOTRASEN, "turret")
+	desc = "A cheap and effective turret designed by Sharplite and purchased and installed on most Makosso-Warra Vessels."
+	faction = list(FACTION_PLAYER_WARRA, "turret")
 	max_integrity = 160
 	integrity_failure = 0.6
 	icon_state = "standard_lethal"
 	base_icon_state = "standard"
 	stun_projectile = /obj/projectile/beam/disabler/sharplite
 	lethal_projectile = /obj/projectile/beam/laser/sharplite
-	lethal_projectile_sound = 'sound/weapons/gun/laser/nt-fire.ogg'
+	lethal_projectile_sound = 'sound/weapons/gun/laser/sharplite-fire.ogg'
 	stun_projectile_sound = 'sound/weapons/taser2.ogg'
 	shot_delay = 10
 	scan_range = 10
 
-/obj/machinery/porta_turret/ruin/nt/light
+/obj/machinery/porta_turret/ruin/warra/light
 	name = "Sharplite LDS"
-	desc = "A cheap and effective 'defensive system' designed by Sharplite for installation on Nanotrasen vessels."
+	desc = "A cheap and effective 'defensive system' designed by Sharplite for installation on Makosso-Warra vessels."
 	stun_projectile = /obj/projectile/beam/disabler/weak/sharplite
 	lethal_projectile = /obj/projectile/beam/laser/light/sharplite
-	lethal_projectile_sound = 'sound/weapons/gun/laser/nt-fire.ogg'
+	lethal_projectile_sound = 'sound/weapons/gun/laser/sharplite-fire.ogg'
 	stun_projectile_sound = 'sound/weapons/taser2.ogg'
 
-/obj/machinery/porta_turret/ruin/nt/light/sniper
+/obj/machinery/porta_turret/ruin/warra/light/sniper
 	name = "Sharplite Long-Range LDS"
-	desc = "A long-ranged 'defensive system' designed by Sharplite for installation on Nanotrasen stations."
+	desc = "A long-ranged 'defensive system' designed by Sharplite for installation on Makosso-Warra stations."
 	stun_projectile = /obj/projectile/beam/disabler/weak/sharplite
 	lethal_projectile = /obj/projectile/beam/laser/light/sharplite
-	lethal_projectile_sound = 'sound/weapons/gun/laser/nt-fire.ogg'
+	lethal_projectile_sound = 'sound/weapons/gun/laser/sharplite-fire.ogg'
 	stun_projectile_sound = 'sound/weapons/taser2.ogg'
 	shot_delay = 15
 	burst_size = 2
 	burst_delay = 3
 
-/obj/machinery/porta_turret/ruin/nt/heavy
+/obj/machinery/porta_turret/ruin/warra/heavy
 	name = "Sharplite Defense Cannon"
-	desc = "A heavy laser mounting designed by Sharplite for usage on Nanotrasen vessels."
+	desc = "A heavy laser mounting designed by Sharplite for usage on Makosso-Warra vessels."
 	lethal_projectile = /obj/projectile/beam/laser/heavylaser/sharplite
 	lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
 	max_integrity = 250
+
+/* Hardliners Derelict Turrets */
+
+/obj/machinery/porta_turret/ruin/hardliners
+	name = "Verdict Turret"
+	desc = "A turret traditionally found mounted on mercenary vessels in the frontier. Reported to be of good make by Turret Lover Monthly (December, 502FSC)"
+	stun_projectile = /obj/projectile/bullet/c57x39mm/rubber
+	stun_projectile_sound = 'sound/weapons/gun/smg/sidewinder.ogg'
+	lethal_projectile = /obj/projectile/bullet/c57x39mm
+	lethal_projectile_sound = 'sound/weapons/gun/smg/sidewinder.ogg'
+	faction = list(FACTION_HARDLINERS, FACTION_PLAYER_SYNDICATE, FACTION_TURRET)
+	shot_delay = 25
+	burst_delay = 5
+	burst_size = 4
+
+/obj/machinery/porta_turret/ruin/hardliners/light
+	name = "Discharge Turret"
+	desc = "A light turret typically found mounted on mercenary and independent vessels as a cheap, aftermarket modification." //do not put these on indie vessels
+	stun_projectile = /obj/projectile/bullet/c45/rubber
+	stun_projectile_sound = 'sound/weapons/gun/smg/cobra.ogg'
+	lethal_projectile = /obj/projectile/bullet/c45
+	lethal_projectile_sound = 'sound/weapons/gun/smg/cobra.ogg'
+	scan_range = 7
+	shot_delay = 12
+	burst_delay = 4
+	burst_size = 2
+
+/obj/machinery/porta_turret/ruin/hardliners/heavy
+	name = "Acquittal Turret"
+	desc = "A heavy turret often found mounted as an after-market modification on mercenary vessels."
+	stun_projectile = /obj/projectile/bullet/a308/rubber
+	stun_projectile_sound = 'sound/weapons/gun/rifle/f4.ogg'
+	lethal_projectile = /obj/projectile/bullet/a308
+	lethal_projectile_sound = 'sound/weapons/gun/rifle/f4.ogg'
+	scan_range = 14
+	shot_delay = 30
+	burst_delay = 3
+	burst_size = 2

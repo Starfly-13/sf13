@@ -50,65 +50,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/meteorslug
-	name = "Meteorslug Shell"
-	result = /obj/item/ammo_casing/shotgun/meteorslug
-	reqs = list(/obj/item/ammo_casing/shotgun/techshell = 1,
-				/obj/item/rcd_ammo = 1,
-				/obj/item/stock_parts/manipulator = 2)
-	tools = list(TOOL_SCREWDRIVER)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
-/datum/crafting_recipe/pulseslug
-	name = "Pulse Slug Shell"
-	result = /obj/item/ammo_casing/shotgun/pulseslug
-	reqs = list(/obj/item/ammo_casing/shotgun/techshell = 1,
-				/obj/item/stock_parts/capacitor = 3,
-				/obj/item/stock_parts/micro_laser = 1,
-				/obj/item/stock_parts/cell = 1,
-				/datum/reagent/lithium = 5)
-	tools = list(TOOL_SCREWDRIVER)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
-/datum/crafting_recipe/dragonsbreath
-	name = "Dragonsbreath Shell"
-	result = /obj/item/ammo_casing/shotgun/dragonsbreath
-	reqs = list(/obj/item/ammo_casing/shotgun/techshell = 1, /datum/reagent/phosphorus = 10)
-	tools = list(TOOL_SCREWDRIVER)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
-/datum/crafting_recipe/frag12
-	name = "FRAG-12 Shell"
-	result = /obj/item/ammo_casing/shotgun/frag12
-	reqs = list(/obj/item/ammo_casing/shotgun/techshell = 1,
-				/datum/reagent/glycerol = 5,
-				/datum/reagent/toxin/acid = 5,
-				/datum/reagent/toxin/acid/fluacid = 5)
-	tools = list(TOOL_SCREWDRIVER)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
-/datum/crafting_recipe/ionslug
-	name = "Ion Scatter Shell"
-	result = /obj/item/ammo_casing/shotgun/ion
-	reqs = list(/obj/item/ammo_casing/shotgun/techshell = 1,
-				/obj/item/stock_parts/micro_laser = 2,
-				/obj/item/stock_parts/capacitor = 2,
-				/obj/item/stock_parts/scanning_module = 1,
-				/datum/reagent/iron = 5,
-				/datum/reagent/uranium = 5)
-	tools = list(TOOL_SCREWDRIVER)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
 /datum/crafting_recipe/improvisedslug
 	name = "Improvised Shotgun Shell"
 	result = /obj/item/ammo_casing/shotgun/improvised
@@ -120,19 +61,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-/datum/crafting_recipe/laserscatter
-	name = "Scatter Laser Shell"
-	result = /obj/item/ammo_casing/shotgun/laserscatter
-	reqs = list(/obj/item/ammo_casing/shotgun/techshell = 1,
-				/obj/item/stock_parts/capacitor = 1,
-				/obj/item/stock_parts/micro_laser = 3,
-				/obj/item/stock_parts/cell = 1,
-				/datum/reagent/lithium = 5)
-	tools = list(TOOL_SCREWDRIVER)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
 /datum/crafting_recipe/ishotgun
 	name = "Improvised Shotgun"
 	result = /obj/item/gun/ballistic/shotgun/doublebarrel/improvised
@@ -140,6 +68,18 @@
 				/obj/item/pipe = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/packageWrap = 5)
+	tools = list(TOOL_SCREWDRIVER)
+	time = 100
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/improvised_rifle
+	name = "Improvised Rifle"
+	result = /obj/item/gun/ballistic/rifle/polymer/empty
+	reqs = list(/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/pipe = 1,
+				/obj/item/weaponcrafting/stock = 1,
+				/obj/item/stack/sheet/metal = 5)
 	tools = list(TOOL_SCREWDRIVER)
 	time = 100
 	category = CAT_WEAPONRY
@@ -178,6 +118,18 @@
 		/obj/item/grenade/chem_grenade = 2
 	)
 	parts = list(/obj/item/stock_parts/matter_bin = 1, /obj/item/grenade/chem_grenade = 2)
+	time = 50
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/dynamite
+	name = "Dynamite"
+	result = /obj/item/grenade/firecracker/dynamite
+	reqs = list(
+		/datum/reagent/gunpowder = 50,
+		/obj/item/paper = 4,
+		/obj/item/stack/cable_coil = 5
+	)
 	time = 50
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON

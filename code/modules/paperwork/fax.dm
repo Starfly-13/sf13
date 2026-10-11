@@ -63,7 +63,7 @@
 
 	/// List with a fake-networks(not a fax actually), for request manager.
 	var/list/special_networks = list(
-		list(fax_name = "Nanotrasen Central Command", fax_id = "nanotrasen", color = "green", emag_needed = FALSE),
+		list(fax_name = "Makosso-Warra Central Command", fax_id = "warra", color = "green", emag_needed = FALSE),
 		list(fax_name = "Outpost Authority", fax_id = "outpost", color = "orange", emag_needed = FALSE),
 		list(fax_name = "IRMG Mothership", fax_id = "inteq", color = "yellow", emag_needed = FALSE),
 		list(fax_name = "Solarian Confederation Frontier Affairs", fax_id = "solgov", color = "teal", emag_needed = FALSE),
@@ -556,10 +556,10 @@
 		list(fax_name = "Frontiersmen Communications Quartermaster", fax_id = "frontiersmen", color = "black", emag_needed = TRUE)
 	)
 
-/obj/machinery/fax/nanotrasen
+/obj/machinery/fax/warra
 	special_networks = list(
 		list(fax_name = "Outpost Authority", fax_id = "outpost", color = "orange", emag_needed = FALSE),
-		list(fax_name = "Nanotrasen Central Command", fax_id = "nanotrasen", color = "green", emag_needed = FALSE),
+		list(fax_name = "Makosso-Warra Central Command", fax_id = "warra", color = "green", emag_needed = FALSE),
 		list(fax_name = "Frontiersmen Communications Quartermaster", fax_id = "frontiersmen", color = "black", emag_needed = TRUE)
 	)
 
@@ -594,10 +594,21 @@
 
 /obj/machinery/fax/admin
 	name = "Central Command Fax Machine"
-	fax_name = "Nanotrasen Central Command"
+	fax_name = "Makosso-Warra Central Command"
 	radio_channel = RADIO_CHANNEL_CENTCOM
 	visible_to_network = FALSE
-	admin_fax_id = "nanotrasen"
+	admin_fax_id = "warra"
+
+/obj/machinery/fax/admin/n_s
+	name = "N+S Fax Machine"
+	fax_name = "N+S Logistics Command"
+	admin_fax_id = "n_s"
+
+/obj/machinery/fax/admin/vi
+	name = "Central Command Fax Machine"
+	fax_name = "Viligitas Interstellar High Command"
+	visible_to_network = FALSE
+	admin_fax_id = "vi"
 
 /obj/machinery/fax/admin/outpost
 	name = "Outpost Fax Machine"
@@ -609,10 +620,25 @@
 	fax_name = "Solarian Confederation Frontier Affairs"
 	admin_fax_id = "solgov"
 
+/obj/machinery/fax/admin/suns
+	name = "SUNS Fax Machine"
+	fax_name = "Student-Union Academic Headquarters"
+	admin_fax_id = "solgov"
+
 /obj/machinery/fax/admin/syndicate
 	name = "Syndicate Coordination Fax Machine"
 	fax_name = "Syndicate Coordination Center"
 	admin_fax_id = "syndicate"
+
+/obj/machinery/fax/admin/ngr
+	name = "New Gorlex Republic Fax Machine"
+	fax_name = "2nd Battlegroup High Command"
+	admin_fax_id = "ngr"
+
+/obj/machinery/fax/admin/cybersun
+	name = "Cybersun Fax Machine"
+	fax_name = "Cybersun Corporate"
+	admin_fax_id = "cybersun"
 
 /obj/machinery/fax/admin/inteq
 	name = "IRMG Fax Machine"
@@ -645,3 +671,8 @@
 	fax_name = "Ramzi Communications Quartermaster"
 	admin_fax_id = "ramzi"
 	frontier_network = TRUE
+
+/obj/machinery/fax/admin/zohil // we are the zohil explorat
+	name = "Zohil Explorat Fax Machine"
+	fax_name = "Zohil Explorat Communications"
+	admin_fax_id = "zohil"

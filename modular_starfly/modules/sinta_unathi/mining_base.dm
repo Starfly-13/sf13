@@ -25,7 +25,7 @@
 	mob_gender = MALE
 	mob_species = /datum/species/lizard
 	icon_state = "corpsehuman"
-	outfit = /datum/outfit/job/nanotrasen/quartermaster
+	outfit = /datum/outfit/job/warra/quartermaster
 	brute_damage = 120
 
 

@@ -10,8 +10,6 @@
 	attack_verb = "burn"
 	attack_sound = 'sound/weapons/etherealhit.ogg'
 	miss_sound = 'sound/weapons/etherealmiss.ogg'
-	mutantstomach = /obj/item/organ/stomach/ethereal
-	mutanttongue = /obj/item/organ/tongue/ethereal
 	siemens_coeff = 0.5 //They thrive on energy
 	attack_type = BURN //burn bish
 	exotic_bloodtype = "E"
@@ -30,12 +28,23 @@
 	min_temp_comfortable = (HUMAN_BODYTEMP_NORMAL - 10)
 	max_temp_comfortable = HUMAN_BODYTEMP_NORMAL + 55
 
-	hair_color = "fixedmutcolor"
-	hair_alpha = 140
+	hair_alpha = 200
 	mutant_bodyparts = list("elzu_horns", "tail_elzu")
 	default_features = list("elzu_horns" = "None", "tail_elzu" = "None")
 	species_eye_path = 'icons/mob/ethereal_parts.dmi'
-	mutant_organs = list(/obj/item/organ/tail/elzu)
+
+	species_organs = list(
+		ORGAN_SLOT_BRAIN = /obj/item/organ/brain,
+		ORGAN_SLOT_HEART = /obj/item/organ/heart,
+		ORGAN_SLOT_LUNGS = /obj/item/organ/lungs,
+		ORGAN_SLOT_EYES = /obj/item/organ/eyes,
+		ORGAN_SLOT_EARS = /obj/item/organ/ears,
+		ORGAN_SLOT_TONGUE = /obj/item/organ/tongue/ethereal,
+		ORGAN_SLOT_LIVER = /obj/item/organ/liver,
+		ORGAN_SLOT_STOMACH = /obj/item/organ/stomach/ethereal,
+		ORGAN_SLOT_APPENDIX = /obj/item/organ/appendix,
+		ORGAN_SLOT_TAIL = /obj/item/organ/tail/elzu,
+	)
 
 	species_limbs = list(
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/ethereal,
@@ -45,6 +54,8 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/ethereal,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/ethereal,
 	)
+
+	prosthetic_style = /datum/sprite_accessory/body/prosthetic/elzuouse
 
 	var/current_color
 	var/EMPeffect = FALSE
@@ -255,16 +266,16 @@
 		if(EMP_HEAVY)
 			addtimer(CALLBACK(src, PROC_REF(stop_emp), _human), 20 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE) //We're out for 20 seconds
 
-/datum/species/elzuose/spec_life(mob/living/carbon/human/_human)
+/datum/species/elzuose/spec_life(mob/living/carbon/human/_human, seconds_per_tick, times_fired)
 	.=..()
-	handle_charge(_human)
+	handle_charge(_human, seconds_per_tick, times_fired)
 
 /datum/species/elzuose/proc/stop_emp(mob/living/carbon/human/_human)
 	EMPeffect = FALSE
 	spec_updatehealth(_human)
 	to_chat(_human, span_notice("You feel more energized as your shine comes back."))
 
-/datum/species/elzuose/proc/handle_charge(mob/living/carbon/human/_human)
+/datum/species/elzuose/proc/handle_charge(mob/living/carbon/human/_human, seconds_per_tick, times_fired)
 	switch(get_charge(_human))
 		if(ELZUOSE_CHARGE_NONE to ELZUOSE_CHARGE_LOWPOWER)
 			if(get_charge(_human) == ELZUOSE_CHARGE_NONE)
@@ -272,14 +283,14 @@
 			else
 				_human.throw_alert("ELZUOSE_CHARGE", /atom/movable/screen/alert/etherealcharge, 2)
 			if(_human.health > 10.5)
-				apply_damage(0.2, TOX, null, null, _human)
+				apply_damage(0.1 * seconds_per_tick, TOX, null, null, _human)
 		if(ELZUOSE_CHARGE_LOWPOWER to ELZUOSE_CHARGE_NORMAL)
 			_human.throw_alert("ELZUOSE_CHARGE", /atom/movable/screen/alert/etherealcharge, 1)
 		if(ELZUOSE_CHARGE_FULL to ELZUOSE_CHARGE_OVERLOAD)
 			_human.throw_alert("ethereal_overcharge", /atom/movable/screen/alert/ethereal_overcharge, 1)
 		if(ELZUOSE_CHARGE_OVERLOAD to ELZUOSE_CHARGE_DANGEROUS)
 			_human.throw_alert("ethereal_overcharge", /atom/movable/screen/alert/ethereal_overcharge, 2)
-			if(prob(10)) //10% each tick for ethereals to explosively release excess energy if it reaches dangerous levels
+			if(SPT_PROB(5, seconds_per_tick)) //5% each second for ethereals to explosively release excess energy if it reaches dangerous levels
 				discharge_process(_human)
 		else
 			_human.clear_alert("ELZUOSE_CHARGE")

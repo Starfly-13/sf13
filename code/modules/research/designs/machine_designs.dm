@@ -86,7 +86,7 @@
 	id = "space_heater"
 	build_path = /obj/item/circuitboard/machine/space_heater
 	build_type = AUTOLATHE | IMPRINTER
-	category = list ("Engineering Machinery", "initial", "Equipment")
+	category = list ("Engineering Machinery", "initial", "Machinery")
 	departmental_flags = ALL
 
 /datum/design/board/teleport_station
@@ -243,7 +243,7 @@
 	name = "Machine Design (R&D Server Board)"
 	desc = "The circuit board for an R&D Server."
 	id = "rdserver"
-	build_type = AUTOLATHE | IMPRINTER
+	build_type = IMPRINTER
 	build_path = /obj/item/circuitboard/machine/rdserver
 	category = list("Research Machinery", "initial", "Equipment")
 
@@ -475,7 +475,7 @@
 	id = "ship_gravity"
 	build_type = AUTOLATHE | IMPRINTER
 	build_path = /obj/item/circuitboard/machine/ship_gravity
-	category = list("Misc. Machinery", "initial", "Equipment")
+	category = list("Misc. Machinery", "initial", "Machinery")
 
 /datum/design/board/ntnet_relay
 	name = "Machine Design (NTNet Relay Board)"

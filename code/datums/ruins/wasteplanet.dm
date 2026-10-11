@@ -1,15 +1,8 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/wasteplanet
-	prefix = "_maps/RandomRuins/WasteRuins/"
+	prefix = MAPROOT + "/RandomRuins/WasteRuins/"
 	ruin_type = RUINTYPE_WASTE
-
-/datum/map_template/ruin/wasteplanet/radiation
-	name = "Honorable deeds storage"
-	id = "wasteplanet_radiation"
-	description = "A dumping ground for nuclear waste."
-	suffix = "wasteplanet_unhonorable.dmm"
-	ruin_tags = list(RUIN_TAG_MINOR_COMBAT, RUIN_TAG_MEDIUM_LOOT, RUIN_TAG_SHELTER, RUIN_TAG_HAZARDOUS)
 
 /datum/map_template/ruin/wasteplanet/abandoned_mechbay
 	name = "Abandoned Exosuit Bay"

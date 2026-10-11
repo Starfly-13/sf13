@@ -337,6 +337,10 @@
 /datum/overmap/ship/controlled/proc/is_join_option()
 	return (length(shuttle_port.spawn_points) >= 1) && (length(job_slots) >= 1) && join_mode != SHIP_JOIN_MODE_CLOSED
 
+// check if its still taking applications
+/datum/overmap/ship/controlled/proc/has_applications_open()
+	return is_join_option() && join_mode == SHIP_JOIN_MODE_APPLY
+
 /datum/overmap/ship/controlled/proc/get_application(mob/applicant)
 	var/index_key = applicant.client?.holder?.fakekey ? applicant.client.holder.fakekey : applicant.key
 	return LAZYACCESS(applications, ckey(index_key))
@@ -508,7 +512,6 @@
 		SStgui.close_uis(helm)
 		helm.say(helm_locked ? "Helm console is now locked." : "Helm console has been unlocked.")
 
-
 /datum/overmap/ship/controlled/alter_token_appearance()
 	if(!source_template)
 		return ..()
@@ -544,6 +547,13 @@
 
 	if(our_helm)
 		our_helm.cancel_jump()
+
+///Checks to see if the ship already has a high priority mission.
+/datum/overmap/ship/controlled/proc/check_for_high_priority_mission()
+	for(var/datum/mission/target_mission as anything in missions)
+		if(target_mission.high_priority == TRUE)
+			return TRUE
+	return FALSE
 
 /datum/overmap/ship/controlled/activate_cloak()
 	. = ..()
@@ -621,4 +631,3 @@
 
 	master_ship.attempt_key_usage(user, src, src) // hello I am a helm console I promise
 	return TRUE
-

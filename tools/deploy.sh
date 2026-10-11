@@ -4,13 +4,15 @@
 #First arg is path to where you want to deploy
 #creates a work tree free of everything except what's necessary to run the game
 
+MAPROOT="${MAPROOT:=_maps2eb}"
+
 #second arg is working directory if necessary
 if [[ $# -eq 2 ]] ; then
   cd $2
 fi
 
 mkdir -p \
-    $1/_maps \
+    $1/${MAPROOT} \
     $1/icons/runtime \
     $1/sound/runtime \
     $1/strings \
@@ -23,7 +25,7 @@ if [ -d ".git" ]; then
 fi
 
 cp shiptest.dmb shiptest.rsc $1/
-cp -r _maps/* $1/_maps/
+cp -r ${MAPROOT}/* $1/${MAPROOT}/
 cp -r icons/runtime/* $1/icons/runtime/
 cp -r sound/runtime/* $1/sound/runtime/
 cp -r strings/* $1/strings/

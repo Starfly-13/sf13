@@ -1,7 +1,7 @@
-/obj/machinery/porta_turret/ship/nt/light/mining_base
+/obj/machinery/porta_turret/ship/warra/light/mining_base
 	lethal = TRUE
 
-/obj/machinery/porta_turret/ship/nt/light/mining_base/Initialize()
+/obj/machinery/porta_turret/ship/warra/light/mining_base/Initialize()
 	. = ..()
 	take_damage(rand(120, 150),BRUTE)
 
@@ -14,7 +14,7 @@
 	mob_gender = MALE
 	mob_species = /datum/species/lizard
 	icon_state = "corpsehuman"
-	outfit = /datum/outfit/job/nanotrasen/quartermaster
+	outfit = /datum/outfit/job/warra/quartermaster
 	brute_damage = 120
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifndef STARFLY13_MODULE_SINTA_UNATHI_ENABLED
@@ -22,13 +22,13 @@
 //---------------------------------------------------------------------------------------------------------------------
 
 /obj/effect/mob_spawn/human/corpse/ruin/ns_mine_miner
-	outfit = /datum/outfit/job/nanotrasen/miner
+	outfit = /datum/outfit/job/warra/miner
 
 /obj/effect/mob_spawn/human/corpse/ruin/ns_mine_miner/armored
-	outfit = /datum/outfit/job/nanotrasen/miner/armored
+	outfit = /datum/outfit/job/warra/miner/armored
 
-/datum/outfit/job/nanotrasen/miner/armored
-	name = "Nanotrasen - Armored Miner"
+/datum/outfit/job/warra/miner/armored
+	name = "N+S Logistics - Armored Miner"
 	suit = /obj/item/clothing/suit/hooded/explorer
 	mask = /obj/item/clothing/mask/gas/explorer
 
@@ -65,7 +65,7 @@
 		"\[00:11\] gruff sarathi man suddenly gasps",
 		"\[00:12\] stern human woman confidently delivers \"If you're so sure, why aren't you the one with the gun?\"",
 		"\[00:17\] gruff sarathi man stammers \"y-you won't get away with thisss\"",
-		"\[00:20\] stern human woman says \"The last Nanotrasen cuck I killed said that too~\"",
+		"\[00:20\] stern human woman says \"The last Tri-corp cuck I killed said that too~\"",
 		"\[00:25\] sudden clattering and a dull thump.",
 		"\[00:26\] gruff sarathi man gasps for breath!",
 		"\[00:27\] stern human woman contemptously declares \"Different boot. Same pathetic people.\"",

@@ -320,9 +320,9 @@
 	icon_state = "letterman_s"
 	item_state = "letterman_s"
 
-/obj/item/clothing/suit/jacket/letterman_nanotrasen
+/obj/item/clothing/suit/jacket/letterman_warra
 	name = "blue letterman jacket"
-	desc = "A blue letterman jacket with a proud Nanotrasen N on the back. The tag says that it was made in Space China."
+	desc = "A blue letterman jacket with a proud Makosso-Warra M on the back. It seems cheaply made."
 	icon_state = "letterman_n"
 	item_state = "letterman_n"
 
@@ -466,6 +466,11 @@
 		"Black Flight Jacket" = "flightblack",
 	)
 	unique_reskin_changes_inhand = TRUE
+	togglename = "zipper"
+	body_parts_covered = CHEST|ARMS
+	cold_protection = CHEST|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/exo/large
 
 /obj/item/clothing/suit/toggle/flight/Initialize()
 	. = ..()
@@ -497,3 +502,11 @@
 /obj/item/clothing/suit/toggle/flight/black
 	name = "Black Flight Jacket"
 	icon_state = "flightblack"
+
+/obj/item/clothing/suit/toggle/aclf
+	name = "ACLF leather jacket"
+	desc = "A hand-stitched dark leather jacket with Anti-Corporation Liberation Front iconography sewn on. It's relatively stiff."
+	icon_state = "aclfcoat"
+	body_parts_covered = CHEST|ARMS
+	cold_protection = CHEST|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT

@@ -13,6 +13,8 @@
 	var/list/valid_parents = list()
 	///Unused.. but could hold extra callbacks I assume?
 	var/list/signals = list()
+	///Flags if it should be hidden in autowiki
+	var/autowiki_hidden = FALSE
 	///Component that handles most of the logic of attachments
 	var/datum/component/attachment/attachment_comp
 
@@ -64,6 +66,7 @@
 		CALLBACK(src, PROC_REF(on_examine)), \
 		CALLBACK(src, PROC_REF(on_alt_click)), \
 		CALLBACK(src, PROC_REF(on_attack_hand)), \
+		CALLBACK(src, PROC_REF(on_safety)), \
 		signals)
 
 /obj/item/attachment/Destroy()
@@ -90,7 +93,9 @@
 		return FALSE
 
 	apply_modifiers(gun, user, TRUE)
-	gun_cell = gun.cell
+	if(istype(gun, /obj/item/gun/energy))
+		var/obj/item/gun/energy/egun = gun
+		gun_cell = egun.cell
 	playsound(src.loc, 'sound/weapons/gun/pistol/mag_insert_alt.ogg', 75, 1)
 	return TRUE
 
@@ -133,6 +138,9 @@
 	return
 
 /obj/item/attachment/proc/on_attack_hand(obj/item/gun/gun, mob/user, list/examine_list)
+	return FALSE
+
+/obj/item/attachment/proc/on_safety(obj/item/gun/gun, mob/user, list/examine_list)
 	return FALSE
 
 /obj/item/attachment/proc/on_alt_click(obj/item/gun/gun, mob/user, list/examine_list)

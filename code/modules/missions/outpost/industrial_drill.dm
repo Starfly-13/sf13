@@ -6,6 +6,12 @@
 	num_wanted = 1
 	objective_type = /obj/item/drill_sample
 	container_type = /obj/item/drill_core_container
+	required_locations = list(
+		DYNAMIC_WORLD_JUNGLE,
+		DYNAMIC_WORLD_ICE,
+		DYNAMIC_WORLD_ROCKPLANET
+	)
+	blackbox_prefix = "T4 Drill "
 	var/obj/machinery/drill/sampler_mission/mission_drill
 
 /datum/mission/acquire/industrial_drill/New(...)
@@ -34,8 +40,8 @@
 	return ..()
 
 /datum/mission/acquire/industrial_drill/Destroy()
-	. = ..()
-	recall_bound(mission_drill, FALSE)
+	mission_drill = null
+	return . = ..()
 
 //unfortunately: the behavior for normal mission drills is different than what I want.
 /obj/machinery/drill/sampler_mission

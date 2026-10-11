@@ -12,6 +12,7 @@ import { env } from "process";
 import Juke from "./juke/index.js";
 import { DreamDaemon, DreamMaker, NamedVersionFile } from "./lib/byond.js";
 import { yarn } from "./lib/yarn.js";
+import buildLayeredMaps from "./lib/maps.js";
 
 Juke.chdir("../..", import.meta.url);
 Juke.setup({ file: import.meta.url }).then((code) => {
@@ -85,6 +86,7 @@ export const DmTarget = new Juke.Target({
     "html/**",
     "icons/**",
     "interface/**",
+    "modular_starfly/modules/**",
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
@@ -95,6 +97,12 @@ export const DmTarget = new Juke.Target({
     return [`${DME_NAME}.dmb`, `${DME_NAME}.rsc`];
   },
   executes: async ({ get }) => {
+    const layered = await buildLayeredMaps({
+      projectRoot: process.cwd(),
+      outputMapsDir: "_maps2eb",
+      logger: Juke.logger,
+    });
+
     await DreamMaker(`${DME_NAME}.dme`, {
       defines: ["CBT", ...get(DefineParameter)],
       warningsAsErrors: get(WarningParameter).includes("error"),

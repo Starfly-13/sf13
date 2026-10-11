@@ -58,3 +58,33 @@
 	auto_rotate = FALSE
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/gauss
 	energy_cost = 1400
+
+/obj/item/ammo_casing/caseless/gauss/rod
+	name = "ferromagnetic rod"
+	desc = "A heavy and incredibly dense alloy rod."
+	caliber = "rod"
+	icon_state = "gauss-rod"
+	projectile_type = /obj/projectile/bullet/gauss/rod
+	auto_rotate = TRUE
+	energy_cost = 1500
+	stack_size = 5
+
+/obj/item/ammo_casing/caseless/gauss/tavsha
+	name = "2x15mm Tav'Sha gauss dart"
+	desc = "A small magnetic dart."
+	caliber = "dart"
+	icon_state = "gauss-lance"
+	projectile_type = /obj/projectile/bullet/gauss/tavsha
+	auto_rotate = FALSE
+	stack_size = 30
+	energy_cost = 0
+
+/obj/item/ammo_casing/caseless/gauss/deusha
+	name = "3x20mm Deu'Sha gauss dart"
+	desc = "A small magnetic dart."
+	caliber = "dart"
+	icon_state = "gauss-lance"
+	projectile_type = /obj/projectile/bullet/gauss/deusha
+	auto_rotate = FALSE
+	stack_size = 30
+	energy_cost = 0

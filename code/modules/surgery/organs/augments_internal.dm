@@ -143,7 +143,7 @@
 	implant_color = "#FFABE0"
 	slot = ORGAN_SLOT_BRAIN_JOYWIRE
 
-/obj/item/organ/cyberimp/brain/joywire/on_life()
+/obj/item/organ/cyberimp/brain/joywire/on_life(seconds_per_tick, times_fired)
 	if(owner || !(organ_flags & ORGAN_FAILING))
 		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "joywire", /datum/mood_event/joywire)
 		ADD_TRAIT(owner, TRAIT_AGEUSIA, TRAIT_GENERIC)
@@ -163,12 +163,12 @@
 	implant_color = "#5E1108"
 	slot = ORGAN_SLOT_BRAIN_JOYWIRE
 
-/obj/item/organ/cyberimp/brain/mindscrew/on_life()
+/obj/item/organ/cyberimp/brain/mindscrew/on_life(seconds_per_tick, times_fired)
 	if(owner || !(organ_flags & ORGAN_FAILING))
 		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "mindscrew", /datum/mood_event/mindscrew)
 
 /obj/item/organ/cyberimp/brain/datachip
-	name = "Nanotrasen brain datachip"
+	name = "Makosso-Warra brain datachip"
 	desc = "Covered in serial codes and warnings. That data must be important."
 
 /obj/item/organ/cyberimp/brain/datachip/Insert()
@@ -199,6 +199,7 @@
 /obj/item/storage/box/cyber_implants
 	name = "boxed cybernetic implants"
 	desc = "A sleek, sturdy box."
+	icon = 'icons/obj/storage.dmi'
 	icon_state = "cyber_implants"
 	var/list/boxed = list(
 		/obj/item/autosurgeon/syndicate/thermal_eyes,

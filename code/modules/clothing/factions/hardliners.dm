@@ -36,6 +36,14 @@
 //Unarmored suits//
 ///////////////////
 
+/obj/item/clothing/suit/toggle/hardliners
+	name = "hardliner leather jacket"
+	desc = "A cropped, sturdy leather jacket with hardliner iconography emblazoned on its back."
+	icon = 'icons/obj/clothing/faction/hardliners/suits.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/suits.dmi'
+	icon_state = "hlcoat"
+	icon_state = "hlcoat"
+
 /obj/item/clothing/suit/hardliners //Ideally, the basic suit model here should be turned into a placeholder model, and this item have "smock" or "apron" added on the end.
 	name = "white smock"
 	desc = "A plain-white surgical smock typically worn by both Hardliners and Cybersun staff. Even mercenaries need medical attention!"
@@ -133,6 +141,28 @@
 ///////////////
 //Spacesuits//
 //////////////
+/obj/item/clothing/head/helmet/space/hardsuit/stealth/hardliners
+	name = "Asura shocktrooper hardsuit helmet"
+	desc = "Parting plates reveal a visor in permanent frown. The night vision sensors this once had appear to be nonfunctional."
+	icon_state = "hardsuit0-hardstealth"
+	item_state = "hardsuit0-hardstealth"
+	icon = 'icons/obj/clothing/faction/hardliners/head.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/head.dmi'
+	hardsuit_type = "hardstealth"
+	flash_protect = null
+	lighting_alpha = null
+
+/obj/item/clothing/suit/space/hardsuit/stealth/hardliners
+	name = "Asura shocktrooper hardsuit"
+	desc = "A modified ICW-era hardsuit in use by the Gorlex Hardliners. This model prioritizes quick movement over heavy armor, utilizing light fibers and steel."
+	icon_state = "hardsuit-hardstealth"
+	item_state = "hardsuit-hardstealth"
+	hardsuit_type = "hardstealth"
+	icon = 'icons/obj/clothing/faction/hardliners/suits.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/suits.dmi'
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/stealth/hardliners
+	jetpack = null
+	supports_variations = DIGITIGRADE_VARIATION
 
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/hl
 	name = "white-red hardsuit helmet"
@@ -143,7 +173,7 @@
 	icon = 'icons/obj/clothing/faction/hardliners/head.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/head.dmi'
 	hardsuit_type = "hl"
-	supports_variations = DIGITIGRADE_VARIATION | KEPORI_VARIATION | VOX_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | KEPORI_VARIATION | VOX_VARIATION | SNOUTED_VARIATION
 
 /obj/item/clothing/suit/space/hardsuit/syndi/hl
 	name = "white-red hardsuit"
@@ -209,7 +239,7 @@
 
 /obj/item/clothing/head/hardliners/peaked
 	name = "Hardliner peaked cap"
-	desc = "A stylish peaked cap utilized by high-ranking officers of the Hardliner movement. Most who wear it are likely to have been a veteran of the ICW, still vying for revenge against Nanotrasen..."
+	desc = "A stylish peaked cap utilized by high-ranking officers of the Hardliner movement. Most who wear it are likely to have been a veteran of the ICW, still vying for revenge against Makosso-Warra..."
 	icon_state = "hl_officer"
 	item_state = "hl_officer"
 

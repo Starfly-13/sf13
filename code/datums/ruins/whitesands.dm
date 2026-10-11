@@ -1,15 +1,8 @@
 // Hey! Listen! Update _maps\map_catalogue.txt with your new ruins!
 
 /datum/map_template/ruin/whitesands
-	prefix = "_maps/RandomRuins/SandRuins/"
+	prefix = MAPROOT + "/RandomRuins/SandRuins/"
 	ruin_type = RUINTYPE_SAND
-
-/datum/map_template/ruin/whitesands/pubbyslopcrash
-	name = "Pubby Slop Crash"
-	id = "ws-pubbyslopcrash"
-	description = "A failed attempt of the Nanotrasen nutrional replacement program"
-	suffix = "whitesands_surface_pubbyslopcrash.dmm"
-	ruin_tags = list(RUIN_TAG_MINOR_COMBAT, RUIN_TAG_MEDIUM_LOOT, RUIN_TAG_SHELTER)
 
 /datum/map_template/ruin/whitesands/cave_base
 	name = "Abandoned Cave Base"
@@ -54,3 +47,9 @@
 	suffix = "whitesands_settlement_raid.dmm"
 	ruin_tags = list(RUIN_TAG_BOSS_COMBAT, RUIN_TAG_MAJOR_LOOT, RUIN_TAG_SHELTER)
 
+/datum/map_template/ruin/whitesands/pubbytown
+	name = "Pubby Town"
+	id = "pubbytown"
+	description = "A town built around the wreck of a Pubby-Class, founded by a Makosso-Warra technician who helps maintain the hermits' sharplite weapons."
+	suffix = "whitesands_surface_pubbytown.dmm"
+	ruin_tags = list(RUIN_TAG_MEDIUM_COMBAT, RUIN_TAG_MEDIUM_LOOT, RUIN_TAG_SHELTER)
