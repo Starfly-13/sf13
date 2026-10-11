@@ -1,3 +1,6 @@
+#ifdef STARFLY13_MODULE_DESERT_RESOURCES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+
 /mob/living/simple_animal/threshbeast
 	name = "threshbeast"
 	desc = "Large herbivorous reptiles native to Moghes, the azkrazal or 'threshbeast' is commonly used as a mount, beast of burden, or convenient food source by Unathi. They are highly valued for their speed and strength, capable of running at 30-42 miles per hour at top speed. Their favorite foods are grasses and cactus fruits"
@@ -105,3 +108,6 @@
 	icon_state = "miervesh-2"
 	icon_living = "miervesh-2"
 	icon_dead = "miervesh-2-dead"
+
+//---------------------------------------------------------------------------------------------------------------------
+#endif // STARFLY13_MODULE_DESERT_RESOURCES_ENABLED

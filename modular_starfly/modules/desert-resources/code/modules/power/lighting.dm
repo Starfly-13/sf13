@@ -1,3 +1,6 @@
+#ifdef STARFLY13_MODULE_DESERT_RESOURCES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+
 /obj/machinery/light/street
 	name = "street light"
 	icon = 'modular_starfly/modules/desert-resources/icons/obj/lighting_32x50.dmi'
@@ -16,3 +19,6 @@ obj/machinery/light/street/pawn
 	base_state = "pawnlight"
 	icon_state = "pawnlight-on"
 	desc = "Traditionally, pawn shops used to have lamps featuring three bulbs by their signs. Many pawn shops still use imagery featuring these lamps to this day."
+
+//---------------------------------------------------------------------------------------------------------------------
+#endif // STARFLY13_MODULE_DESERT_RESOURCES_ENABLED

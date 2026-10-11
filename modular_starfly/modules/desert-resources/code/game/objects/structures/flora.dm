@@ -1,3 +1,6 @@
+#ifdef STARFLY13_MODULE_DESERT_RESOURCES_ENABLED
+//---------------------------------------------------------------------------------------------------------------------
+
 /obj/structure/flora/ausbushes/moghes
 	icon = 'modular_starfly/modules/desert-resources/icons/obj/flora/desert.dmi'
 	icon_state = "firstbush_1"
@@ -43,3 +46,6 @@
 
 /obj/structure/flora/ausbushes/moghes/sparsegrass3
 	icon_state = "sparsegrass_3"
+
+//---------------------------------------------------------------------------------------------------------------------
+#endif // STARFLY13_MODULE_DESERT_RESOURCES_ENABLED
