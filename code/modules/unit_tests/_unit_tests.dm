@@ -256,10 +256,10 @@
 #include "starfly13_ruin_placement_test.dm"
 #endif //STARFLY13_RUIN_PLACEMENT_TEST_TEST
 
-#ifdef STARFLY13_RUIN_PLACEMENT_WASTEPLANET_TEST
+#ifdef STARFLY13_RUIN_PLACEMENT_WASTE_TEST
 #include "starfly13_ruin_placement.dm"
-#include "starfly13_ruin_placement_wasteplanet.dm"
-#endif //STARFLY13_RUIN_PLACEMENT_WASTEPLANET_TEST
+#include "starfly13_ruin_placement_waste.dm"
+#endif //STARFLY13_RUIN_PLACEMENT_WASTE_TEST
 
 #ifdef STARFLY13_RUIN_PLACEMENT_WATERPLANET_TEST
 #include "starfly13_ruin_placement.dm"
