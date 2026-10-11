@@ -13992,7 +13992,6 @@
 "UK" = (
 /obj/structure/closet/crate/bin,
 /obj/item/trash/pistachios,
-/obj/item/trash/cheesie,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
@@ -15180,7 +15179,7 @@
 /obj/item/caution,
 /obj/item/clothing/neck/tie/purple,
 /obj/item/clothing/head/beanie/purple,
-/obj/item/clothing/gloves/color/purple,
+/obj/item/clothing/gloves/color/lightpurple,
 /obj/item/mop,
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/pushbroom,
