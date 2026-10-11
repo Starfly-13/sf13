@@ -112,7 +112,7 @@
 	name = "Insulated Gloves Crate"
 	desc = "The backbone of modern society. Contains a pair of insulated gloves."
 	cost = 750
-	contains = list(/obj/item/clothing/gloves/color/yellow)
+	contains = list(/obj/item/clothing/gloves/insulated)
 	crate_name = "insulated gloves crate"
 
 /datum/supply_pack/tools/inducer
@@ -188,6 +188,16 @@
 	contains = list(/obj/item/melee/sledgehammer/gorlex)
 	crate_name = "sledgehammer crate"
 	faction = /datum/faction/syndicate/ngr
+	faction_locked = TRUE
+	faction_discount = 0
+
+/datum/supply_pack/tools/breachinghammer_hardliner
+	name = "Breaching Sledgehammer Crate"
+	desc = "Contains a Breaching Sledgehammer obtained through intelligence channels. Capable of wrecking hull and flesh with ease."
+	cost = 1500
+	contains = list(/obj/item/melee/sledgehammer/gorlex)
+	crate_name = "sledgehammer crate"
+	faction = /datum/faction/syndicate/hardliners
 	faction_locked = TRUE
 	faction_discount = 0
 

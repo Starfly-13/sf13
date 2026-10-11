@@ -14,7 +14,7 @@
 	processing_flags = START_PROCESSING_MANUALLY
 	subsystem_type = /datum/controller/subsystem/processing/fastprocess
 
-	interaction_flags_machine = INTERACT_MACHINE_WIRES_IF_OPEN | INTERACT_MACHINE_OFFLINE
+	interaction_flags_machine = INTERACT_MACHINE_WIRES_IF_OPEN | INTERACT_MACHINE_UNPOWERED
 
 	var/minimum_timer = 90
 	var/timer_set = 90
@@ -243,6 +243,14 @@
 	desc = "Do not taunt. Warranty invalid if exposed to high temperature. Not suitable for agents under 3 years of age."
 	payload = /obj/item/bombcore/large
 	can_unanchor = FALSE
+
+/obj/machinery/syndicatebomb/live_fucking_bomb
+	name = "self destruct device"
+	desc = "Now you've done it you freak shit."
+
+/obj/machinery/syndicatebomb/live_fucking_bomb/Initialize()
+	. = ..()
+	activate() // :D
 
 ///Bomb Cores///
 

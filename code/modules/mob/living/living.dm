@@ -350,6 +350,11 @@
 			update_pull_movespeed()
 
 		set_pull_offsets(M, state)
+	else
+		// We already know it's an object since it's not a mob so no need to typecheck
+		var/obj/O = AM
+		if (O.density || O.drag_slowdown)
+			face_mouse = FALSE
 
 //mob verbs are a lot faster than object verbs
 //for more info on why this is not atom/pull, see examinate() in mob.dm
@@ -368,6 +373,8 @@
 	..()
 	update_pull_movespeed()
 	update_pull_hud_icon()
+	if(a_intent == INTENT_HARM)
+		face_mouse = TRUE
 
 /mob/living/verb/stop_pulling1()
 	set name = "Stop Pulling"
@@ -1015,7 +1022,7 @@
 		if(has_gravity == 1)
 			clear_alert("gravity")
 		else
-			if(has_gravity >= GRAVITY_DAMAGE_TRESHOLD)
+			if(has_gravity >= GRAVITY_DAMAGE_THRESHOLD)
 				throw_alert("gravity", /atom/movable/screen/alert/veryhighgravity)
 			else
 				throw_alert("gravity", /atom/movable/screen/alert/highgravity)
@@ -1365,12 +1372,12 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 * Handles effects happening when mob is on normal fire
 *
 * Vars:
-* * delta_time
+* * seconds_per_tick
 * * times_fired
 * * fire_handler: Current fire status effect that called the proc
 */
 
-/mob/living/proc/on_fire_stack(delta_time, datum/status_effect/fire_handler/fire_stacks/fire_handler)
+/mob/living/proc/on_fire_stack(seconds_per_tick, datum/status_effect/fire_handler/fire_stacks/fire_handler)
 	return
 
 //Mobs on Fire end
@@ -1994,15 +2001,19 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 /// Used for setting typing indicator on/off. Checking the state should be done not on the proc to avoid overhead.
 /mob/living/set_typing_indicator(state)
 	typing_indicator = state
+	// cut_overlay matches by appearance so if someone changes to sign language which uses different icons things break
+	// so we have to store the overlay and cut it exactly
+	if(bubble_overlay)
+		cut_overlay(bubble_overlay)
+		bubble_overlay = null
+	if(!typing_indicator)
+		return
 	var/datum/language/used_language = get_selected_language()
 	var/state_of_bubble = "[initial(used_language?.bubble_override) || bubble_icon || "default"]0"
-	var/mutable_appearance/bubble_overlay = mutable_appearance('icons/mob/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)
+	bubble_overlay = mutable_appearance('icons/mob/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)
 	bubble_overlay.appearance_flags = RESET_COLOR | RESET_TRANSFORM | TILE_BOUND | PIXEL_SCALE
-	if(typing_indicator)
-		add_overlay(bubble_overlay)
-		play_fov_effect(src, 6, "talk", ignore_self = TRUE)
-	else
-		cut_overlay(bubble_overlay)
+	add_overlay(bubble_overlay)
+	play_fov_effect(src, 6, "talk", ignore_self = TRUE)
 
 /mob/living/remove_air(amount) //To prevent those in contents suffocating
 	return loc ? loc.remove_air(amount) : null

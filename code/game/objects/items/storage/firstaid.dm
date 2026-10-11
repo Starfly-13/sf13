@@ -3,6 +3,7 @@
  *		First Aid Kits
  * 		Pill Bottles
  *		Dice Pack (in a pill bottle)
+ *		Medical Restock Packs
  */
 
 /*
@@ -12,7 +13,7 @@
 /obj/item/storage/firstaid
 	name = "first-aid kit"
 	desc = "An emergency medical aid kit."
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/obj/storage/medkit.dmi'
 	icon_state = "firstaid"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
@@ -20,6 +21,7 @@
 	pickup_sound =  'sound/items/handling/cardboardbox_pickup.ogg'
 	throw_speed = 3
 	throw_range = 7
+	custom_materials = list(/datum/material/plastic = 2000)
 	/// If the medkit starts empty or not
 	var/empty = FALSE
 	/// Defines damage type of the medkit. General ones stay null. Used for medibot healing bonuses
@@ -126,7 +128,6 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/firstaid/ancient
-	icon = 'icons/obj/storage.dmi'
 	icon_state = "firstaid_old"
 	desc = "A basic first aid kit. It looks a little old..."
 
@@ -254,8 +255,8 @@
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/medigel/hadrakine = 1,
 		/obj/item/storage/pill_bottle/indomide = 1,
-		/obj/item/stack/medical/bone_gel = 1,
-		/obj/item/stack/sticky_tape/surgical = 1,
+		/obj/item/stack/medical/bone_gel/four = 1,
+		/obj/item/stack/sticky_tape/surgical/four = 1,
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/stack/medical/splint = 1,
 		/obj/item/reagent_containers/hypospray/medipen/silfrine = 1,
@@ -378,12 +379,29 @@
 /obj/item/storage/pill_bottle
 	name = "pill bottle"
 	desc = "It's an airtight container for storing medication."
-	icon_state = "pill_canister"
+	icon_state = "pill_bottle"
 	icon = 'icons/obj/chemical/medicine.dmi'
 	item_state = "pillbottle"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
+
+	unique_reskin = list(\
+		"pill bottle" = "pill_bottle",
+		"pill bottle (no label)" = "pill_bottle_nolabel",
+		"blue pill bottle" = "pill_bottleblue",
+		"blue pill bottle (no label)" = "pill_bottleblue_nolabel",
+		"red pill bottle" = "pill_bottler",
+		"red pill bottle (no label)" = "pill_bottler_nolabel",
+		"green pill bottle" = "pill_bottleg",
+		"green pill bottle (no label)" = "pill_bottleg_nolabel",
+		"black pill bottle" = "pill_bottleb",
+		"black pill bottle (no label)" = "pill_bottleb_nolabel",
+		"yellow pill bottle" = "pill_bottley",
+		"yellow pill bottle (no label)" = "pill_bottley_nolabel",
+		"white pill bottle" = "pill_bottlew",
+		"white pill bottle (no label)" = "pill_bottlew_nolabel",
+		)
 
 /obj/item/storage/pill_bottle/ComponentInitialize()
 	. = ..()
@@ -459,6 +477,7 @@
 /obj/item/storage/pill_bottle/zoom
 	name = "suspicious pill bottle"
 	desc = "The label is pretty old and almost unreadable, you recognize some chemical compounds."
+	icon_state = "pill_bottley"
 
 /obj/item/storage/pill_bottle/zoom/PopulateContents()
 	for(var/i in 1 to 5)
@@ -467,6 +486,7 @@
 /obj/item/storage/pill_bottle/happy
 	name = "suspicious pill bottle"
 	desc = "There is a smiley on the top."
+	icon_state = "pill_bottle_nolabel"
 
 /obj/item/storage/pill_bottle/happy/PopulateContents()
 	for(var/i in 1 to 5)
@@ -483,6 +503,7 @@
 /obj/item/storage/pill_bottle/aranesp
 	name = "suspicious pill bottle"
 	desc = "The label has 'fuck disablers' hastily scrawled in black marker."
+	icon_state = "pill_bottlew_nolabel"
 
 /obj/item/storage/pill_bottle/aranesp/PopulateContents()
 	for(var/i in 1 to 5)
@@ -516,6 +537,7 @@
 /obj/item/storage/pill_bottle/floorpill
 	name = "bottle of floorpills"
 	desc = "An old pill bottle. It smells musty."
+	icon_state = "pill_bottle_nolabel"
 
 /obj/item/storage/pill_bottle/floorpill/Initialize()
 	. = ..()
@@ -611,3 +633,78 @@
 /obj/item/storage/pill_bottle/rcyte/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/rcyte(src)
+
+/obj/item/storage/medpack
+	name = "medical pack"
+	desc = "a sealed, sterile-white plastic package"
+	icon = 'icons/obj/storage/medkit.dmi'
+	icon_state = "medpack"
+	item_state = "syringe_kit"
+	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	resistance_flags = FLAMMABLE
+	drop_sound = 'sound/items/handling/cardboardbox_drop.ogg'
+	pickup_sound =  'sound/items/handling/cardboardbox_pickup.ogg'
+
+/obj/item/storage/medpack/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 4
+	STR.set_holdable(list(
+		/obj/item/stack/medical,
+		/obj/item/reagent_containers/hypospray/medipen))
+	STR.locked = TRUE
+	STR.locked_flavor = "seems to be sealed closed!"
+
+/obj/item/storage/medpack/proc/open_medpack(mob/user)
+	to_chat(user, span_notice("You tear open \the [src]."))
+	playsound(user.loc, 'sound/effects/rip3.ogg', 50)
+	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_SET_LOCKSTATE, FALSE)
+	desc += "\nIt's been opened. Let's get it all put away."
+
+/obj/item/storage/medpack/attack_self(mob/user)
+	var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
+	if(locked)
+		open_medpack(user)
+		icon_state = "[icon_state]_open"
+	return ..()
+
+/obj/item/storage/medpack/sutures
+	name = "pack of medical sutures"
+	desc = "a sealed, sterile-white plastic package full of medical sutures."
+
+/obj/item/storage/medpack/sutures/PopulateContents()
+	var/static/items_inside = list(/obj/item/stack/medical/suture = 4)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medpack/mesh
+	name = "pack of regenerative mesh"
+	desc = "a sealed, sterile-white plastic package full of regenerative mesh."
+
+/obj/item/storage/medpack/mesh/PopulateContents()
+	var/static/items_inside = list(/obj/item/stack/medical/mesh = 4)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medpack/bruisepacks
+	name = "pack of bruise packs"
+	desc = "a sealed, sterile-white plastic package full of bruise packs."
+
+/obj/item/storage/medpack/bruisepacks/PopulateContents()
+	var/static/items_inside = list(/obj/item/stack/medical/bruise_pack = 4)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medpack/gauze
+	name = "pack of medical gauze"
+	desc = "a sealed, sterile-white plastic package full of medical gauze."
+
+/obj/item/storage/medpack/gauze/PopulateContents()
+	var/static/items_inside = list(/obj/item/stack/medical/gauze = 4)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medpack/epipens
+	name = "pack of epinephrine autoinjectors"
+	desc = "a sealed, sterile-white plastic package full of epinephrine autoinjectors."
+
+/obj/item/storage/medpack/epipens/PopulateContents()
+	var/static/items_inside = list(/obj/item/reagent_containers/hypospray/medipen = 4)
+	generate_items_inside(items_inside,src)
