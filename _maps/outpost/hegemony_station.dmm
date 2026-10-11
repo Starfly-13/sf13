@@ -258,14 +258,14 @@
 /area/outpost/maintenance/starboard)
 "aO" = (
 /obj/structure/rack,
-/obj/item/clothing/gloves/color/latex/nitrile{
+/obj/item/clothing/gloves/nitrile/blue{
 	pixel_y = -4
 	},
-/obj/item/clothing/gloves/color/latex/nitrile,
-/obj/item/clothing/gloves/color/latex/nitrile{
+/obj/item/clothing/gloves/nitrile/blue,
+/obj/item/clothing/gloves/nitrile/blue{
 	pixel_y = 4
 	},
-/obj/item/clothing/gloves/color/latex/nitrile{
+/obj/item/clothing/gloves/nitrile/blue{
 	pixel_y = 8
 	},
 /turf/open/floor/plasteel/patterned/brushed,
