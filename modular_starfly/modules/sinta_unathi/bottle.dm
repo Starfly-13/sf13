@@ -24,6 +24,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine
 	name = "bottle of Moghesan wine"
 	desc = "An alcoholic beverage made from the fruits of assorted Moghesan cacti."
+	icon = 'modular_starfly/modules/sinta_unathi/icons/bottle.dmi'
 	icon_state = "lizardwine"
 	list_reagents = list(/datum/reagent/consumable/ethanol/lizardwine = 100)
 	foodtype = FRUIT | ALCOHOL
