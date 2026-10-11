@@ -10623,10 +10623,10 @@
 /obj/effect/turf_decal/corner/opaque/tan{
 	dir = 10
 	},
-/obj/machinery/computer/processing_unit_console/directional/south{
-	pixel_y = 54;
-	machinedir = 1;
-	pixel_x = 32
+/obj/machinery/mineral/processing_unit_console{
+	dir = 1;
+	pixel_x = 32;
+	pixel_y = 54
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
