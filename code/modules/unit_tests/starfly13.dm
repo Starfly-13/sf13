@@ -27,7 +27,7 @@
 	var/list/test_names = list(
 		"asteroid",
 		"battlefieldplanet",
-		"beachplanet",
+		"beach",
 		"desertplanet",
 		"dustball",
 		"empty space",
