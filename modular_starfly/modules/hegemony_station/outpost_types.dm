@@ -25,8 +25,6 @@
 
 /datum/map_template/outpost/hegemony
 	name = "hegemony_station"
-	outpost_name = "Hegemony Station"
-	outpost_administrator = "Madtankdriver"
 
 /datum/map_template/outpost/hangar/hegemony_20x20
 	name = "hangar/hegemony_20x20"
@@ -55,6 +53,8 @@
 
 
 /datum/overmap/outpost/hegemony
+	outpost_name = "Hegemony Station"
+	outpost_administrator = "Madtankdriver"
 	token_icon_state = "station_planet"
 	main_template = /datum/map_template/outpost/hegemony
 	elevator_template = /datum/map_template/outpost/elevator_hegemony
