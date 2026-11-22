@@ -10,7 +10,7 @@
 			BP = def_zone
 		else
 			if(!def_zone)
-				def_zone = ran_zone(def_zone)
+				def_zone = run_zone(def_zone)
 			BP = get_bodypart(check_zone(def_zone))
 			if(!BP)
 				BP = get_first_available_bodypart()
@@ -272,33 +272,57 @@
 	if(update)
 		update_damage_overlays()
 
-/// damage MANY bodyparts, in random order
+/// Damages several bodyparts in a random order. Larger bodyparts receive a greater share of the damage.
 /mob/living/carbon/take_overall_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE, required_status, ignore_reduction = 0)
 	if(status_flags & GODMODE)
 		return	//godmode
 
-	var/list/obj/item/bodypart/parts = get_damageable_bodyparts(required_status)
+	var/list/obj/item/bodypart/parts = list()
+	var/total_weight = 0
+	var/obj/item/bodypart/part
+	for(var/zone in bodyparts)
+		part = bodyparts[zone]
+		if(!part)
+			continue
+		if(required_status && (part.bodytype & required_status))
+			continue
+		if(part.brute_dam + part.burn_dam < part.max_damage)
+			parts += part
+			total_weight += part.body_weight
+
 	var/update = 0
+	var/took_stamina = FALSE
+	var/part_weight_ratio
 	while(length(parts) && (brute > 0 || burn > 0 || stamina > 0))
 		var/obj/item/bodypart/picked = pick(parts)
-		var/brute_per_part = round(brute/parts.len, DAMAGE_PRECISION)
-		var/burn_per_part = round(burn/parts.len, DAMAGE_PRECISION)
-		var/stamina_per_part = round(stamina/parts.len, DAMAGE_PRECISION)
+		part_weight_ratio = picked.body_weight / total_weight
+
+		var/brute_per_part = round(brute * part_weight_ratio, DAMAGE_PRECISION)
+		var/burn_per_part = round(burn * part_weight_ratio, DAMAGE_PRECISION)
+		var/stamina_per_part = round(stamina * part_weight_ratio, DAMAGE_PRECISION)
 
 		var/brute_was = picked.brute_dam
 		var/burn_was = picked.burn_dam
 		var/stamina_was = picked.stamina_dam
 
-
-		update |= picked.receive_damage(brute_per_part, burn_per_part, stamina_per_part, FALSE, required_status, wound_bonus = CANT_WOUND, ignore_reduction = ignore_reduction)
+		update |= picked.receive_damage(brute_per_part, burn_per_part, stamina_per_part, updating_health = FALSE, wound_bonus = CANT_WOUND, ignore_reduction = ignore_reduction)
+		if(stamina_per_part > DAMAGE_PRECISION)
+			took_stamina = TRUE
 
 		brute	= round(brute - (picked.brute_dam - brute_was), DAMAGE_PRECISION)
 		burn	= round(burn - (picked.burn_dam - burn_was), DAMAGE_PRECISION)
 		stamina = round(stamina - (picked.stamina_dam - stamina_was), DAMAGE_PRECISION)
 
 		parts -= picked
+		total_weight -= picked.body_weight
+
 	if(updating_health)
 		updatehealth()
+
+	// once here rather than per part, like receive_damage()
+	if(took_stamina)
+		stam_regen_start_time = world.time + STAMINA_REGEN_BLOCK_TIME
+		update = TRUE
 
 	if(update)
 		update_damage_overlays()

@@ -119,8 +119,12 @@
 		lock_loss = 0
 		STOP_PROCESSING(SSfastprocess, src)
 
-/obj/item/gun/ballistic/cs_gauss/process_fire(atom/target, mob/living/user, message, params, zone_override, bonus_spread, burst_firing, spread_override, iteration)
+/obj/item/gun/ballistic/cs_gauss/before_firing(atom/target, mob/user)
 	if(current_target && chambered)
+		if(isnull(chambered.BB))
+			qdel(chambered)
+			chambered = null
+			chamber_round()
 		if(!prob(lock_loss) || !lock_loss)
 			chambered.BB.homing = TRUE
 			chambered.BB.homing_target = current_target.resolve()
@@ -145,6 +149,7 @@
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/cybersun/onmob.dmi'
 
 	w_class = WEIGHT_CLASS_SMALL
+	wield_slowdown = PISTOL_SLOWDOWN
 	default_ammo_type = /obj/item/ammo_box/magazine/cs_gauss/pistol
 
 
@@ -189,6 +194,9 @@
 	ammo_counter = TRUE
 	smart_lock = FALSE
 
+/obj/item/gun/ballistic/cs_gauss/rectifier/shock
+	default_ammo_type = /obj/item/ammo_box/magazine/cs_gauss/pistol/shock
+
 NO_MAG_GUN_HELPER(cs_gauss/rectifier)
 NO_MAG_GUN_HELPER(cs_gauss/rectifier/export)
 
@@ -205,6 +213,7 @@ NO_MAG_GUN_HELPER(cs_gauss/rectifier/export)
 
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
+	wield_slowdown = SMG_SLOWDOWN
 
 	wear_minor_threshold = 240
 	wear_major_threshold = 380
@@ -212,6 +221,11 @@ NO_MAG_GUN_HELPER(cs_gauss/rectifier/export)
 	default_ammo_type = /obj/item/ammo_box/magazine/cs_gauss
 	allowed_ammo_types = list(
 		/obj/item/ammo_box/magazine/cs_gauss,
+	)
+
+	//no you can't fire the bigger darts in the smg
+	blacklisted_ammo_types = list(
+		/obj/item/ammo_box/magazine/cs_gauss/rifle
 	)
 
 	load_sound = 'sound/weapons/gun/gauss/rifle_reload.ogg'
@@ -256,6 +270,7 @@ NO_MAG_GUN_HELPER(cs_gauss/convergence/export)
 
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
+	wield_slowdown = LIGHT_RIFLE_SLOWDOWN
 
 	default_ammo_type = /obj/item/ammo_box/magazine/cs_gauss/rifle
 	allowed_ammo_types = list(
