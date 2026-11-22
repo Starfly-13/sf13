@@ -72,8 +72,8 @@
 /obj/item/bodypart/tail/lizard
 	name = "unathi tail"
 	desc = "A severed Unathi's tail. Can't they regrow these...?"
-	icon = 'icons/mob/species/lizard/bodyparts.dmi'
-	icon_state = "sarathi_tail"
+	icon = 'modular_starfly/modules/sinta_unathi/icons/bodyparts.dmi'
+	icon_state = "sinta_tail"
 	examine_id = SPECIES_SARATHI
 	limb_id = SPECIES_SARATHI
 	uses_mutcolor = TRUE
@@ -109,7 +109,7 @@
 
 /obj/item/bodypart/tail/lizard/large
 	name = "large unathi tail"
-	icon_state = "large_sarathi_tail"
+	icon_state = "large_sinta_tail"
 	limb_id = "large_" + SPECIES_SARATHI
 	max_damage = 50
 	max_stamina_damage = 50
@@ -118,7 +118,7 @@
 
 /obj/item/bodypart/tail/lizard/small
 	name = "small unathi tail"
-	icon_state = "small_sarathi_tail"
+	icon_state = "small_sinta_tail"
 	limb_id = "small_" + SPECIES_SARATHI
 	max_damage = 20
 	max_stamina_damage = 20
@@ -126,7 +126,7 @@
 
 /obj/item/bodypart/tail/lizard/synth
 	name = "prosthetic unathi tail"
-	icon_state = "synth_sarathi_tail"
+	icon_state = "synth_sinta_tail"
 	examine_id = "prosthetic " + SPECIES_SARATHI
 	limb_id = "synth_" + SPECIES_SARATHI
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
@@ -136,7 +136,7 @@
 
 /obj/item/bodypart/tail/lizard/synth/large
 	name = "prosthetic large unathi tail"
-	icon_state = "large_sarathi_tail"
+	icon_state = "large_sinta_tail"
 	examine_id = "prosthetic large " + SPECIES_SARATHI
 	limb_id = "large_" + SPECIES_SARATHI
 	max_damage = 50
@@ -146,7 +146,7 @@
 
 /obj/item/bodypart/tail/lizard/one_color
 	name = "unathi tail (one color)"
-	icon_state = "onecolor_sarathi_tail"
+	icon_state = "onecolor_sinta_tail"
 	limb_id = "onecolor_" + SPECIES_SARATHI
 	overlay_icon_state = FALSE
 
