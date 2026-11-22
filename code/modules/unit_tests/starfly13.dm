@@ -37,7 +37,6 @@
 		"lava",
 		"moon",
 		"plasma giant",
-		"reebe",
 		"rock",
 		"sand",
 		"shroudedplanet",
