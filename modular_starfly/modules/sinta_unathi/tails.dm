@@ -21,14 +21,14 @@
 
 // See: code/modules/surgery/organs/tails.dm
 
-/obj/item/organ/tail/lizard
-	name = "\improper Unathi tail"
-	desc = "A severed Unathi's tail. Can they regrow these...?"
-	icon_state = "severedlizard"
-	color = "#116611"
-	tail_trait = TRAIT_TAILED
-	tail_type = "Smooth"
-	var/spines = "None"
+// /obj/item/organ/tail/lizard
+// 	name = "\improper Unathi tail"
+// 	desc = "A severed Unathi's tail. Can they regrow these...?"
+// 	icon_state = "severedlizard"
+// 	color = "#116611"
+// 	tail_trait = TRAIT_TAILED
+// 	tail_type = "Smooth"
+// 	var/spines = "None"
 
 //---------------------------------------------------------------------------------------------------------------------
 #endif // #ifdef STARFLY13_MODULE_SINTA_UNATHI_ENABLED

@@ -71,7 +71,7 @@
 
 /obj/item/bodypart/tail/lizard
 	name = "unathi tail"
-	desc = "A severed Sarathi's tail. Can't they regrow these...?"
+	desc = "A severed Unathi's tail. Can't they regrow these...?"
 	icon = 'icons/mob/species/lizard/bodyparts.dmi'
 	icon_state = "unathi_tail"
 	examine_id = SPECIES_SARATHI
