@@ -273,6 +273,7 @@
 	)
 
 /obj/item/clothing/head/helmet/m10/cybersun/trauma/teal
+	icon_state = "trauma_teal_m10helm"
 	current_skin = "Trauma Teal"
 
 /obj/item/clothing/head/helmet/bulletproof/x11/cybersun
@@ -332,7 +333,7 @@
 	desc = "Impact resistant plasmaglass is inset with plastitanium to make a durable helmet with clean unassisted field-of-view."
 	icon_state = "hardsuit0-collapsar"
 	hardsuit_type = "collapsar"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 100, "rad" = 65, "fire" = 75, "acid" = 40, "wound" = 30)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 40, "bomb" = 50, "bio" = 100, "rad" = 65, "fire" = 75, "acid" = 40, "wound" = 30)
 	icon = 'icons/obj/clothing/faction/cybersun/head.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/cybersun/head.dmi'
 	kepori_override_icon = 'icons/mob/clothing/head/spacesuits_kepori.dmi'
@@ -495,3 +496,11 @@
 	new /obj/item/gun/energy/cybersun/lorentz/opportunist(src)
 	for(var/i in 1 to 4)
 		new /obj/item/stock_parts/cell/gun/cybersun(src)
+
+/obj/item/storage/belt/military/cybersun/security/PopulateContents()
+	new /obj/item/melee/classic_baton/telescopic(src)
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/assembly/flash/handheld(src)
+	for(var/i in 1 to 3)
+		new /obj/item/ammo_box/magazine/cs_gauss/pistol/shock(src)
+
